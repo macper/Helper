@@ -70,6 +70,36 @@
           </Torso>
           <Items>Sakiewka</Items>
           <Gold>0</Gold>
+          <Effects>
+            <Effect>
+              <Name>Choroba sieroca</Name>
+              <Description>-3 KP</Description>
+              <Duration xsi:nil="true" />
+            </Effect>
+            <Effect>
+              <Name>Szał</Name>
+              <Description />
+              <Duration>10</Duration>
+            </Effect>
+          </Effects>
+          <KnownSpells>
+            <SpellDefinition>
+              <Name>Magiczny pocisk</Name>
+              <Type>Mage</Type>
+              <Shool>Wywoływanie</Shool>
+              <Level>1</Level>
+              <Description>K4+1 nigdy za dużo</Description>
+            </SpellDefinition>
+            <SpellDefinition>
+              <Name>Tarcza</Name>
+              <Type>Mage</Type>
+              <Shool>Iluzje</Shool>
+              <Level>1</Level>
+              <Description>+4 KP na 10 rund</Description>
+            </SpellDefinition>
+          </KnownSpells>
+          <Spells />
+          <AvailableCastings />
         </Character>
       </Members>
     </CharacterGroup>
@@ -114,6 +144,10 @@
             </Attack>
           </Attacks>
           <Gold>0</Gold>
+          <Effects />
+          <KnownSpells />
+          <Spells />
+          <AvailableCastings />
         </Character>
       </Members>
     </CharacterGroup>
@@ -163,5 +197,21 @@
       <Panalty>2</Panalty>
     </Item>
   </Items>
+  <Spells>
+    <SpellDefinition>
+      <Name>Magiczny pocisk</Name>
+      <Type>Mage</Type>
+      <Shool>Wywoływanie</Shool>
+      <Level>1</Level>
+      <Description>K4+1 nigdy za dużo</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Tarcza</Name>
+      <Type>Mage</Type>
+      <Shool>Iluzje</Shool>
+      <Level>1</Level>
+      <Description>+4 KP na 10 rund</Description>
+    </SpellDefinition>
+  </Spells>
   <CurrentTime>1300-05-13T01:00:00</CurrentTime>
 </Helper>

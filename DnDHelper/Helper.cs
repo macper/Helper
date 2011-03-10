@@ -16,6 +16,7 @@ namespace DnDHelper
         public DateTime CurrentTime { get { return _currentTime; } set { _currentTime = value; OnPropertyChanged("CurrentTime"); } }
         public List<CharacterGroup> Groups;
         public List<Item> Items;
+        public List<SpellDefinition> Spells;
 
         public Helper()
         {

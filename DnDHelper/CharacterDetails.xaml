@@ -51,7 +51,22 @@
         <TabControl Height="262" HorizontalAlignment="Left" Margin="15,310,0,0" Name="tabControl1" VerticalAlignment="Top" Width="464">
             <TabItem Header="Efekty" Name="tabItem1">
                 <Grid>
-                    <ListView Height="225" HorizontalAlignment="Left" Margin="6,6,0,0" Name="listView2" VerticalAlignment="Top" Width="441" />
+                    <ListView Height="225" HorizontalAlignment="Left" Margin="6,6,0,0" Name="listView2" VerticalAlignment="Top" Width="441">
+                        <ListView.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Dodaj" Click="DodajEfekt_Click"  />
+                                <MenuItem Header="Edytuj" Click="EdytujEfekt_Click" />
+                                <MenuItem Header="Usuń" Click="UsunEfekt_Click" />
+                            </ContextMenu>
+                        </ListView.ContextMenu>
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Nazwa" Width="100" DisplayMemberBinding="{Binding Path=Name}" />
+                                <GridViewColumn Header="Czas trwania" Width="80" DisplayMemberBinding="{Binding Path=Duration}" />
+                                <GridViewColumn Header="Opis" Width="260" DisplayMemberBinding="{Binding Path=Description}" />
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
                 </Grid>
             </TabItem>
             <TabItem Header="Ekwipunek">
@@ -72,7 +87,32 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Czary" >
-                <Grid />
+                <Grid>
+                    <TabControl Height="231" HorizontalAlignment="Left" Margin="3,0,0,0" Name="tabControl2" VerticalAlignment="Top" Width="450">
+                        <TabItem Header="Zapamiętane" Name="tabItem2">
+                            <Grid />
+                        </TabItem>
+                        <TabItem Header="Znane">
+                            <Grid>
+                                <ListView Height="188" HorizontalAlignment="Left" Margin="6,6,0,0" Name="listView3" VerticalAlignment="Top" Width="173" SelectionChanged="listView3_SelectionChanged">
+                                    <ListView.ContextMenu>
+                                        <ContextMenu>
+                                            <MenuItem Header="Edytuj" Click="DodajCzar_Click" />
+                                        </ContextMenu>
+                                    </ListView.ContextMenu>
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridViewColumn Header="Nazwa" Width="120" DisplayMemberBinding="{Binding Path=Name}" />
+                                            <GridViewColumn Header="Poziom" Width="50" DisplayMemberBinding="{Binding Path=Level}" />
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                                <TextBox Height="166" HorizontalAlignment="Right" Margin="0,28,6,0" Name="textBox5" VerticalAlignment="Top" Width="248" />
+                                <Label Content="Opis" Height="28" HorizontalAlignment="Left" Margin="289,6,0,0" Name="label21" VerticalAlignment="Top" />
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
             </TabItem>
         </TabControl>
         <ListView Height="115" HorizontalAlignment="Left" Margin="235,189,0,0" Name="listView1" VerticalAlignment="Top" Width="238" UseLayoutRounding="False" IsManipulationEnabled="True" Grid.Row="1" Grid.Column="1">

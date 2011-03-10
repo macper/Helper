@@ -33,6 +33,6 @@
         <Button Content="Zapisz" Height="23" HorizontalAlignment="Left" Margin="509,307,0,0" Name="button3" VerticalAlignment="Top" Width="75" Click="button3_Click" />
         <Label Content="Specjalne:" Height="28" HorizontalAlignment="Left" Margin="279,213,0,0" Name="label8" VerticalAlignment="Top" />
         <TextBox Height="86" HorizontalAlignment="Left" Margin="348,215,0,0" Name="textBox7" VerticalAlignment="Top" Width="236" />
-        <Button Content="OK" Height="23" HorizontalAlignment="Left" Margin="683,405,0,0" Name="button4" VerticalAlignment="Top" Width="75" Click="button4_Click" />
+        <Button Content="OK" Height="23" HorizontalAlignment="Right" Margin="0,405,12,0" Name="button4" VerticalAlignment="Top" Width="75" Click="button4_Click" />
     </Grid>
 </Window>

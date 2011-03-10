@@ -32,6 +32,8 @@ namespace DnDHelper
             _character = chr;
             _helper = help;
             listView1.ItemsSource = _character.Attacks;
+            listView2.ItemsSource = _character.Effects;
+            listView3.ItemsSource = _character.KnownSpells;
             ContentGrid.DataContext = _character;
         }
 
@@ -114,6 +116,61 @@ namespace DnDHelper
             if (itWnd.ShowDialog() == true)
             {
                 textBox4.GetBindingExpression(TextBox.TextProperty).UpdateTarget();
+            }
+        }
+
+        private void DodajEfekt_Click(object sender, RoutedEventArgs e)
+        {
+            Effect newEfekt = new DnDHelper.Effect();
+            EffectEditWindow efWnd = new EffectEditWindow(newEfekt);
+            if (efWnd.ShowDialog() == true)
+            {
+                _character.Effects.Add(newEfekt);
+                listView2.Items.Refresh();
+            }
+        }
+
+        private void EdytujEfekt_Click(object sender, RoutedEventArgs e)
+        {
+            if (listView2.SelectedItem == null)
+            {
+                MessageBox.Show("Coś byś se wybrał najpierw");
+                return;
+            }
+            DnDHelper.Effect efekt = (DnDHelper.Effect)listView2.SelectedItem;
+            EffectEditWindow efWnd = new EffectEditWindow(efekt);
+            if (efWnd.ShowDialog() == true)
+            {
+                listView2.Items.Refresh();
+            }
+        }
+
+        private void UsunEfekt_Click(object sender, RoutedEventArgs e)
+        {
+            if (listView2.SelectedItem == null)
+            {
+                MessageBox.Show("Coś trza wybrać, nie ma rady");
+                return;
+            }
+            DnDHelper.Effect efekt = (DnDHelper.Effect)listView2.SelectedItem;
+            _character.Effects.Remove(efekt);
+            listView2.Items.Refresh();
+        }
+
+        private void DodajCzar_Click(object sender, RoutedEventArgs e)
+        {
+            SpellEditWindow spellWnd = new SpellEditWindow(_helper, _character);
+            if (spellWnd.ShowDialog() == true)
+            {
+                listView3.Items.Refresh();
+            }
+        }
+
+        private void listView3_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (listView3.SelectedItem != null)
+            {
+                textBox5.Text = listView3.SelectedItem.ToString();
             }
         }
     }

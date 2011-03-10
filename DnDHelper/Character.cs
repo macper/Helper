@@ -23,12 +23,19 @@ namespace DnDHelper
         public Item Torso { get; set; }
         public string Items { get; set; }
         public int Gold { get; set; }
+        public List<Effect> Effects { get; set; }
+        public List<SpellDefinition> KnownSpells { get; set; }
+        public List<Spell> Spells { get; set; }
+        public List<SpellCasting> AvailableCastings { get; set; }
 
         public Character()
         {
             Attacks = new List<Attack>();
             CurrentStats = new Stats();
             OriginalStats = new Stats();
+            Effects = new List<Effect>();
+            KnownSpells = new List<SpellDefinition>();
+            Spells = new List<Spell>();
         }
     }
 
@@ -106,6 +113,41 @@ namespace DnDHelper
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public int Duration { get; set; }
+        public int? Duration { get; set; }
+    }
+
+    [Serializable]
+    public class SpellDefinition
+    {
+        public string Name { get; set; }
+        public string Type { get; set; }
+        public string Shool { get; set; }
+        public int Level { get; set; }
+        public string Description { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format(@"Nazwa: {0}
+Typ: {1}
+Poziom: {2}
+Szkoła: {3}
+Opis:
+{4}", Name, Type, Level.ToString(), Shool, Description);
+        }
+    }
+
+    [Serializable]
+    public class Spell
+    {
+        public SpellDefinition Definition { get; set; }
+        public bool IsCasted { get; set; }
+    }
+
+    [Serializable]
+    public class SpellCasting
+    {
+        public int Level { get; set; }
+        public int Count { get; set; }
+        public string Type { get; set; }
     }
 }
