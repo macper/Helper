@@ -31,45 +31,11 @@ namespace DnDHelper
         {
             _character = chr;
             _helper = help;
-            cbLeftHand.ItemsSource = _helper.Items;
-            cbLeftHand.DisplayMemberPath = "Name";
-            cbRightHand.ItemsSource = _helper.Items;
-            cbRightHand.DisplayMemberPath = "Name";
-            cbTorso.ItemsSource = _helper.Items;
-            cbTorso.DisplayMemberPath = "Name";
-            FillData();
+            listView1.ItemsSource = _character.Attacks;
+            ContentGrid.DataContext = _character;
         }
 
-        public void FillData()
-        {
-            tbName.Text = _character.Name;
-            tbRace.Text = _character.Race;
-            tbClass.Text = _character.Class;
-            tbLevel.Text = _character.Level.ToString();
-            tbStrength.Text = _character.CurrentStats.Strength.ToString();
-            tbStrengthOryg.Text = _character.OriginalStats.Strength.ToString();
-            tbDexterity.Text = _character.CurrentStats.Dexterity.ToString();
-            tbDexterityOryg.Text = _character.OriginalStats.Dexterity.ToString();
-            tbConstitution.Text = _character.CurrentStats.Constitution.ToString();
-            tbConstitutionOryg.Text = _character.OriginalStats.Constitution.ToString();
-            tbWisdom.Text = _character.CurrentStats.Wisdom.ToString();
-            tbWisdomOryg.Text = _character.OriginalStats.Wisdom.ToString();
-            tbInteligence.Text = _character.CurrentStats.Inteligence.ToString();
-            tbInteligenceOryg.Text = _character.OriginalStats.Inteligence.ToString();
-            tbWill.Text = _character.CurrentStats.WillThrow.ToString();
-            tbWillOryg.Text = _character.OriginalStats.WillThrow.ToString();
-            tbReflex.Text = _character.CurrentStats.ReflexThrow.ToString();
-            tbReflexOryg.Text = _character.OriginalStats.ReflexThrow.ToString();
-            tbWytrwalosc.Text = _character.CurrentStats.StrongThrow.ToString();
-            tbWytrwaloscOryg.Text = _character.OriginalStats.StrongThrow.ToString();
-            tbAC.Text = _character.CurrentStats.AC.ToString();
-            tbACOryg.Text = _character.OriginalStats.AC.ToString();
-            tbHP.Text = _character.CurrentStats.HP.ToString();
-            tbHPOryg.Text = _character.OriginalStats.HP.ToString();
-            tbAttack.Text = _character.CurrentStats.AttackSkill.ToString();
-            tbAttackOryg.Text = _character.OriginalStats.AttackSkill.ToString();
-            Refresh();
-        }
+        
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
@@ -84,9 +50,71 @@ namespace DnDHelper
 
         private void Refresh()
         {
-            cbLeftHand.Items.Refresh();
-            cbRightHand.Items.Refresh();
-            cbTorso.Items.Refresh();
+            listView1.Items.Refresh();
+        }
+
+        private void DodajAtak_Click(object sender, RoutedEventArgs e)
+        {
+            Attack attack = new Attack();
+            _character.Attacks.Add(attack);
+            AttackEditWindow wnd = new AttackEditWindow(attack);
+            if (wnd.ShowDialog() == true)
+            {
+                Refresh();
+            }
+        }
+
+        private void EdytujAtak_Click(object sender, RoutedEventArgs e)
+        {
+            if (listView1.SelectedItem == null)
+            {
+                MessageBox.Show("Wybierz jakiś atak żeby go edytować");
+                return;
+            }
+            Attack attack = (Attack)listView1.SelectedItem;
+            AttackEditWindow wnd = new AttackEditWindow(attack);
+            if (wnd.ShowDialog() == true)
+            {
+                Refresh();
+            }
+        }
+
+        private void UsunAtak_Click(object sender, RoutedEventArgs e)
+        {
+            if (listView1.SelectedItem == null)
+            {
+                MessageBox.Show("Wybierz jakiś atak żeby go usunąć");
+                return;
+            }
+            _character.Attacks.Remove((Attack)listView1.SelectedItem);
+            Refresh();
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            ItemsWindow itWnd = new ItemsWindow(_helper, 1, _character);
+            if (itWnd.ShowDialog() == true)
+            {
+                textBox2.GetBindingExpression(TextBox.TextProperty).UpdateTarget();
+            }
+        }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            ItemsWindow itWnd = new ItemsWindow(_helper, 2, _character);
+            if (itWnd.ShowDialog() == true)
+            {
+                textBox3.GetBindingExpression(TextBox.TextProperty).UpdateTarget();
+            }
+        }
+
+        private void button5_Click(object sender, RoutedEventArgs e)
+        {
+            ItemsWindow itWnd = new ItemsWindow(_helper, 3, _character);
+            if (itWnd.ShowDialog() == true)
+            {
+                textBox4.GetBindingExpression(TextBox.TextProperty).UpdateTarget();
+            }
         }
     }
 }

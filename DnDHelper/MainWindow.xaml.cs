@@ -129,9 +129,36 @@ namespace DnDHelper
             CharacterGroup chGr = (CharacterGroup)listBox1.SelectedItem;
             Character newCharacter = new Character() { Name = "Nowa postać" };
             chGr.Members.Add(newCharacter);
-            CharacterDetails chDetails = new CharacterDetails();
-            wrapPanel1.Children.Add(chDetails);
-            chDetails.Init(_helper, newCharacter);
+            characterDetails1.Init(_helper, newCharacter);
+        }
+
+        private void listBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                listBox2.ItemsSource = ((CharacterGroup)listBox1.SelectedItem).Members;
+                listBox2.DisplayMemberPath = "Name";
+                listBox2.Items.Refresh();
+            }
+        }
+
+        private void listBox2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (listBox2.SelectedItem != null)
+            {
+                characterDetails1.Init(_helper, (Character)listBox2.SelectedItem);
+            }
+            listBox2.Items.Refresh();
+        }
+
+        private void button8_Click(object sender, RoutedEventArgs e)
+        {
+            if (listBox2.SelectedItem != null)
+            {
+                CharacterGroup chG = (CharacterGroup)listBox1.SelectedItem;
+                chG.Members.Remove((Character)listBox2.SelectedItem);
+            }
+            listBox2.Items.Refresh();
         }
     }
 }

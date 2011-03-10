@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.ComponentModel;
 
 namespace DnDHelper
 {
@@ -20,12 +21,11 @@ namespace DnDHelper
         public Item RightHand { get; set; }
         public Item LeftHand { get; set; }
         public Item Torso { get; set; }
-        public List<Item> Items { get; set; }
+        public string Items { get; set; }
         public int Gold { get; set; }
 
         public Character()
         {
-            Items = new List<Item>();
             Attacks = new List<Attack>();
             CurrentStats = new Stats();
             OriginalStats = new Stats();
@@ -42,10 +42,15 @@ namespace DnDHelper
         public int Inteligence { get; set; }
         public int HP { get; set; }
         public int AC { get; set; }
-        public int AttackSkill { get; set; }
+        public string AttackSkill { get; set; }
         public int WillThrow { get; set; }
         public int ReflexThrow { get; set; }
         public int StrongThrow { get; set; }
+
+        public Stats()
+        {
+            Strength = Dexterity = Constitution = Wisdom = Inteligence = 10;
+        }
     }
 
     [Serializable]
@@ -63,6 +68,17 @@ namespace DnDHelper
         public string Type
         {
             get { return Damage != null ? "Broń" : "Zbroja"; }
+        }
+        public override string ToString()
+        {
+            if (Type == "Broń")
+            {
+                return string.Format("{0} - {1} {2}", Name, Damage, Specials);
+            }
+            else
+            {
+                return string.Format("{0} - +{1}KP, Max. ZR {2}, Kary -{3}", Name, AC.ToString(), MaxDexterityBonus.ToString(), Panalty.ToString());
+            }
         }
     }
 

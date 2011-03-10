@@ -19,12 +19,23 @@ namespace DnDHelper
     public partial class ItemsWindow : Window
     {
         Helper _helper;
+        int? _local;
+        Character _character;
 
         public ItemsWindow(Helper help)
         {
             InitializeComponent();
             _helper = help;
             listView1.ItemsSource = _helper.Items;
+        }
+
+        public ItemsWindow(Helper help, int? local, Character ch)
+        {
+            InitializeComponent();
+            _helper = help;
+            listView1.ItemsSource = _helper.Items;
+            _local = local;
+            _character = ch;
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -92,6 +103,33 @@ namespace DnDHelper
             catch
             {
             }
+        }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            if (_local != null)
+            {
+                if (listView1.SelectedItem == null)
+                {
+                    MessageBox.Show("Wybierz jakiś przedmiot");
+                    return;
+                }
+                Item item = (Item)listView1.SelectedItem;
+                DialogResult = true;
+                if (_local == 1)
+                {
+                    _character.RightHand = item;
+                }
+                else if (_local == 2)
+                {
+                    _character.LeftHand = item;
+                }
+                else
+                {
+                    _character.Torso = item;
+                }
+            }
+            Close();
         }
     }
 }

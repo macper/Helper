@@ -1,6 +1,123 @@
 <?xml version="1.0"?>
 <Helper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Groups />
+  <Groups>
+    <CharacterGroup>
+      <GroupName>Drużyna</GroupName>
+      <Members>
+        <Character>
+          <Name>Zorg</Name>
+          <Race>Półork</Race>
+          <Level>3</Level>
+          <Class>Barbarzyńca</Class>
+          <CurrentStats>
+            <Strength>17</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <HP>34</HP>
+            <AC>14</AC>
+            <AttackSkill>6</AttackSkill>
+            <WillThrow>2</WillThrow>
+            <ReflexThrow>4</ReflexThrow>
+            <StrongThrow>7</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>17</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <HP>34</HP>
+            <AC>14</AC>
+            <AttackSkill>6</AttackSkill>
+            <WillThrow>2</WillThrow>
+            <ReflexThrow>4</ReflexThrow>
+            <StrongThrow>7</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <Attacks>
+            <Attack>
+              <ToHit>3</ToHit>
+              <Damage>2K6+5</Damage>
+            </Attack>
+          </Attacks>
+          <RightHand>
+            <Name>Miecz długi</Name>
+            <Specials />
+            <Cost>20</Cost>
+            <Damage>K8</Damage>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </RightHand>
+          <LeftHand>
+            <Name>Kij+1</Name>
+            <Specials>Odporność na mróz + 20 %</Specials>
+            <Cost>50</Cost>
+            <Damage>K6+1</Damage>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </LeftHand>
+          <Torso>
+            <Name>Zbroja ćwiekowana</Name>
+            <Specials />
+            <Cost>150</Cost>
+            <AC>4</AC>
+            <MaxDexterityBonus>5</MaxDexterityBonus>
+            <Panalty>1</Panalty>
+          </Torso>
+          <Items>Sakiewka</Items>
+          <Gold>0</Gold>
+        </Character>
+      </Members>
+    </CharacterGroup>
+    <CharacterGroup>
+      <GroupName>Potwory 1 (nieumarli)</GroupName>
+      <Members>
+        <Character>
+          <Name>Zombie</Name>
+          <Race>Nieumarły</Race>
+          <Level>3</Level>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <HP>22</HP>
+            <AC>12</AC>
+            <AttackSkill>4</AttackSkill>
+            <WillThrow>5</WillThrow>
+            <ReflexThrow>1</ReflexThrow>
+            <StrongThrow>4</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <HP>22</HP>
+            <AC>12</AC>
+            <AttackSkill>4</AttackSkill>
+            <WillThrow>5</WillThrow>
+            <ReflexThrow>1</ReflexThrow>
+            <StrongThrow>4</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <Attacks>
+            <Attack>
+              <ToHit>5</ToHit>
+              <Damage>K4+2</Damage>
+            </Attack>
+          </Attacks>
+          <Gold>0</Gold>
+        </Character>
+      </Members>
+    </CharacterGroup>
+  </Groups>
   <Items>
     <Item>
       <Name>Kij+1</Name>
@@ -19,6 +136,32 @@
       <MaxDexterityBonus>5</MaxDexterityBonus>
       <Panalty>1</Panalty>
     </Item>
+    <Item>
+      <Name>Miecz długi</Name>
+      <Specials />
+      <Cost>20</Cost>
+      <Damage>K8</Damage>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Miecz dwuręczny</Name>
+      <Specials />
+      <Cost>30</Cost>
+      <Damage>2K6</Damage>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Średnia Tarcza</Name>
+      <Specials />
+      <Cost>10</Cost>
+      <AC>3</AC>
+      <MaxDexterityBonus>4</MaxDexterityBonus>
+      <Panalty>2</Panalty>
+    </Item>
   </Items>
-  <CurrentTime>1300-05-13T00:00:00</CurrentTime>
+  <CurrentTime>1300-05-13T01:00:00</CurrentTime>
 </Helper>
