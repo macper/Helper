@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Helper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Groups />
+  <Items>
+    <Item>
+      <Name>Kij+1</Name>
+      <Specials>Odporność na mróz + 20 %</Specials>
+      <Cost>50</Cost>
+      <Damage>K6+1</Damage>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Zbroja ćwiekowana</Name>
+      <Specials />
+      <Cost>150</Cost>
+      <AC>4</AC>
+      <MaxDexterityBonus>5</MaxDexterityBonus>
+      <Panalty>1</Panalty>
+    </Item>
+  </Items>
+  <CurrentTime>1300-05-13T00:00:00</CurrentTime>
+</Helper>
