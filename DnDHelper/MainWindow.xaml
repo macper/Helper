@@ -1,0 +1,34 @@
+﻿<Window x:Class="DnDHelper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="D&amp;D Helper" Height="741" Width="1090" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid>
+        <DockPanel HorizontalAlignment="Stretch" Margin="12,12,35,17" Name="dockPanel1" VerticalAlignment="Stretch" UseLayoutRounding="True" LastChildFill="False">
+            <TabControl Name="tabControl1" UseLayoutRounding="False" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Width="1000">
+                <TabItem Header="Ogólne" Name="tabItem1">
+                    <Grid x:Name="myGrid" Width="914">
+                        <Label HorizontalAlignment="Right" Margin="0,25,685,0" Name="label1" VerticalAlignment="Top" FontFamily="Arial" FontSize="24" Width="210.587" Content="2010-01-01 12:00" />
+                        <Button Content="Dzień" Height="23" HorizontalAlignment="Left" Margin="235,31.252,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
+                        <Button Content="Godzina +" Height="23" HorizontalAlignment="Left" Margin="316,31.252,0,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click" />
+                        <Button Content="Godzina -" Height="23" HorizontalAlignment="Left" Margin="397,31.252,0,0" Name="button3" VerticalAlignment="Top" Width="75" Click="button3_Click" />
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Walka" />
+                <TabItem Header="Obiekty">
+                    <Grid x:Name="GroupGrid" Width="1000">
+                        <Label Content="Grupy:" Height="28" Name="label2" Margin="6,-1,716,614.723" />
+                        <ListBox Height="245" Name="listBox1" Margin="6,20.362,742.5,376.361" DataContext="{Binding}" />
+                        <TextBox Height="23" Name="textBox1" Margin="6,271.362,823.5,347.362" />
+                        <Button Content="Nowa" Height="23" Name="button4" Width="75" Margin="166,271.362,717,347.362" Click="button4_Click" />
+                        <Button Content="Usuń" Height="23" Name="button5" Width="75" Margin="187,300.362,0,0" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" Click="button5_Click" />
+                        <Button Content="Zapisz" Height="23" HorizontalAlignment="Left" Margin="187,329.362,0,0" Name="button6" VerticalAlignment="Top" Width="75" Click="button6_Click" />
+                        <Label Content="Członkowie:" Height="28" Margin="269,-1,453,614.723" Name="label3" />
+                        <ListBox Height="245" HorizontalAlignment="Left" Margin="263,20,0,0" Name="listBox2" VerticalAlignment="Top" Width="222" />
+                        <WrapPanel Height="616" HorizontalAlignment="Left" Margin="492,19.723,0,0" Name="wrapPanel1" VerticalAlignment="Top" Width="491" />
+                        <Button Content="Nowy" Height="23" HorizontalAlignment="Left" Margin="410,269.5,0,0" Name="button7" VerticalAlignment="Top" Width="75" Click="button7_Click_1" />
+                    </Grid>   
+                </TabItem>
+            </TabControl>
+        </DockPanel>
+    </Grid>
+</Window>

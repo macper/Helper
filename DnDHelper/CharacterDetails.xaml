@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="DnDHelper.CharacterDetails"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="491" Height="616">
+    <Grid>
+        <Label Content="Nazwa:" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="64,14,0,0" Name="tbName" VerticalAlignment="Top" Width="162" />
+        <Label Content="Rasa:" Height="28" HorizontalAlignment="Left" Margin="232,14,0,0" Name="label2" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,16,12,0" Name="tbRace" VerticalAlignment="Top" Width="162" />
+        <Label Content="Klasa:" Height="28" HorizontalAlignment="Left" Margin="12,41,0,0" Name="label3" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,43,265,0" Name="tbClass" VerticalAlignment="Top" Width="162" />
+        <Label Content="Poziom:" Height="28" HorizontalAlignment="Left" Margin="231,39,0,0" Name="label4" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="419,41,0,0" Name="tbLevel" VerticalAlignment="Top" Width="60" />
+        <Label Content="Siła:" Height="28" HorizontalAlignment="Left" Margin="12,70,0,0" Name="label5" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,75,328,0" Name="tbStrength" VerticalAlignment="Top" Width="59" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,75,263,0" Name="tbStrengthOryg" VerticalAlignment="Top" Width="59" />
+        <Label Content="Zreczność:" Height="28" HorizontalAlignment="Left" Margin="12,99,0,0" Name="label6" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,104,328,0" Name="tbDexterity" VerticalAlignment="Top" Width="59" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,104,263,0" Name="tbDexterityOryg" VerticalAlignment="Top" Width="59" />
+        <Label Content="Kondycja:" Height="28" HorizontalAlignment="Left" Margin="11,130,0,0" Name="label7" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="104,133,0,0" Name="tbConstitution" VerticalAlignment="Top" Width="59" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,133,263,0" Name="tbConstitutionOryg" VerticalAlignment="Top" Width="59" />
+        <Label Content="Mądrosc:" Height="28" HorizontalAlignment="Left" Margin="12,160,0,0" Name="label8" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,162,328,0" Name="tbWisdom" VerticalAlignment="Top" Width="59" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,162,263,0" Name="tbWisdomOryg" VerticalAlignment="Top" Width="59" />
+        <Label Content="Inteligencja:" Height="28" HorizontalAlignment="Left" Margin="12,189,0,0" Name="label9" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="104,191,0,0" Name="tbInteligence" VerticalAlignment="Top" Width="59" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,191,263,0" Name="tbInteligenceOryg" VerticalAlignment="Top" Width="59" />
+        <Label Content="Rzut na Wole:" Height="28" HorizontalAlignment="Left" Margin="12,218,0,0" Name="label10" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="104,220,0,0" Name="tbWill" VerticalAlignment="Top" Width="59" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,220,263,0" Name="tbWillOryg" VerticalAlignment="Top" Width="59" />
+        <Label Content="Rzut na refleks:" Height="28" HorizontalAlignment="Left" Margin="12,247,0,0" Name="label11" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="104,249,0,0" Name="tbReflex" VerticalAlignment="Top" Width="59" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,249,263,0" Name="tbReflexOryg" VerticalAlignment="Top" Width="59" />
+        <Label Content="Rzut na wytrwałość" Height="28" HorizontalAlignment="Left" Margin="12,276,0,0" Name="label12" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="104,278,0,0" Name="tbWytrwalosc" VerticalAlignment="Top" Width="59" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,278,263,0" Name="tbWytrwaloscOryg" VerticalAlignment="Top" Width="59" />
+        <Label Content="KP:" Height="28" HorizontalAlignment="Left" Margin="235,73,0,0" Name="label13" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="355,78,0,0" Name="tbAC" VerticalAlignment="Top" Width="59" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,78,12,0" Name="tbACOryg" VerticalAlignment="Top" Width="59" />
+        <Label Content="P.Ż" Height="28" HorizontalAlignment="Left" Margin="235,102,0,0" Name="label14" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="355,104,0,0" Name="tbHP" VerticalAlignment="Top" Width="59" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,104,12,0" Name="tbHPOryg" VerticalAlignment="Top" Width="59" />
+        <Label Content="Atak (bazowy):" Height="28" HorizontalAlignment="Left" Margin="235,128,0,0" Name="label15" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="355,130,0,0" Name="tbAttack" VerticalAlignment="Top" Width="59" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,130,12,0" Name="tbAttackOryg" VerticalAlignment="Top" Width="59" />
+        <Label Content="Ataki:" Height="28" HorizontalAlignment="Left" Margin="328,162,0,0" Name="label16" VerticalAlignment="Top" />
+        <ListBox Height="112" HorizontalAlignment="Left" Margin="235,189,0,0" Name="listBox1" VerticalAlignment="Top" Width="244" />
+        <TabControl Height="250" HorizontalAlignment="Left" Margin="15,310,0,0" Name="tabControl1" VerticalAlignment="Top" Width="464">
+            <TabItem Header="Efekty" Name="tabItem1">
+                <Grid />
+            </TabItem>
+            <TabItem Header="Ekwipunek">
+                <Grid>
+                    <Label Content="Prawa ręka:" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="label17" VerticalAlignment="Top" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="80,6,0,0" Name="cbRightHand" VerticalAlignment="Top" Width="161" />
+                    <Label Content="Lewa ręka:" Height="28" HorizontalAlignment="Left" Margin="6,35,0,0" Name="label18" VerticalAlignment="Top" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="80,35,0,0" Name="cbLeftHand" VerticalAlignment="Top" Width="161" />
+                    <Label Content="Tors:" Height="28" HorizontalAlignment="Left" Margin="6,64,0,0" Name="label19" VerticalAlignment="Top" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="80,64,0,0" Name="cbTorso" VerticalAlignment="Top" Width="161" />
+                    <Button Content="Przedmioty" Height="23" HorizontalAlignment="Left" Margin="317,6,0,0" Name="button1" VerticalAlignment="Top" Width="131" Click="button1_Click" />
+                    <Button Content="Odswież" Height="23" HorizontalAlignment="Left" Margin="319,35,0,0" Name="button2" VerticalAlignment="Top" Width="128" Click="button2_Click" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Czary" >
+                <Grid />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>
