@@ -20,6 +20,7 @@ namespace DnDHelper
     public partial class MainWindow : Window
     {
         protected Helper _helper;
+        protected Battle _battle;
 
         public MainWindow()
         {
@@ -160,6 +161,32 @@ namespace DnDHelper
                 chG.Members.Remove((Character)listBox2.SelectedItem);
             }
             listBox2.Items.Refresh();
+        }
+
+        private void NewBattle_Click(object sender, RoutedEventArgs e)
+        {
+            _battle = new Battle();
+            ContentWalka.DataContext = _battle;
+            listView1.ItemsSource = _battle.Members;
+        }
+
+        private void BattleBegin_Click(object sender, RoutedEventArgs e)
+        {
+            _battle.Start();
+        }
+
+        private void AddMember_Click(object sender, RoutedEventArgs e)
+        {
+            BattleMemberAddWindow wnd = new BattleMemberAddWindow(_helper, _battle);
+            if (wnd.ShowDialog() == true)
+            {
+                listView1.Items.Refresh();
+            }
+        }
+
+        private void RemoveMember_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

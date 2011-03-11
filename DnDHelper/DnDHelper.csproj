@@ -55,10 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Battle.cs" />
+    <Compile Include="BattleMemberAddWindow.xaml.cs">
+      <DependentUpon>BattleMemberAddWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SpellEditWindow.xaml.cs">
       <DependentUpon>SpellEditWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="AttackEditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BattleMemberAddWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

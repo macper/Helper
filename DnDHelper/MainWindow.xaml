@@ -14,8 +14,40 @@
                     </Grid>
                 </TabItem>
                 <TabItem Header="Walka">
-                    <Grid>
-                    <my:CharacterDetails Height="616" x:Name="characterDetails2" Width="491" Margin="493,6,6,19.04" />
+                    <Grid ShowGridLines="True" x:Name="ContentWalka">
+                        <Grid.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Nowa bitwa" Click="NewBattle_Click" />
+                                <MenuItem Header="Rozpocznij" Click="BattleBegin_Click" />
+                            </ContextMenu>
+                        </Grid.ContextMenu>
+                        <my:CharacterDetails Height="616" x:Name="characterDetails2" Width="491" Margin="493,6,6,19.04" />
+                        <Label Content="Tura:" Height="35" HorizontalAlignment="Left" Margin="6,6,0,0" Name="label4" VerticalAlignment="Top" FontSize="18" Width="48.933" />
+                        <Label Content="{Binding Path=Turn}" Height="28" HorizontalAlignment="Left" Margin="60.933,6,0,0" Name="label5" VerticalAlignment="Top" FontSize="18" />
+                        <ListView Height="330" HorizontalAlignment="Left" Margin="6,40,0,0" Name="listView1" VerticalAlignment="Top" Width="481" FontSize="14" FontFamily="Arial" Foreground="#FF101010">
+                            <ListView.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem Header="Dodaj uczestnika" Click="AddMember_Click" />
+                                    <MenuItem Header="Usuń uczestnika" Click="RemoveMember_Click" />
+                                </ContextMenu>
+                            </ListView.ContextMenu>
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Nazwa" Width="150" DisplayMemberBinding="{Binding Path=Name}" />
+                                    <GridViewColumn Header="Szczegóły" Width="320" DisplayMemberBinding="{Binding Path=Description}" />
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                        <Label Content="Logi" Height="28" HorizontalAlignment="Left" Margin="6,363,0,0" Name="label6" VerticalAlignment="Top" />
+                        <ListView Height="237.643" HorizontalAlignment="Left" Margin="6,384.357,0,0" Name="listView2" VerticalAlignment="Top" Width="481">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Tura" Width="30" />
+                                    <GridViewColumn Header="Wiadomość" Width="440" />
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                        <Button Content="Next" Height="23" HorizontalAlignment="Left" Margin="412,13.953,0,0" Name="button9" VerticalAlignment="Top" Width="75" />
                     </Grid>
                 </TabItem>
                 <TabItem Header="Obiekty">

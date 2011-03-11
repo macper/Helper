@@ -7,7 +7,7 @@ using System.ComponentModel;
 namespace DnDHelper
 {
     [Serializable]
-    public class Character
+    public class Character : IComparable
     {
         public string Name { get; set; }
         public string Race { get; set; }
@@ -37,6 +37,29 @@ namespace DnDHelper
             KnownSpells = new List<SpellDefinition>();
             Spells = new List<Spell>();
         }
+
+        public string Description
+        {
+            get
+            {
+                string strEffects ="";
+                foreach (Effect ef in Effects)
+                {
+                    strEffects += string.Format("{0} ({1}) ", ef.Name, ef.Duration.ToString());
+                }
+
+                return string.Format("PŻ:{0} KP:{1} Rzt:{2}/{3}/{4} Efekty: {5}", CurrentStats.HP.ToString(), CurrentStats.AC.ToString(), CurrentStats.ReflexThrow.ToString(), CurrentStats.WillThrow.ToString(), CurrentStats.StrongThrow.ToString(), strEffects);
+            }
+        }
+
+        #region IComparable Members
+
+        public int CompareTo(object obj)
+        {
+            return Initiative - ((Character)obj).Initiative;
+        }
+
+        #endregion
     }
 
     [Serializable]

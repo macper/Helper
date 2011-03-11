@@ -35,7 +35,7 @@
             <ReflexThrow>4</ReflexThrow>
             <StrongThrow>7</StrongThrow>
           </OriginalStats>
-          <Initiative>0</Initiative>
+          <Initiative>20</Initiative>
           <Attacks>
             <Attack>
               <ToHit>3</ToHit>
@@ -258,7 +258,7 @@
             <ReflexThrow>1</ReflexThrow>
             <StrongThrow>4</StrongThrow>
           </OriginalStats>
-          <Initiative>0</Initiative>
+          <Initiative>11</Initiative>
           <Attacks>
             <Attack>
               <ToHit>5</ToHit>
