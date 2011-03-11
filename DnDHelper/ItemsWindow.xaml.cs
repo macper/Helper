@@ -109,12 +109,12 @@ namespace DnDHelper
         {
             if (_local != null)
             {
-                if (listView1.SelectedItem == null)
+                Item item = null;
+                if (listView1.SelectedItem != null)
                 {
-                    MessageBox.Show("Wybierz jakiś przedmiot");
-                    return;
+                    item = (Item)listView1.SelectedItem;
                 }
-                Item item = (Item)listView1.SelectedItem;
+                
                 DialogResult = true;
                 if (_local == 1)
                 {

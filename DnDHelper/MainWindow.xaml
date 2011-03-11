@@ -13,7 +13,11 @@
                         <Button Content="Godzina -" Height="23" HorizontalAlignment="Left" Margin="397,31.252,0,0" Name="button3" VerticalAlignment="Top" Width="75" Click="button3_Click" />
                     </Grid>
                 </TabItem>
-                <TabItem Header="Walka" />
+                <TabItem Header="Walka">
+                    <Grid>
+                    <my:CharacterDetails Height="616" x:Name="characterDetails2" Width="491" Margin="493,6,6,19.04" />
+                    </Grid>
+                </TabItem>
                 <TabItem Header="Obiekty">
                     <Grid x:Name="GroupGrid" Width="1000">
                         <Label Content="Grupy:" Height="28" Name="label2" Margin="6,-1,716,614.723" />

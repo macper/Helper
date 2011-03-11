@@ -43,23 +43,14 @@
             </Attack>
           </Attacks>
           <RightHand>
-            <Name>Miecz długi</Name>
+            <Name>Miecz dwuręczny</Name>
             <Specials />
-            <Cost>20</Cost>
-            <Damage>K8</Damage>
+            <Cost>30</Cost>
+            <Damage>2K6</Damage>
             <AC>0</AC>
             <MaxDexterityBonus>0</MaxDexterityBonus>
             <Panalty>0</Panalty>
           </RightHand>
-          <LeftHand>
-            <Name>Kij+1</Name>
-            <Specials>Odporność na mróz + 20 %</Specials>
-            <Cost>50</Cost>
-            <Damage>K6+1</Damage>
-            <AC>0</AC>
-            <MaxDexterityBonus>0</MaxDexterityBonus>
-            <Panalty>0</Panalty>
-          </LeftHand>
           <Torso>
             <Name>Zbroja ćwiekowana</Name>
             <Specials />
@@ -70,18 +61,60 @@
           </Torso>
           <Items>Sakiewka</Items>
           <Gold>0</Gold>
-          <Effects>
-            <Effect>
-              <Name>Choroba sieroca</Name>
-              <Description>-3 KP</Description>
-              <Duration xsi:nil="true" />
-            </Effect>
-            <Effect>
-              <Name>Szał</Name>
-              <Description />
-              <Duration>10</Duration>
-            </Effect>
-          </Effects>
+          <Effects />
+          <KnownSpells />
+          <Spells />
+          <AvailableCastings />
+        </Character>
+        <Character>
+          <Name>Ignatus</Name>
+          <Race>Człowiek</Race>
+          <Level>4</Level>
+          <Class>Mag</Class>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>12</Dexterity>
+            <Constitution>11</Constitution>
+            <Wisdom>15</Wisdom>
+            <Inteligence>17</Inteligence>
+            <HP>16</HP>
+            <AC>12</AC>
+            <AttackSkill>2</AttackSkill>
+            <WillThrow>4</WillThrow>
+            <ReflexThrow>1</ReflexThrow>
+            <StrongThrow>1</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>12</Dexterity>
+            <Constitution>11</Constitution>
+            <Wisdom>15</Wisdom>
+            <Inteligence>17</Inteligence>
+            <HP>16</HP>
+            <AC>12</AC>
+            <AttackSkill>2</AttackSkill>
+            <WillThrow>4</WillThrow>
+            <ReflexThrow>1</ReflexThrow>
+            <StrongThrow>1</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <Attacks>
+            <Attack>
+              <ToHit>3</ToHit>
+              <Damage>K6+1</Damage>
+            </Attack>
+          </Attacks>
+          <RightHand>
+            <Name>Kij+1</Name>
+            <Specials>Odporność na mróz + 20 %</Specials>
+            <Cost>50</Cost>
+            <Damage>K6+1</Damage>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </RightHand>
+          <Gold>0</Gold>
+          <Effects />
           <KnownSpells>
             <SpellDefinition>
               <Name>Magiczny pocisk</Name>
@@ -97,9 +130,98 @@
               <Level>1</Level>
               <Description>+4 KP na 10 rund</Description>
             </SpellDefinition>
+            <SpellDefinition>
+              <Name>Niewidzialność</Name>
+              <Type>Mage</Type>
+              <Shool>Iluzje</Shool>
+              <Level>2</Level>
+              <Description>na 10 rund</Description>
+            </SpellDefinition>
           </KnownSpells>
-          <Spells />
-          <AvailableCastings />
+          <Spells>
+            <Spell>
+              <Definition>
+                <Name>Magiczny pocisk</Name>
+                <Type>Mage</Type>
+                <Shool>Wywoływanie</Shool>
+                <Level>1</Level>
+                <Description>K4+1 nigdy za dużo</Description>
+              </Definition>
+              <IsCasted>false</IsCasted>
+            </Spell>
+            <Spell>
+              <Definition>
+                <Name>Tarcza</Name>
+                <Type>Mage</Type>
+                <Shool>Iluzje</Shool>
+                <Level>1</Level>
+                <Description>+4 KP na 10 rund</Description>
+              </Definition>
+              <IsCasted>false</IsCasted>
+            </Spell>
+            <Spell>
+              <Definition>
+                <Name>Magiczny pocisk</Name>
+                <Type>Mage</Type>
+                <Shool>Wywoływanie</Shool>
+                <Level>1</Level>
+                <Description>K4+1 nigdy za dużo</Description>
+              </Definition>
+              <IsCasted>false</IsCasted>
+            </Spell>
+            <Spell>
+              <Definition>
+                <Name>Magiczny pocisk</Name>
+                <Type>Mage</Type>
+                <Shool>Wywoływanie</Shool>
+                <Level>1</Level>
+                <Description>K4+1 nigdy za dużo</Description>
+              </Definition>
+              <IsCasted>false</IsCasted>
+            </Spell>
+            <Spell>
+              <Definition>
+                <Name>Niewidzialność</Name>
+                <Type>Mage</Type>
+                <Shool>Iluzje</Shool>
+                <Level>2</Level>
+                <Description>na 10 rund</Description>
+              </Definition>
+              <IsCasted>false</IsCasted>
+            </Spell>
+            <Spell>
+              <Definition>
+                <Name>Niewidzialność</Name>
+                <Type>Mage</Type>
+                <Shool>Iluzje</Shool>
+                <Level>2</Level>
+                <Description>na 10 rund</Description>
+              </Definition>
+              <IsCasted>false</IsCasted>
+            </Spell>
+            <Spell>
+              <Definition>
+                <Name>Magiczny pocisk</Name>
+                <Type>Mage</Type>
+                <Shool>Wywoływanie</Shool>
+                <Level>1</Level>
+                <Description>K4+1 nigdy za dużo</Description>
+              </Definition>
+              <IsCasted>false</IsCasted>
+            </Spell>
+          </Spells>
+          <AvailableCastings>
+            <SpellCasting>
+              <Level>1</Level>
+              <Count>3</Count>
+              <Type>Mage</Type>
+            </SpellCasting>
+            <SpellCasting>
+              <Level>2</Level>
+              <Count>3</Count>
+              <Type>Mage</Type>
+            </SpellCasting>
+          </AvailableCastings>
         </Character>
       </Members>
     </CharacterGroup>
@@ -212,6 +334,20 @@
       <Level>1</Level>
       <Description>+4 KP na 10 rund</Description>
     </SpellDefinition>
+    <SpellDefinition>
+      <Name>Leczenie lekkich ran</Name>
+      <Type>Cleric</Type>
+      <Shool>Dobro, Leczenie</Shool>
+      <Level>1</Level>
+      <Description>Leczy K8+2 P.Z</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Niewidzialność</Name>
+      <Type>Mage</Type>
+      <Shool>Iluzje</Shool>
+      <Level>2</Level>
+      <Description>na 10 rund</Description>
+    </SpellDefinition>
   </Spells>
-  <CurrentTime>1300-05-13T01:00:00</CurrentTime>
+  <CurrentTime>1300-05-15T19:00:00</CurrentTime>
 </Helper>

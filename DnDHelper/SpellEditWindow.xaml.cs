@@ -20,7 +20,7 @@ namespace DnDHelper
     {
         Helper _helper;
         Character _character;
-        static readonly string [] Types = new string [] { "Mage", "Cleric", "Druid", "Bard" };
+        public static readonly string [] Types = new string [] { "Mage", "Cleric", "Druid", "Bard" };
 
         public SpellEditWindow(Helper helper, Character character)
         {

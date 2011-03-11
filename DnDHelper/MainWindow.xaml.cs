@@ -130,6 +130,7 @@ namespace DnDHelper
             Character newCharacter = new Character() { Name = "Nowa postać" };
             chGr.Members.Add(newCharacter);
             characterDetails1.Init(_helper, newCharacter);
+            listBox2.Items.Refresh();
         }
 
         private void listBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)

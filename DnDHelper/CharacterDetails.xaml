@@ -90,7 +90,22 @@
                 <Grid>
                     <TabControl Height="231" HorizontalAlignment="Left" Margin="3,0,0,0" Name="tabControl2" VerticalAlignment="Top" Width="450">
                         <TabItem Header="Zapamiętane" Name="tabItem2">
-                            <Grid />
+                            <Grid>
+                                <ListView Height="187" HorizontalAlignment="Left" Margin="6,6,0,0" Name="listView6" VerticalAlignment="Top" Width="314">
+                                    <ListView.ContextMenu>
+                                        <ContextMenu>
+                                            <MenuItem Header="Rzucony" Click="CzarRzuc_Click" />
+                                        </ContextMenu>
+                                    </ListView.ContextMenu>
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridViewColumn Header="Poziom" Width="45" DisplayMemberBinding="{Binding Path=Definition.Level}" />
+                                            <GridViewColumn Header="Nazwa" Width="200" DisplayMemberBinding="{Binding Path=Definition.Name}" />
+                                            <GridViewColumn Header="Typ" Width="60" DisplayMemberBinding="{Binding Path=Definition.Type}" />
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                            </Grid>
                         </TabItem>
                         <TabItem Header="Znane">
                             <Grid>
@@ -109,6 +124,53 @@
                                 </ListView>
                                 <TextBox Height="166" HorizontalAlignment="Right" Margin="0,28,6,0" Name="textBox5" VerticalAlignment="Top" Width="248" />
                                 <Label Content="Opis" Height="28" HorizontalAlignment="Left" Margin="289,6,0,0" Name="label21" VerticalAlignment="Top" />
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Czary na poziom">
+                            <Grid x:Name="CzaryPoziomContent">
+                                <ListView Height="193" HorizontalAlignment="Left" Margin="6,6,0,0" Name="listView4" VerticalAlignment="Top" Width="167" SelectionChanged="listView4_SelectionChanged">
+                                    <ListView.ContextMenu>
+                                        <ContextMenu>
+                                            <MenuItem Header="Dodaj" Click="DodajCzarPoziom_Click" />
+                                            <MenuItem Header="Edytuj" />
+                                            <MenuItem Header="Usuń" Click="UsunCzarPoziom_Click" />
+                                        </ContextMenu>
+                                    </ListView.ContextMenu>
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridViewColumn Header="Typ" Width="60" DisplayMemberBinding="{Binding Path=Type}" />
+                                            <GridViewColumn Header="Poziom" Width="60" DisplayMemberBinding="{Binding Path=Level}"/>
+                                            <GridViewColumn Header="Liczba" Width="40" DisplayMemberBinding="{Binding Path=Count}"/>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                                <Label Content="Typ:" Height="28" HorizontalAlignment="Left" Margin="179,6,0,0" Name="label22" VerticalAlignment="Top" />
+                                <ComboBox SelectedItem="{Binding Path=Type}" Height="23" HorizontalAlignment="Left" Margin="242,11,0,0" Name="comboBox1" VerticalAlignment="Top" Width="120" />
+                                <Label Content="Poziom:" Height="28" HorizontalAlignment="Left" Margin="179,35,0,0" Name="label23" VerticalAlignment="Top" />
+                                <TextBox Text="{Binding Path=Level}" Height="23" HorizontalAlignment="Left" Margin="242,37,0,0" Name="textBox6" VerticalAlignment="Top" Width="120" />
+                                <Label Content="Liczba:" Height="28" HorizontalAlignment="Left" Margin="179,64,0,0" Name="label24" VerticalAlignment="Top" />
+                                <TextBox Text="{Binding Path=Count}" Height="23" HorizontalAlignment="Right" Margin="0,66,78,0" Name="textBox7" VerticalAlignment="Top" Width="120" />
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Przygotowane">
+                            <Grid>
+                                <ComboBox Height="23" HorizontalAlignment="Left" Margin="6,6,0,0" Name="comboBox2" VerticalAlignment="Top" Width="227" SelectionChanged="comboBox2_SelectionChanged" />
+                                <ListView Height="158" HorizontalAlignment="Left" Margin="6,35,0,0" Name="listView5" VerticalAlignment="Top" Width="227">
+                                    <ListView.ContextMenu>
+                                        <ContextMenu>
+                                            <MenuItem Header="Usuń" Click="UsunCzarPrzygotowany_Click" />
+                                        </ContextMenu>
+                                    </ListView.ContextMenu>
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridViewColumn Header="Nazwa" Width="180" DisplayMemberBinding="{Binding Path=Definition.Name}">
+                                            </GridViewColumn>
+                                            <GridViewColumn Header="Rzuc." Width="50" DisplayMemberBinding="{Binding Path=IsCasted}"/>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                                <ComboBox DisplayMemberPath="{Binding Path=Name}" Height="23" HorizontalAlignment="Left" Margin="266,6,0,0" Name="comboBox3" VerticalAlignment="Top" Width="168" />
+                                <Button Content="Dodaj" Height="23" HorizontalAlignment="Left" Margin="359,35,0,0" Name="button6" VerticalAlignment="Top" Width="75" Click="button6_Click" />
                             </Grid>
                         </TabItem>
                     </TabControl>
@@ -130,5 +192,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button Content="Odpoczynek" Height="23" HorizontalAlignment="Left" Margin="404,581,0,0" Name="button7" VerticalAlignment="Top" Width="75" Click="button7_Click" />
+        <Button Content="Przywrócenie" Height="23" HorizontalAlignment="Left" Margin="317,581,0,0" Name="button8" VerticalAlignment="Top" Width="75" Click="button8_Click" />
     </Grid>
 </UserControl>
