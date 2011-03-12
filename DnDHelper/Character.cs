@@ -27,6 +27,9 @@ namespace DnDHelper
         public List<SpellDefinition> KnownSpells { get; set; }
         public List<Spell> Spells { get; set; }
         public List<SpellCasting> AvailableCastings { get; set; }
+        // Chujowy hack bo już mnie kurwica bierze z tym WPF-em pierdolonym
+        public bool IsActiveMember { get; set; }
+        public bool IsAlive { get { return CurrentStats.HP > 0; } }
 
         public Character()
         {
@@ -48,7 +51,7 @@ namespace DnDHelper
                     strEffects += string.Format("{0} ({1}) ", ef.Name, ef.Duration.ToString());
                 }
 
-                return string.Format("PŻ:{0} KP:{1} Rzt:{2}/{3}/{4} Efekty: {5}", CurrentStats.HP.ToString(), CurrentStats.AC.ToString(), CurrentStats.ReflexThrow.ToString(), CurrentStats.WillThrow.ToString(), CurrentStats.StrongThrow.ToString(), strEffects);
+                return string.Format("PŻ:{0} Efekty: {1}", CurrentStats.HP.ToString(), strEffects);
             }
         }
 
@@ -56,7 +59,7 @@ namespace DnDHelper
 
         public int CompareTo(object obj)
         {
-            return Initiative - ((Character)obj).Initiative;
+            return ((Character)obj).Initiative - Initiative;
         }
 
         #endregion
@@ -129,6 +132,11 @@ namespace DnDHelper
     {
         public int ToHit { get; set; }
         public string Damage { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("+{0} {1}", ToHit.ToString(), Damage.ToString());
+        }
     }
 
     [Serializable]

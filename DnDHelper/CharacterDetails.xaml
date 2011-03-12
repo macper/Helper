@@ -13,7 +13,7 @@
         <Label Content="Klasa:" Height="28" HorizontalAlignment="Left" Margin="12,41,0,0" Name="label3" VerticalAlignment="Top" />
         <TextBox Text="{Binding Path=Class}" Height="23" HorizontalAlignment="Right" Margin="0,43,265,0" Name="tbClass" VerticalAlignment="Top" Width="162" />
         <Label Content="Poziom:" Height="28" HorizontalAlignment="Left" Margin="231,39,0,0" Name="label4" VerticalAlignment="Top" />
-        <TextBox Text="{Binding Path=Level}" Height="23" HorizontalAlignment="Left" Margin="419,41,0,0" Name="tbLevel" VerticalAlignment="Top" Width="60" />
+        <TextBox Text="{Binding Path=Level}" Height="23" HorizontalAlignment="Left" Margin="317,41,0,0" Name="tbLevel" VerticalAlignment="Top" Width="60" />
         <Label Content="Siła:" Height="28" HorizontalAlignment="Left" Margin="12,70,0,0" Name="label5" VerticalAlignment="Top" />
         <TextBox Text="{Binding Path=CurrentStats.Strength}" Height="23" HorizontalAlignment="Right" Margin="0,75,328,0" Name="tbStrength" VerticalAlignment="Top" Width="59" />
         <TextBox Text="{Binding Path=OriginalStats.Strength}" Height="23" HorizontalAlignment="Right" Margin="0,75,263,0" Name="tbStrengthOryg" VerticalAlignment="Top" Width="59" />
@@ -194,5 +194,7 @@
         </ListView>
         <Button Content="Odpoczynek" Height="23" HorizontalAlignment="Left" Margin="404,581,0,0" Name="button7" VerticalAlignment="Top" Width="75" Click="button7_Click" />
         <Button Content="Przywrócenie" Height="23" HorizontalAlignment="Left" Margin="317,581,0,0" Name="button8" VerticalAlignment="Top" Width="75" Click="button8_Click" />
+        <Label Content="Inic." Height="28" HorizontalAlignment="Left" Margin="383,38,0,0" Name="label25" VerticalAlignment="Top" />
+        <TextBox Text="{Binding Path=Initiative}" Height="23" HorizontalAlignment="Left" Margin="420,41,0,0" Name="textBox8" VerticalAlignment="Top" Width="60" />
     </Grid>
 </UserControl>

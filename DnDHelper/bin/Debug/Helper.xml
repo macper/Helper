@@ -15,7 +15,7 @@
             <Constitution>10</Constitution>
             <Wisdom>10</Wisdom>
             <Inteligence>10</Inteligence>
-            <HP>34</HP>
+            <HP>24</HP>
             <AC>14</AC>
             <AttackSkill>6</AttackSkill>
             <WillThrow>2</WillThrow>
@@ -35,7 +35,7 @@
             <ReflexThrow>4</ReflexThrow>
             <StrongThrow>7</StrongThrow>
           </OriginalStats>
-          <Initiative>20</Initiative>
+          <Initiative>12</Initiative>
           <Attacks>
             <Attack>
               <ToHit>3</ToHit>
@@ -65,6 +65,7 @@
           <KnownSpells />
           <Spells />
           <AvailableCastings />
+          <IsActiveMember>false</IsActiveMember>
         </Character>
         <Character>
           <Name>Ignatus</Name>
@@ -97,7 +98,7 @@
             <ReflexThrow>1</ReflexThrow>
             <StrongThrow>1</StrongThrow>
           </OriginalStats>
-          <Initiative>0</Initiative>
+          <Initiative>14</Initiative>
           <Attacks>
             <Attack>
               <ToHit>3</ToHit>
@@ -147,7 +148,7 @@
                 <Level>1</Level>
                 <Description>K4+1 nigdy za dużo</Description>
               </Definition>
-              <IsCasted>false</IsCasted>
+              <IsCasted>true</IsCasted>
             </Spell>
             <Spell>
               <Definition>
@@ -167,7 +168,7 @@
                 <Level>1</Level>
                 <Description>K4+1 nigdy za dużo</Description>
               </Definition>
-              <IsCasted>false</IsCasted>
+              <IsCasted>true</IsCasted>
             </Spell>
             <Spell>
               <Definition>
@@ -177,7 +178,7 @@
                 <Level>1</Level>
                 <Description>K4+1 nigdy za dużo</Description>
               </Definition>
-              <IsCasted>false</IsCasted>
+              <IsCasted>true</IsCasted>
             </Spell>
             <Spell>
               <Definition>
@@ -207,7 +208,7 @@
                 <Level>1</Level>
                 <Description>K4+1 nigdy za dużo</Description>
               </Definition>
-              <IsCasted>false</IsCasted>
+              <IsCasted>true</IsCasted>
             </Spell>
           </Spells>
           <AvailableCastings>
@@ -222,6 +223,7 @@
               <Type>Mage</Type>
             </SpellCasting>
           </AvailableCastings>
+          <IsActiveMember>false</IsActiveMember>
         </Character>
       </Members>
     </CharacterGroup>
@@ -234,7 +236,7 @@
           <Level>3</Level>
           <CurrentStats>
             <Strength>10</Strength>
-            <Dexterity>10</Dexterity>
+            <Dexterity>11</Dexterity>
             <Constitution>10</Constitution>
             <Wisdom>10</Wisdom>
             <Inteligence>10</Inteligence>
@@ -247,7 +249,7 @@
           </CurrentStats>
           <OriginalStats>
             <Strength>10</Strength>
-            <Dexterity>10</Dexterity>
+            <Dexterity>11</Dexterity>
             <Constitution>10</Constitution>
             <Wisdom>10</Wisdom>
             <Inteligence>10</Inteligence>
@@ -258,7 +260,7 @@
             <ReflexThrow>1</ReflexThrow>
             <StrongThrow>4</StrongThrow>
           </OriginalStats>
-          <Initiative>11</Initiative>
+          <Initiative>55</Initiative>
           <Attacks>
             <Attack>
               <ToHit>5</ToHit>
@@ -270,6 +272,7 @@
           <KnownSpells />
           <Spells />
           <AvailableCastings />
+          <IsActiveMember>false</IsActiveMember>
         </Character>
       </Members>
     </CharacterGroup>
@@ -349,5 +352,5 @@
       <Description>na 10 rund</Description>
     </SpellDefinition>
   </Spells>
-  <CurrentTime>1300-05-15T19:00:00</CurrentTime>
+  <CurrentTime>1300-05-15T22:00:00</CurrentTime>
 </Helper>

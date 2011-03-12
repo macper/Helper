@@ -23,12 +23,44 @@
                         </Grid.ContextMenu>
                         <my:CharacterDetails Height="616" x:Name="characterDetails2" Width="491" Margin="493,6,6,19.04" />
                         <Label Content="Tura:" Height="35" HorizontalAlignment="Left" Margin="6,6,0,0" Name="label4" VerticalAlignment="Top" FontSize="18" Width="48.933" />
-                        <Label Content="{Binding Path=Turn}" Height="28" HorizontalAlignment="Left" Margin="60.933,6,0,0" Name="label5" VerticalAlignment="Top" FontSize="18" />
-                        <ListView Height="330" HorizontalAlignment="Left" Margin="6,40,0,0" Name="listView1" VerticalAlignment="Top" Width="481" FontSize="14" FontFamily="Arial" Foreground="#FF101010">
+                        <Label Content="{Binding Path=Turn, Mode=TwoWay}" Height="28" HorizontalAlignment="Left" Margin="60.933,6,0,0" Name="label5" VerticalAlignment="Top" FontSize="18" />
+                        <ListView Height="323" HorizontalAlignment="Left" Margin="6,47,0,0" Name="listView1" VerticalAlignment="Top" Width="481" FontSize="14" FontFamily="Arial" Foreground="#FF101010" SelectionChanged="listView1_SelectionChanged">
+                            <ListView.Resources>
+                                <ControlTemplate x:Key="ItemSelected" TargetType="{x:Type ListViewItem}">
+                                    <StackPanel Background="LightBlue">
+                                        <GridViewRowPresenter Content="{TemplateBinding Content}" Columns="{TemplateBinding GridView.ColumnCollection}" />
+                                    </StackPanel>
+                                </ControlTemplate>
+                                <ControlTemplate x:Key="ItemNotSelected" TargetType="{x:Type ListViewItem}">
+                                    <StackPanel Background="White">
+                                        <GridViewRowPresenter Content="{TemplateBinding Content}" Columns="{TemplateBinding GridView.ColumnCollection}" />
+                                    </StackPanel>
+                                </ControlTemplate>
+                                <ControlTemplate x:Key="ItemKilled" TargetType="{x:Type ListViewItem}">
+                                    <StackPanel Background="DarkSalmon">
+                                        <GridViewRowPresenter Content="{TemplateBinding Content}" Columns="{TemplateBinding GridView.ColumnCollection}" />
+                                    </StackPanel>
+                                </ControlTemplate>
+                            </ListView.Resources>
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="{x:Type ListViewItem}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=IsActiveMember}" Value="True">
+                                            <Setter Property="Template" Value="{StaticResource ItemSelected}" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Path=IsAlive}" Value="False">
+                                            <Setter Property="Template" Value="{StaticResource ItemKilled}" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </ListView.ItemContainerStyle>
                             <ListView.ContextMenu>
                                 <ContextMenu>
                                     <MenuItem Header="Dodaj uczestnika" Click="AddMember_Click" />
                                     <MenuItem Header="Usuń uczestnika" Click="RemoveMember_Click" />
+                                    <MenuItem Header="Odswież" Click="RefreshMembers_Click" />
+                                    <MenuItem Header="Atakuj" Click="AttackMember_Click" />
+                                    <MenuItem Header="Zadaj obrażenia" Click="DoDamage_Click" />
                                 </ContextMenu>
                             </ListView.ContextMenu>
                             <ListView.View>
@@ -47,7 +79,9 @@
                                 </GridView>
                             </ListView.View>
                         </ListView>
-                        <Button Content="Next" Height="23" HorizontalAlignment="Left" Margin="412,13.953,0,0" Name="button9" VerticalAlignment="Top" Width="75" />
+                        <Button Content="Next" Height="23" HorizontalAlignment="Left" Margin="412,13.953,0,0" Name="button9" VerticalAlignment="Top" Width="75" Click="button9_Click" />
+                        <Button Content="Nowa" Height="23" HorizontalAlignment="Left" Margin="331,13.142,0,0" Name="button10" VerticalAlignment="Top" Width="75" Click="button10_Click" />
+                    
                     </Grid>
                 </TabItem>
                 <TabItem Header="Obiekty">
