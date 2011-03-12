@@ -24,7 +24,7 @@
                         <my:CharacterDetails Height="616" x:Name="characterDetails2" Width="491" Margin="493,6,6,19.04" />
                         <Label Content="Tura:" Height="35" HorizontalAlignment="Left" Margin="6,6,0,0" Name="label4" VerticalAlignment="Top" FontSize="18" Width="48.933" />
                         <Label Content="{Binding Path=Turn, Mode=TwoWay}" Height="28" HorizontalAlignment="Left" Margin="60.933,6,0,0" Name="label5" VerticalAlignment="Top" FontSize="18" />
-                        <ListView Height="323" HorizontalAlignment="Left" Margin="6,47,0,0" Name="listView1" VerticalAlignment="Top" Width="481" FontSize="14" FontFamily="Arial" Foreground="#FF101010" SelectionChanged="listView1_SelectionChanged">
+                        <ListView Height="323" HorizontalAlignment="Left" Margin="6,47,0,0" Name="listView1" VerticalAlignment="Top" Width="481" FontSize="14" FontFamily="Arial" Foreground="#FF101010" SelectionChanged="listView1_SelectionChanged" KeyDown="listView1_KeyDown">
                             <ListView.Resources>
                                 <ControlTemplate x:Key="ItemSelected" TargetType="{x:Type ListViewItem}">
                                     <StackPanel Background="LightBlue">

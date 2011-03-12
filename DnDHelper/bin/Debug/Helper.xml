@@ -15,6 +15,7 @@
             <Constitution>10</Constitution>
             <Wisdom>10</Wisdom>
             <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
             <HP>24</HP>
             <AC>14</AC>
             <AttackSkill>6</AttackSkill>
@@ -28,6 +29,7 @@
             <Constitution>10</Constitution>
             <Wisdom>10</Wisdom>
             <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
             <HP>34</HP>
             <AC>14</AC>
             <AttackSkill>6</AttackSkill>
@@ -35,11 +37,11 @@
             <ReflexThrow>4</ReflexThrow>
             <StrongThrow>7</StrongThrow>
           </OriginalStats>
-          <Initiative>12</Initiative>
+          <Initiative>1</Initiative>
           <Attacks>
             <Attack>
-              <ToHit>3</ToHit>
-              <Damage>2K6+5</Damage>
+              <ToHit>9</ToHit>
+              <Damage>2K6+3</Damage>
             </Attack>
           </Attacks>
           <RightHand>
@@ -60,11 +62,28 @@
             <Panalty>1</Panalty>
           </Torso>
           <Items>Sakiewka</Items>
-          <Gold>0</Gold>
+          <Gold>300</Gold>
           <Effects />
           <KnownSpells />
           <Spells />
           <AvailableCastings />
+          <Skills>
+            <Skill>
+              <Name>Przeszukiwanie</Name>
+              <BaseValue>3</BaseValue>
+              <BonusValue>1</BonusValue>
+            </Skill>
+            <Skill>
+              <Name>Ciche poruszanie się</Name>
+              <BaseValue>1</BaseValue>
+              <BonusValue>-1</BonusValue>
+            </Skill>
+            <Skill>
+              <Name>Wspinaczka</Name>
+              <BaseValue>5</BaseValue>
+              <BonusValue>1</BonusValue>
+            </Skill>
+          </Skills>
           <IsActiveMember>false</IsActiveMember>
         </Character>
         <Character>
@@ -78,6 +97,7 @@
             <Constitution>11</Constitution>
             <Wisdom>15</Wisdom>
             <Inteligence>17</Inteligence>
+            <Charisma>0</Charisma>
             <HP>16</HP>
             <AC>12</AC>
             <AttackSkill>2</AttackSkill>
@@ -91,6 +111,7 @@
             <Constitution>11</Constitution>
             <Wisdom>15</Wisdom>
             <Inteligence>17</Inteligence>
+            <Charisma>0</Charisma>
             <HP>16</HP>
             <AC>12</AC>
             <AttackSkill>2</AttackSkill>
@@ -98,7 +119,7 @@
             <ReflexThrow>1</ReflexThrow>
             <StrongThrow>1</StrongThrow>
           </OriginalStats>
-          <Initiative>14</Initiative>
+          <Initiative>2</Initiative>
           <Attacks>
             <Attack>
               <ToHit>3</ToHit>
@@ -223,7 +244,19 @@
               <Type>Mage</Type>
             </SpellCasting>
           </AvailableCastings>
-          <IsActiveMember>false</IsActiveMember>
+          <Skills>
+            <Skill>
+              <Name>Koncentracja</Name>
+              <BaseValue>7</BaseValue>
+              <BonusValue>3</BonusValue>
+            </Skill>
+            <Skill>
+              <Name>Dyplomacja</Name>
+              <BaseValue>2</BaseValue>
+              <BonusValue>0</BonusValue>
+            </Skill>
+          </Skills>
+          <IsActiveMember>true</IsActiveMember>
         </Character>
       </Members>
     </CharacterGroup>
@@ -240,6 +273,7 @@
             <Constitution>10</Constitution>
             <Wisdom>10</Wisdom>
             <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
             <HP>22</HP>
             <AC>12</AC>
             <AttackSkill>4</AttackSkill>
@@ -253,6 +287,7 @@
             <Constitution>10</Constitution>
             <Wisdom>10</Wisdom>
             <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
             <HP>22</HP>
             <AC>12</AC>
             <AttackSkill>4</AttackSkill>
@@ -272,6 +307,180 @@
           <KnownSpells />
           <Spells />
           <AvailableCastings />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Wojak</Name>
+          <Race>Człowiek</Race>
+          <Level>6</Level>
+          <Class>Wojownik</Class>
+          <CurrentStats>
+            <Strength>14</Strength>
+            <Dexterity>15</Dexterity>
+            <Constitution>13</Constitution>
+            <Wisdom>9</Wisdom>
+            <Inteligence>11</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>41</HP>
+            <AC>0</AC>
+            <AttackSkill>6\1</AttackSkill>
+            <WillThrow>2</WillThrow>
+            <ReflexThrow>4</ReflexThrow>
+            <StrongThrow>6</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>14</Strength>
+            <Dexterity>15</Dexterity>
+            <Constitution>13</Constitution>
+            <Wisdom>9</Wisdom>
+            <Inteligence>11</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>41</HP>
+            <AC>0</AC>
+            <AttackSkill>6\1</AttackSkill>
+            <WillThrow>2</WillThrow>
+            <ReflexThrow>4</ReflexThrow>
+            <StrongThrow>6</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <Attacks>
+            <Attack>
+              <ToHit>8</ToHit>
+              <Damage>K8+2</Damage>
+            </Attack>
+            <Attack>
+              <ToHit>3</ToHit>
+              <Damage>K8+2</Damage>
+            </Attack>
+          </Attacks>
+          <RightHand>
+            <Name>Miecz długi</Name>
+            <Specials />
+            <Cost>20</Cost>
+            <Damage>K8</Damage>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </RightHand>
+          <LeftHand>
+            <Name>Średnia Tarcza</Name>
+            <Specials />
+            <Cost>10</Cost>
+            <AC>3</AC>
+            <MaxDexterityBonus>4</MaxDexterityBonus>
+            <Panalty>2</Panalty>
+          </LeftHand>
+          <Torso>
+            <Name>Kolczuga</Name>
+            <Specials />
+            <Cost>200</Cost>
+            <AC>6</AC>
+            <MaxDexterityBonus>2</MaxDexterityBonus>
+            <Panalty>3</Panalty>
+          </Torso>
+          <Gold>0</Gold>
+          <Effects />
+          <KnownSpells />
+          <Spells />
+          <AvailableCastings />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+      </Members>
+    </CharacterGroup>
+    <CharacterGroup>
+      <GroupName>Glaviken</GroupName>
+      <Members>
+        <Character>
+          <Name>Travani</Name>
+          <Race>Elf</Race>
+          <Level>10</Level>
+          <Class>Mag</Class>
+          <CurrentStats>
+            <Strength>11</Strength>
+            <Dexterity>17</Dexterity>
+            <Constitution>8</Constitution>
+            <Wisdom>17</Wisdom>
+            <Inteligence>19</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>25</HP>
+            <AC>17</AC>
+            <AttackSkill>5</AttackSkill>
+            <WillThrow>12</WillThrow>
+            <ReflexThrow>8</ReflexThrow>
+            <StrongThrow>4</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>11</Strength>
+            <Dexterity>17</Dexterity>
+            <Constitution>8</Constitution>
+            <Wisdom>17</Wisdom>
+            <Inteligence>19</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>25</HP>
+            <AC>17</AC>
+            <AttackSkill>5</AttackSkill>
+            <WillThrow>12</WillThrow>
+            <ReflexThrow>8</ReflexThrow>
+            <StrongThrow>4</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <Attacks>
+            <Attack>
+              <ToHit>5</ToHit>
+              <Damage>K6+4</Damage>
+            </Attack>
+          </Attacks>
+          <RightHand>
+            <Name>Kij +4, Obrońca</Name>
+            <Specials>Zwiększa KP + 2</Specials>
+            <Cost>2000</Cost>
+            <Damage>K6+4</Damage>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </RightHand>
+          <Torso>
+            <Name>Szata Arcymaga, pomniejsza</Name>
+            <Specials>+2 do rzutów obronnych, odporność na obrażenia fizyczne /5</Specials>
+            <Cost>1000</Cost>
+            <AC>2</AC>
+            <MaxDexterityBonus>100</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </Torso>
+          <Gold>0</Gold>
+          <Effects />
+          <KnownSpells />
+          <Spells />
+          <AvailableCastings>
+            <SpellCasting>
+              <Level>1</Level>
+              <Count>5</Count>
+              <Type>Mage</Type>
+            </SpellCasting>
+            <SpellCasting>
+              <Level>2</Level>
+              <Count>5</Count>
+              <Type>Mage</Type>
+            </SpellCasting>
+            <SpellCasting>
+              <Level>3</Level>
+              <Count>4</Count>
+              <Type>Mage</Type>
+            </SpellCasting>
+            <SpellCasting>
+              <Level>4</Level>
+              <Count>4</Count>
+              <Type>Mage</Type>
+            </SpellCasting>
+            <SpellCasting>
+              <Level>5</Level>
+              <Count>3</Count>
+              <Type>Mage</Type>
+            </SpellCasting>
+          </AvailableCastings>
+          <Skills />
           <IsActiveMember>false</IsActiveMember>
         </Character>
       </Members>
@@ -321,6 +530,31 @@
       <MaxDexterityBonus>4</MaxDexterityBonus>
       <Panalty>2</Panalty>
     </Item>
+    <Item>
+      <Name>Kolczuga</Name>
+      <Specials />
+      <Cost>200</Cost>
+      <AC>6</AC>
+      <MaxDexterityBonus>2</MaxDexterityBonus>
+      <Panalty>3</Panalty>
+    </Item>
+    <Item>
+      <Name>Kij +4, Obrońca</Name>
+      <Specials>Zwiększa KP + 2</Specials>
+      <Cost>2000</Cost>
+      <Damage>K6+4</Damage>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Szata Arcymaga, pomniejsza</Name>
+      <Specials>+2 do rzutów obronnych, odporność na obrażenia fizyczne /5</Specials>
+      <Cost>1000</Cost>
+      <AC>2</AC>
+      <MaxDexterityBonus>100</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
   </Items>
   <Spells>
     <SpellDefinition>
@@ -352,5 +586,5 @@
       <Description>na 10 rund</Description>
     </SpellDefinition>
   </Spells>
-  <CurrentTime>1300-05-15T22:00:00</CurrentTime>
+  <CurrentTime>1300-05-14T23:00:00</CurrentTime>
 </Helper>

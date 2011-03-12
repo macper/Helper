@@ -50,6 +50,11 @@ namespace DnDHelper
                 Character character = (Character)listBox2.SelectedItem;
                 try
                 {
+                    if (_battle.Members.Contains(character))
+                    {
+                        MessageBox.Show("Ten członek został już dodany:)");
+                        return;
+                    }
                     character.IsActiveMember = false;
                     character.Initiative = int.Parse(textBox1.Text) + Rules.GetStandardBonus(character.CurrentStats.Dexterity);
                     _battle.AddMember(character);
@@ -78,6 +83,27 @@ namespace DnDHelper
                         ms.Position = 0;
                         Character newCharacter = (Character)xmlSerializer.Deserialize(ms);
                         newCharacter.Name = textBox2.Text;
+                        if (_battle.Members.FirstOrDefault(f => f.Name == newCharacter.Name) != null)
+                        {
+                            int counter = 2;
+                            IEnumerable<Character> lst = _battle.Members.Where(f => f.Name.Contains('_'));
+                            if (lst.Count() > 0)
+                            {
+                                string[] parts = lst.OrderByDescending(o => o.Name).ToArray().First().Name.Split('_');
+                                if (parts.Length > 1)
+                                {
+                                    try
+                                    {
+                                        int number = int.Parse(parts[1]);
+                                        counter = ++number;
+                                    }
+                                    catch
+                                    {
+                                    }
+                                }
+                            }
+                            newCharacter.Name += "_" + counter.ToString();
+                        }
                         newCharacter.Initiative = int.Parse(textBox1.Text) + Rules.GetStandardBonus(newCharacter.CurrentStats.Dexterity);
                         _battle.AddMember(newCharacter);
                         listBox3.Items.Refresh();

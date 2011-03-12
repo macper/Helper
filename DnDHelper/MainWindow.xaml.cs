@@ -261,6 +261,14 @@ namespace DnDHelper
             }
         }
 
+        private void listView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.N)
+            {
+                button9_Click(sender, e);
+            }
+        }
+
             
 
     }

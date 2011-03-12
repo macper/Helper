@@ -27,6 +27,8 @@ namespace DnDHelper
         public List<SpellDefinition> KnownSpells { get; set; }
         public List<Spell> Spells { get; set; }
         public List<SpellCasting> AvailableCastings { get; set; }
+        public List<Skill> Skills { get; set; }
+
         // Chujowy hack bo już mnie kurwica bierze z tym WPF-em pierdolonym
         public bool IsActiveMember { get; set; }
         public bool IsAlive { get { return CurrentStats.HP > 0; } }
@@ -39,6 +41,7 @@ namespace DnDHelper
             Effects = new List<Effect>();
             KnownSpells = new List<SpellDefinition>();
             Spells = new List<Spell>();
+            Skills = new List<Skill>();
         }
 
         public string Description
@@ -73,6 +76,7 @@ namespace DnDHelper
         public int Constitution { get; set; }
         public int Wisdom { get; set; }
         public int Inteligence { get; set; }
+        public int Charisma { get; set; }
         public int HP { get; set; }
         public int AC { get; set; }
         public string AttackSkill { get; set; }
