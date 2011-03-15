@@ -6,7 +6,10 @@
         <ListView Height="281" HorizontalAlignment="Left" Margin="12,32,0,0" Name="listView1" VerticalAlignment="Top" Width="240" SelectionChanged="listView1_SelectionChanged">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Nazwa" Width="120" DisplayMemberBinding="{Binding Path=Name}" />
+                    <GridViewColumn Width="120" DisplayMemberBinding="{Binding Path=Name}">
+                        <GridViewColumnHeader Content="Nazwa" Tag="Name">  
+                            </GridViewColumnHeader>
+                    </GridViewColumn>
                     <GridViewColumn Header="Typ" Width="50" DisplayMemberBinding="{Binding Path=Type}" />
                     <GridViewColumn Header="Poziom" Width="50" DisplayMemberBinding="{Binding Path=Level}" />
                 </GridView>
@@ -15,26 +18,24 @@
         <Label Content="Typ:" Height="28" HorizontalAlignment="Left" Margin="12,6,0,0" Name="label1" VerticalAlignment="Top" />
         <ComboBox Height="23" HorizontalAlignment="Left" Margin="50,6,0,0" Name="comboBox1" VerticalAlignment="Top" Width="82" />
         <Label Content="Poz." Height="28" HorizontalAlignment="Left" Margin="132,6,0,0" Name="label2" VerticalAlignment="Top" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="168,6,0,0" Name="textBox1" VerticalAlignment="Top" Width="84" />
         <Button Content="Nowy" Height="23" HorizontalAlignment="Left" Margin="177,320,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
         <Button Content="Usuń" Height="23" HorizontalAlignment="Left" Margin="96,320,0,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click" />
-        <Label Content="Nazwa:" Height="28" HorizontalAlignment="Left" Margin="281,31,0,0" Name="label3" VerticalAlignment="Top" />
-        <TextBox Text="{Binding Path=Name}" Height="23" HorizontalAlignment="Left" Margin="333,33,0,0" Name="textBox2" VerticalAlignment="Top" Width="120" />
-        <Label Content="Poziom:" Height="28" HorizontalAlignment="Left" Margin="281,60,0,0" Name="label4" VerticalAlignment="Top" />
-        <TextBox Text="{Binding Path=Level}" Height="23" HorizontalAlignment="Left" Margin="333,60,0,0" Name="textBox3" VerticalAlignment="Top" Width="79" />
-        <Label Content="Typ:" Height="28" HorizontalAlignment="Left" Margin="281,89,0,0" Name="label5" VerticalAlignment="Top" />
-        <ComboBox SelectedItem="{Binding Path=Type}" Height="23" HorizontalAlignment="Left" Margin="333,89,0,0" Name="comboBox2" VerticalAlignment="Top" Width="120" />
-        <Label Content="Szkoła:" Height="28" HorizontalAlignment="Left" Margin="281,116,0,0" Name="label6" VerticalAlignment="Top" />
-        <TextBox Text="{Binding Path=Shool}" Height="23" HorizontalAlignment="Left" Margin="333,118,0,0" Name="textBox4" VerticalAlignment="Top" Width="120" />
-        <Label Content="Opis:" Height="28" HorizontalAlignment="Left" Margin="281,145,0,0" Name="label7" VerticalAlignment="Top" />
-        <TextBox Text="{Binding Path=Description}" Height="166" HorizontalAlignment="Left" Margin="333,147,0,0" Name="textBox5" VerticalAlignment="Top" Width="148" />
-        <Button Content="Zapisz" Height="23" HorizontalAlignment="Left" Margin="414,320,0,0" Name="button3" VerticalAlignment="Top" Width="67" Click="button3_Click" />
+        <Label Content="Nazwa:" Height="28" HorizontalAlignment="Left" Margin="257,31,0,0" Name="label3" VerticalAlignment="Top" />
+        <TextBox Text="{Binding Path=Name, Mode=OneWay}" Height="23" HorizontalAlignment="Left" Margin="309,33,0,0" Name="textBox2" VerticalAlignment="Top" Width="120" TabIndex="1" />
+        <Label Content="Poziom:" Height="28" HorizontalAlignment="Left" Margin="257,60,0,0" Name="label4" VerticalAlignment="Top" />
+        <TextBox Text="{Binding Path=Level, Mode=OneWay}" Height="23" HorizontalAlignment="Left" Margin="309,60,0,0" Name="textBox3" VerticalAlignment="Top" Width="79" TabIndex="2" />
+        <Label Content="Typy:" Height="28" HorizontalAlignment="Left" Margin="257,89,0,0" Name="label5" VerticalAlignment="Top" />
+        <Label Content="Szkoła:" Height="28" HorizontalAlignment="Left" Margin="257,116,0,0" Name="label6" VerticalAlignment="Top" />
+        <TextBox Text="{Binding Path=Shool, Mode=OneWay}" Height="23" HorizontalAlignment="Left" Margin="309,118,0,0" Name="textBox4" VerticalAlignment="Top" Width="120" TabIndex="4" />
+        <Label Content="Opis:" Height="28" HorizontalAlignment="Left" Margin="531,129,0,0" Name="label7" VerticalAlignment="Top" />
+        <TextBox Text="{Binding Path=Description, Mode=OneWay}" Height="166" HorizontalAlignment="Left" Margin="258,147,0,0" Name="textBox5" VerticalAlignment="Top" Width="308" AcceptsReturn="True" AcceptsTab="True" TextWrapping="Wrap" TabIndex="5" />
+        <Button Content="Zapisz" Height="23" HorizontalAlignment="Left" Margin="499,320,0,0" Name="button3" VerticalAlignment="Top" Width="67" Click="button3_Click" />
         <Button Content="Wybierz" Height="23" HorizontalAlignment="Right" Margin="0,320,33,0" Name="button4" VerticalAlignment="Top" Width="63" Click="button4_Click" />
         <ListView Height="281" HorizontalAlignment="Left" Margin="572,31,0,0" Name="listView2" VerticalAlignment="Top" Width="240">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Nazwa" Width="120" />
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Type}" Header="Typ" Width="50" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Nazwa" Width="100" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Types}" Header="Typ" Width="80" />
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Level}" Header="Poziom" Width="50" />
                 </GridView>
             </ListView.View>
@@ -42,5 +43,8 @@
         <Button Content="Usuń" Height="23" HorizontalAlignment="Left" Margin="668,320,0,0" Name="button5" VerticalAlignment="Top" Width="75" Click="button5_Click" />
         <Button Content="OK" Height="23" HorizontalAlignment="Left" Margin="738,350,0,0" Name="button6" VerticalAlignment="Top" Width="75" Click="button6_Click" />
         <Label Content="Wybrane:" Height="27" HorizontalAlignment="Left" Margin="572,6,0,0" Name="label8" VerticalAlignment="Top" />
+        <TextBox Text="{Binding Path=Types, Mode=OneWay}"  Height="23" HorizontalAlignment="Left" Margin="309,89,0,0" Name="textBox6" VerticalAlignment="Top" Width="257" TabIndex="3" />
+        <Button Content="Filtruj" Height="23" HorizontalAlignment="Left" Margin="258,6,0,0" Name="button7" VerticalAlignment="Top" Width="75" Click="button7_Click" />
+        <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,6,593,0" Name="comboBox2" VerticalAlignment="Top" Width="84"></ComboBox>
     </Grid>
 </Window>

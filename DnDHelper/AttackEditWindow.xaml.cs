@@ -26,6 +26,7 @@ namespace DnDHelper
             _attack = at;
             textBox1.Text = at.ToHit.ToString();
             textBox2.Text = at.Damage;
+            textBox3.Text = at.Name;
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -34,6 +35,7 @@ namespace DnDHelper
             {
                 _attack.ToHit = int.Parse(textBox1.Text);
                 _attack.Damage = textBox2.Text;
+                _attack.Name = textBox3.Text;
             }
             catch
             {

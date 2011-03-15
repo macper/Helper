@@ -26,6 +26,8 @@ namespace DnDHelper
             InitializeComponent();
             _character = character;
             _addGold = added;
+            textBox1.Focus();
+            textBox1.SelectAll();
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)

@@ -1,7 +1,7 @@
 ﻿<Window x:Class="DnDHelper.AttackWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="AttackWindow" Height="244" Width="509">
+        Title="AttackWindow" Height="244" Width="509" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label Content="Atakujący:" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" />
         <Label Content="Ofiara:" Height="28" HorizontalAlignment="Left" Margin="12,29,0,0" Name="label2" VerticalAlignment="Top" />

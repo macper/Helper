@@ -56,7 +56,7 @@ namespace DnDHelper
                         return;
                     }
                     character.IsActiveMember = false;
-                    character.Initiative = int.Parse(textBox1.Text) + Rules.GetStandardBonus(character.CurrentStats.Dexterity);
+                    character.Initiative = int.Parse(textBox1.Text) + character.BaseInitiative;
                     _battle.AddMember(character);
                     listBox3.Items.Refresh();
                     
@@ -104,7 +104,7 @@ namespace DnDHelper
                             }
                             newCharacter.Name += "_" + counter.ToString();
                         }
-                        newCharacter.Initiative = int.Parse(textBox1.Text) + Rules.GetStandardBonus(newCharacter.CurrentStats.Dexterity);
+                        newCharacter.Initiative = int.Parse(textBox1.Text) + newCharacter.BaseInitiative;
                         _battle.AddMember(newCharacter);
                         listBox3.Items.Refresh();
                     }

@@ -11,61 +11,89 @@
           <Class>Barbarzyńca</Class>
           <CurrentStats>
             <Strength>17</Strength>
-            <Dexterity>10</Dexterity>
-            <Constitution>10</Constitution>
-            <Wisdom>10</Wisdom>
-            <Inteligence>10</Inteligence>
-            <Charisma>0</Charisma>
-            <HP>24</HP>
-            <AC>14</AC>
-            <AttackSkill>6</AttackSkill>
-            <WillThrow>2</WillThrow>
-            <ReflexThrow>4</ReflexThrow>
-            <StrongThrow>7</StrongThrow>
-          </CurrentStats>
-          <OriginalStats>
-            <Strength>17</Strength>
-            <Dexterity>10</Dexterity>
-            <Constitution>10</Constitution>
-            <Wisdom>10</Wisdom>
+            <Dexterity>13</Dexterity>
+            <Constitution>13</Constitution>
+            <Wisdom>9</Wisdom>
             <Inteligence>10</Inteligence>
             <Charisma>0</Charisma>
             <HP>34</HP>
-            <AC>14</AC>
-            <AttackSkill>6</AttackSkill>
-            <WillThrow>2</WillThrow>
+            <AC>15</AC>
+            <AttackSkill>3</AttackSkill>
+            <WillThrow>0</WillThrow>
             <ReflexThrow>4</ReflexThrow>
-            <StrongThrow>7</StrongThrow>
+            <StrongThrow>6</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>17</Strength>
+            <Dexterity>13</Dexterity>
+            <Constitution>13</Constitution>
+            <Wisdom>9</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>34</HP>
+            <AC>15</AC>
+            <AttackSkill>3</AttackSkill>
+            <WillThrow>0</WillThrow>
+            <ReflexThrow>4</ReflexThrow>
+            <StrongThrow>6</StrongThrow>
           </OriginalStats>
-          <Initiative>1</Initiative>
+          <Initiative>8</Initiative>
+          <BaseInitiative>1</BaseInitiative>
           <Attacks>
             <Attack>
-              <ToHit>9</ToHit>
-              <Damage>2K6+3</Damage>
+              <Name>Głowny atak</Name>
+              <ToHit>8</ToHit>
+              <Damage>2K6+5</Damage>
             </Attack>
           </Attacks>
           <RightHand>
-            <Name>Miecz dwuręczny</Name>
-            <Specials />
-            <Cost>30</Cost>
-            <Damage>2K6</Damage>
+            <Name>Miecz dwuręczny +1 Dar drowów</Name>
+            <Specials>+3 przeciwko Elfom</Specials>
+            <Cost>2000</Cost>
+            <Damage>2K6+1</Damage>
             <AC>0</AC>
             <MaxDexterityBonus>0</MaxDexterityBonus>
             <Panalty>0</Panalty>
           </RightHand>
           <Torso>
-            <Name>Zbroja ćwiekowana</Name>
+            <Name>Skórzana ćwiekowana</Name>
             <Specials />
-            <Cost>150</Cost>
-            <AC>4</AC>
+            <Cost>250</Cost>
+            <AC>3</AC>
             <MaxDexterityBonus>5</MaxDexterityBonus>
             <Panalty>1</Panalty>
           </Torso>
-          <Items>Sakiewka</Items>
-          <Gold>300</Gold>
-          <Effects />
-          <KnownSpells />
-          <Spells />
+          <Items>Sakiewka
+Buty refleksu + 2
+Strzałka paraliżu x4
+Pierścień ochrony +1
+Jedzenie x3
+</Items>
+          <Gold>2249</Gold>
+          <Effects>
+            <Effect>
+              <Name>Szał</Name>
+              <Description>+4 SI, +4 KON</Description>
+              <Duration>10</Duration>
+            </Effect>
+            <Effect>
+              <Name>Jakiś efekt</Name>
+              <Description>Coś se tam trwa</Description>
+              <Duration>5</Duration>
+            </Effect>
+            <Effect>
+              <Name>Niewrażliwość na magię</Name>
+              <Description>50 %</Description>
+              <Duration xsi:nil="true" />
+            </Effect>
+            <Effect>
+              <Name>Paraliż</Name>
+              <Description />
+              <Duration>5</Duration>
+            </Effect>
+          </Effects>
+          <KnownSpellsS />
+          <SpellsS />
           <AvailableCastings />
           <Skills>
             <Skill>
@@ -83,8 +111,13 @@
               <BaseValue>5</BaseValue>
               <BonusValue>1</BonusValue>
             </Skill>
+            <Skill>
+              <Name>Nasłuchiwanie</Name>
+              <BaseValue>2</BaseValue>
+              <BonusValue>-1</BonusValue>
+            </Skill>
           </Skills>
-          <IsActiveMember>false</IsActiveMember>
+          <IsActiveMember>true</IsActiveMember>
         </Character>
         <Character>
           <Name>Ignatus</Name>
@@ -98,7 +131,7 @@
             <Wisdom>15</Wisdom>
             <Inteligence>17</Inteligence>
             <Charisma>0</Charisma>
-            <HP>16</HP>
+            <HP>10</HP>
             <AC>12</AC>
             <AttackSkill>2</AttackSkill>
             <WillThrow>4</WillThrow>
@@ -112,14 +145,15 @@
             <Wisdom>15</Wisdom>
             <Inteligence>17</Inteligence>
             <Charisma>0</Charisma>
-            <HP>16</HP>
+            <HP>10</HP>
             <AC>12</AC>
             <AttackSkill>2</AttackSkill>
-            <WillThrow>4</WillThrow>
-            <ReflexThrow>1</ReflexThrow>
+            <WillThrow>6</WillThrow>
+            <ReflexThrow>2</ReflexThrow>
             <StrongThrow>1</StrongThrow>
           </OriginalStats>
-          <Initiative>2</Initiative>
+          <Initiative>7</Initiative>
+          <BaseInitiative>1</BaseInitiative>
           <Attacks>
             <Attack>
               <ToHit>3</ToHit>
@@ -135,107 +169,56 @@
             <MaxDexterityBonus>0</MaxDexterityBonus>
             <Panalty>0</Panalty>
           </RightHand>
-          <Gold>0</Gold>
-          <Effects />
-          <KnownSpells>
-            <SpellDefinition>
-              <Name>Magiczny pocisk</Name>
-              <Type>Mage</Type>
-              <Shool>Wywoływanie</Shool>
-              <Level>1</Level>
-              <Description>K4+1 nigdy za dużo</Description>
-            </SpellDefinition>
-            <SpellDefinition>
+          <Gold>15</Gold>
+          <Effects>
+            <Effect>
+              <Name />
+              <Description />
+              <Duration xsi:nil="true" />
+            </Effect>
+          </Effects>
+          <KnownSpellsS>
+            <string>Tarcza</string>
+            <string>Niewidzialność</string>
+            <string>Magiczny pocisk</string>
+            <string>Płomienie Agannazara</string>
+            <string>Identyfikacja</string>
+            <string>Wykrycie nieumarłych</string>
+          </KnownSpellsS>
+          <SpellsS>
+            <SpellS>
               <Name>Tarcza</Name>
-              <Type>Mage</Type>
-              <Shool>Iluzje</Shool>
-              <Level>1</Level>
-              <Description>+4 KP na 10 rund</Description>
-            </SpellDefinition>
-            <SpellDefinition>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Magiczny pocisk</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Identyfikacja</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Magiczny pocisk</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
               <Name>Niewidzialność</Name>
-              <Type>Mage</Type>
-              <Shool>Iluzje</Shool>
-              <Level>2</Level>
-              <Description>na 10 rund</Description>
-            </SpellDefinition>
-          </KnownSpells>
-          <Spells>
-            <Spell>
-              <Definition>
-                <Name>Magiczny pocisk</Name>
-                <Type>Mage</Type>
-                <Shool>Wywoływanie</Shool>
-                <Level>1</Level>
-                <Description>K4+1 nigdy za dużo</Description>
-              </Definition>
-              <IsCasted>true</IsCasted>
-            </Spell>
-            <Spell>
-              <Definition>
-                <Name>Tarcza</Name>
-                <Type>Mage</Type>
-                <Shool>Iluzje</Shool>
-                <Level>1</Level>
-                <Description>+4 KP na 10 rund</Description>
-              </Definition>
               <IsCasted>false</IsCasted>
-            </Spell>
-            <Spell>
-              <Definition>
-                <Name>Magiczny pocisk</Name>
-                <Type>Mage</Type>
-                <Shool>Wywoływanie</Shool>
-                <Level>1</Level>
-                <Description>K4+1 nigdy za dużo</Description>
-              </Definition>
-              <IsCasted>true</IsCasted>
-            </Spell>
-            <Spell>
-              <Definition>
-                <Name>Magiczny pocisk</Name>
-                <Type>Mage</Type>
-                <Shool>Wywoływanie</Shool>
-                <Level>1</Level>
-                <Description>K4+1 nigdy za dużo</Description>
-              </Definition>
-              <IsCasted>true</IsCasted>
-            </Spell>
-            <Spell>
-              <Definition>
-                <Name>Niewidzialność</Name>
-                <Type>Mage</Type>
-                <Shool>Iluzje</Shool>
-                <Level>2</Level>
-                <Description>na 10 rund</Description>
-              </Definition>
+            </SpellS>
+            <SpellS>
+              <Name>Płomienie Agannazara</Name>
               <IsCasted>false</IsCasted>
-            </Spell>
-            <Spell>
-              <Definition>
-                <Name>Niewidzialność</Name>
-                <Type>Mage</Type>
-                <Shool>Iluzje</Shool>
-                <Level>2</Level>
-                <Description>na 10 rund</Description>
-              </Definition>
-              <IsCasted>false</IsCasted>
-            </Spell>
-            <Spell>
-              <Definition>
-                <Name>Magiczny pocisk</Name>
-                <Type>Mage</Type>
-                <Shool>Wywoływanie</Shool>
-                <Level>1</Level>
-                <Description>K4+1 nigdy za dużo</Description>
-              </Definition>
+            </SpellS>
+            <SpellS>
+              <Name>Płomienie Agannazara</Name>
               <IsCasted>true</IsCasted>
-            </Spell>
-          </Spells>
+            </SpellS>
+          </SpellsS>
           <AvailableCastings>
             <SpellCasting>
               <Level>1</Level>
-              <Count>3</Count>
+              <Count>4</Count>
               <Type>Mage</Type>
             </SpellCasting>
             <SpellCasting>
@@ -256,7 +239,171 @@
               <BonusValue>0</BonusValue>
             </Skill>
           </Skills>
-          <IsActiveMember>true</IsActiveMember>
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Ajantis</Name>
+          <Race>Człowiek</Race>
+          <Level>3</Level>
+          <Class>Wojownik</Class>
+          <CurrentStats>
+            <Strength>17</Strength>
+            <Dexterity>11</Dexterity>
+            <Constitution>13</Constitution>
+            <Wisdom>14</Wisdom>
+            <Inteligence>11</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>-8</HP>
+            <AC>20</AC>
+            <AttackSkill>3</AttackSkill>
+            <WillThrow>3</WillThrow>
+            <ReflexThrow>1</ReflexThrow>
+            <StrongThrow>4</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>17</Strength>
+            <Dexterity>11</Dexterity>
+            <Constitution>13</Constitution>
+            <Wisdom>14</Wisdom>
+            <Inteligence>11</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>23</HP>
+            <AC>20</AC>
+            <AttackSkill>3</AttackSkill>
+            <WillThrow>3</WillThrow>
+            <ReflexThrow>1</ReflexThrow>
+            <StrongThrow>4</StrongThrow>
+          </OriginalStats>
+          <Initiative>2</Initiative>
+          <BaseInitiative>0</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <ToHit>6</ToHit>
+              <Damage>K8+4</Damage>
+            </Attack>
+          </Attacks>
+          <RightHand>
+            <Name>Miecz długi +1</Name>
+            <Specials />
+            <Cost>900</Cost>
+            <Damage>K8+1</Damage>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </RightHand>
+          <LeftHand>
+            <Name>Pawęż</Name>
+            <Specials />
+            <Cost>50</Cost>
+            <AC>3</AC>
+            <MaxDexterityBonus>3</MaxDexterityBonus>
+            <Panalty>2</Panalty>
+          </LeftHand>
+          <Torso>
+            <Name>Zbroja płytowa</Name>
+            <Specials />
+            <Cost>500</Cost>
+            <AC>7</AC>
+            <MaxDexterityBonus>2</MaxDexterityBonus>
+            <Panalty>3</Panalty>
+          </Torso>
+          <Gold>15</Gold>
+          <Effects />
+          <KnownSpellsS />
+          <SpellsS />
+          <AvailableCastings />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Sabat</Name>
+          <Race>Półelf</Race>
+          <Level>3</Level>
+          <Class>Tropiciel</Class>
+          <CurrentStats>
+            <Strength>12</Strength>
+            <Dexterity>18</Dexterity>
+            <Constitution>17</Constitution>
+            <Wisdom>13</Wisdom>
+            <Inteligence>12</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>-8</HP>
+            <AC>16</AC>
+            <AttackSkill>3</AttackSkill>
+            <WillThrow>2</WillThrow>
+            <ReflexThrow>7</ReflexThrow>
+            <StrongThrow>9</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>12</Strength>
+            <Dexterity>18</Dexterity>
+            <Constitution>17</Constitution>
+            <Wisdom>13</Wisdom>
+            <Inteligence>12</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>27</HP>
+            <AC>16</AC>
+            <AttackSkill>3</AttackSkill>
+            <WillThrow>2</WillThrow>
+            <ReflexThrow>7</ReflexThrow>
+            <StrongThrow>9</StrongThrow>
+          </OriginalStats>
+          <Initiative>23</Initiative>
+          <BaseInitiative>4</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <Name>Prawa ręka</Name>
+              <ToHit>5</ToHit>
+              <Damage>K6+1</Damage>
+            </Attack>
+            <Attack>
+              <Name>Lewa ręka</Name>
+              <ToHit>6</ToHit>
+              <Damage>k4+1</Damage>
+            </Attack>
+            <Attack>
+              <Name>Krótki łuk</Name>
+              <ToHit>7</ToHit>
+              <Damage>K8</Damage>
+            </Attack>
+          </Attacks>
+          <RightHand>
+            <Name>Miecz krótki</Name>
+            <Specials />
+            <Cost>20</Cost>
+            <Damage>K6</Damage>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </RightHand>
+          <LeftHand>
+            <Name>Sztylet +1 (trucizna)</Name>
+            <Specials>Rzut ST. 12 (Wytrwałość), Trucizna K4</Specials>
+            <Cost>1</Cost>
+            <Damage>K4+1</Damage>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </LeftHand>
+          <Torso>
+            <Name>Zbroja skórzana</Name>
+            <Specials />
+            <Cost>250</Cost>
+            <AC>2</AC>
+            <MaxDexterityBonus>6</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </Torso>
+          <Items>Długi łuk
+Strzałka paraliżu +2 (k4+2) x8
+Pierścień dźwięku 2K8 (10m)
+Zł. narzędzia x1</Items>
+          <Gold>1233</Gold>
+          <Effects />
+          <KnownSpellsS />
+          <SpellsS />
+          <AvailableCastings />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
         </Character>
       </Members>
     </CharacterGroup>
@@ -296,6 +443,7 @@
             <StrongThrow>4</StrongThrow>
           </OriginalStats>
           <Initiative>55</Initiative>
+          <BaseInitiative>0</BaseInitiative>
           <Attacks>
             <Attack>
               <ToHit>5</ToHit>
@@ -304,85 +452,424 @@
           </Attacks>
           <Gold>0</Gold>
           <Effects />
-          <KnownSpells />
-          <Spells />
+          <KnownSpellsS />
+          <SpellsS />
           <AvailableCastings />
           <Skills />
           <IsActiveMember>false</IsActiveMember>
         </Character>
         <Character>
-          <Name>Wojak</Name>
-          <Race>Człowiek</Race>
-          <Level>6</Level>
-          <Class>Wojownik</Class>
+          <Name>Szkielet</Name>
+          <Race>Nieumarły</Race>
+          <Level>1</Level>
           <CurrentStats>
-            <Strength>14</Strength>
-            <Dexterity>15</Dexterity>
-            <Constitution>13</Constitution>
-            <Wisdom>9</Wisdom>
-            <Inteligence>11</Inteligence>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
             <Charisma>0</Charisma>
-            <HP>41</HP>
-            <AC>0</AC>
-            <AttackSkill>6\1</AttackSkill>
-            <WillThrow>2</WillThrow>
-            <ReflexThrow>4</ReflexThrow>
-            <StrongThrow>6</StrongThrow>
+            <HP>6</HP>
+            <AC>13</AC>
+            <WillThrow>0</WillThrow>
+            <ReflexThrow>-1</ReflexThrow>
+            <StrongThrow>3</StrongThrow>
           </CurrentStats>
           <OriginalStats>
-            <Strength>14</Strength>
-            <Dexterity>15</Dexterity>
-            <Constitution>13</Constitution>
-            <Wisdom>9</Wisdom>
-            <Inteligence>11</Inteligence>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
             <Charisma>0</Charisma>
-            <HP>41</HP>
-            <AC>0</AC>
-            <AttackSkill>6\1</AttackSkill>
-            <WillThrow>2</WillThrow>
-            <ReflexThrow>4</ReflexThrow>
-            <StrongThrow>6</StrongThrow>
+            <HP>6</HP>
+            <AC>13</AC>
+            <WillThrow>0</WillThrow>
+            <ReflexThrow>-1</ReflexThrow>
+            <StrongThrow>3</StrongThrow>
           </OriginalStats>
-          <Initiative>0</Initiative>
+          <Initiative>1</Initiative>
+          <BaseInitiative>0</BaseInitiative>
           <Attacks>
             <Attack>
-              <ToHit>8</ToHit>
-              <Damage>K8+2</Damage>
-            </Attack>
-            <Attack>
-              <ToHit>3</ToHit>
-              <Damage>K8+2</Damage>
+              <ToHit>1</ToHit>
+              <Damage>K4+1</Damage>
             </Attack>
           </Attacks>
-          <RightHand>
-            <Name>Miecz długi</Name>
-            <Specials />
-            <Cost>20</Cost>
-            <Damage>K8</Damage>
-            <AC>0</AC>
-            <MaxDexterityBonus>0</MaxDexterityBonus>
-            <Panalty>0</Panalty>
-          </RightHand>
-          <LeftHand>
-            <Name>Średnia Tarcza</Name>
-            <Specials />
-            <Cost>10</Cost>
-            <AC>3</AC>
-            <MaxDexterityBonus>4</MaxDexterityBonus>
-            <Panalty>2</Panalty>
-          </LeftHand>
+          <Gold>0</Gold>
+          <Effects />
+          <KnownSpellsS />
+          <SpellsS />
+          <AvailableCastings />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Szkielet Wielki</Name>
+          <Race>Nieumarły</Race>
+          <Level>3</Level>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>26</HP>
+            <AC>13</AC>
+            <WillThrow>2</WillThrow>
+            <ReflexThrow>1</ReflexThrow>
+            <StrongThrow>5</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>26</HP>
+            <AC>13</AC>
+            <WillThrow>2</WillThrow>
+            <ReflexThrow>1</ReflexThrow>
+            <StrongThrow>5</StrongThrow>
+          </OriginalStats>
+          <Initiative>5</Initiative>
+          <BaseInitiative>0</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <ToHit>5</ToHit>
+              <Damage>2K6+1</Damage>
+            </Attack>
+          </Attacks>
+          <Gold>0</Gold>
+          <Effects />
+          <KnownSpellsS />
+          <SpellsS />
+          <AvailableCastings />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Szkielet Wielki 2</Name>
+          <Race>Nieumarły</Race>
+          <Level>3</Level>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>26</HP>
+            <AC>17</AC>
+            <AttackSkill>5</AttackSkill>
+            <WillThrow>2</WillThrow>
+            <ReflexThrow>1</ReflexThrow>
+            <StrongThrow>5</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>26</HP>
+            <AC>17</AC>
+            <AttackSkill>5</AttackSkill>
+            <WillThrow>2</WillThrow>
+            <ReflexThrow>1</ReflexThrow>
+            <StrongThrow>5</StrongThrow>
+          </OriginalStats>
+          <Initiative>4</Initiative>
+          <BaseInitiative>0</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <ToHit>5</ToHit>
+              <Damage>2K6+1</Damage>
+            </Attack>
+          </Attacks>
           <Torso>
-            <Name>Kolczuga</Name>
+            <Name>Zbroja płytowa</Name>
             <Specials />
-            <Cost>200</Cost>
-            <AC>6</AC>
+            <Cost>500</Cost>
+            <AC>7</AC>
             <MaxDexterityBonus>2</MaxDexterityBonus>
             <Panalty>3</Panalty>
           </Torso>
           <Gold>0</Gold>
           <Effects />
-          <KnownSpells />
-          <Spells />
+          <KnownSpellsS />
+          <SpellsS />
+          <AvailableCastings />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Mumia</Name>
+          <Race>Nieumarły</Race>
+          <Level>6</Level>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>42</HP>
+            <AC>17</AC>
+            <WillThrow>3</WillThrow>
+            <ReflexThrow>1</ReflexThrow>
+            <StrongThrow>1</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>42</HP>
+            <AC>17</AC>
+            <WillThrow>3</WillThrow>
+            <ReflexThrow>1</ReflexThrow>
+            <StrongThrow>1</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>0</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <ToHit>6</ToHit>
+              <Damage>K6+4</Damage>
+            </Attack>
+          </Attacks>
+          <Gold>0</Gold>
+          <Effects>
+            <Effect>
+              <Name>Rozpacz</Name>
+              <Description>ST: 15 (Wola) Paraliż na K4 r</Description>
+              <Duration xsi:nil="true" />
+            </Effect>
+            <Effect>
+              <Name>Mumijna zgnilizna</Name>
+              <Description />
+              <Duration xsi:nil="true" />
+            </Effect>
+            <Effect>
+              <Name>Odporność na obrażenia fizyczne</Name>
+              <Description>50 % fizycznych ran</Description>
+              <Duration xsi:nil="true" />
+            </Effect>
+          </Effects>
+          <KnownSpellsS />
+          <SpellsS />
+          <AvailableCastings />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Allip</Name>
+          <Race>Nieumarły</Race>
+          <Level>3</Level>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>26</HP>
+            <AC>15</AC>
+            <WillThrow>4</WillThrow>
+            <ReflexThrow>1</ReflexThrow>
+            <StrongThrow>2</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>26</HP>
+            <AC>15</AC>
+            <WillThrow>4</WillThrow>
+            <ReflexThrow>1</ReflexThrow>
+            <StrongThrow>2</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>0</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <ToHit>3</ToHit>
+              <Damage>K4</Damage>
+            </Attack>
+          </Attacks>
+          <Gold>0</Gold>
+          <Effects>
+            <Effect>
+              <Name>Bełkotanie</Name>
+              <Description>Wola na ST 16 lub hipnoza na k4</Description>
+              <Duration xsi:nil="true" />
+            </Effect>
+            <Effect>
+              <Name>Bezcielestność</Name>
+              <Description />
+              <Duration xsi:nil="true" />
+            </Effect>
+          </Effects>
+          <KnownSpellsS />
+          <SpellsS />
+          <AvailableCastings />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Upiór</Name>
+          <Race>Nieumarły</Race>
+          <Level>3</Level>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>26</HP>
+            <AC>15</AC>
+            <WillThrow>5</WillThrow>
+            <ReflexThrow>1</ReflexThrow>
+            <StrongThrow>2</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>26</HP>
+            <AC>15</AC>
+            <WillThrow>5</WillThrow>
+            <ReflexThrow>1</ReflexThrow>
+            <StrongThrow>2</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>0</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <ToHit>3</ToHit>
+              <Damage>K4+1</Damage>
+            </Attack>
+          </Attacks>
+          <Gold>0</Gold>
+          <Effects>
+            <Effect>
+              <Name>Wysączenie poziomu</Name>
+              <Description>ST: 14 (Wytr)</Description>
+              <Duration xsi:nil="true" />
+            </Effect>
+          </Effects>
+          <KnownSpellsS />
+          <SpellsS />
+          <AvailableCastings />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Widmowy grzyb</Name>
+          <Level>0</Level>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>15</HP>
+            <AC>14</AC>
+            <WillThrow>6</WillThrow>
+            <ReflexThrow>0</ReflexThrow>
+            <StrongThrow>0</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>15</HP>
+            <AC>14</AC>
+            <WillThrow>6</WillThrow>
+            <ReflexThrow>0</ReflexThrow>
+            <StrongThrow>0</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>0</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <ToHit>3</ToHit>
+              <Damage>K6+3</Damage>
+            </Attack>
+          </Attacks>
+          <Gold>0</Gold>
+          <Effects>
+            <Effect>
+              <Name>Ulepszona niewidzialność</Name>
+              <Description />
+              <Duration xsi:nil="true" />
+            </Effect>
+          </Effects>
+          <KnownSpellsS />
+          <SpellsS />
+          <AvailableCastings />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Tal'Rasha</Name>
+          <Race>Nieumarły</Race>
+          <Level>0</Level>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>-2</HP>
+            <AC>15</AC>
+            <WillThrow>5</WillThrow>
+            <ReflexThrow>6</ReflexThrow>
+            <StrongThrow>10</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>104</HP>
+            <AC>15</AC>
+            <WillThrow>5</WillThrow>
+            <ReflexThrow>6</ReflexThrow>
+            <StrongThrow>10</StrongThrow>
+          </OriginalStats>
+          <Initiative>2</Initiative>
+          <BaseInitiative>0</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <ToHit>12</ToHit>
+              <Damage>2K6+6</Damage>
+            </Attack>
+          </Attacks>
+          <Gold>0</Gold>
+          <Effects />
+          <KnownSpellsS />
+          <SpellsS />
           <AvailableCastings />
           <Skills />
           <IsActiveMember>false</IsActiveMember>
@@ -426,6 +913,7 @@
             <StrongThrow>4</StrongThrow>
           </OriginalStats>
           <Initiative>0</Initiative>
+          <BaseInitiative>0</BaseInitiative>
           <Attacks>
             <Attack>
               <ToHit>5</ToHit>
@@ -451,8 +939,8 @@
           </Torso>
           <Gold>0</Gold>
           <Effects />
-          <KnownSpells />
-          <Spells />
+          <KnownSpellsS />
+          <SpellsS />
           <AvailableCastings>
             <SpellCasting>
               <Level>1</Level>
@@ -495,14 +983,6 @@
       <AC>0</AC>
       <MaxDexterityBonus>0</MaxDexterityBonus>
       <Panalty>0</Panalty>
-    </Item>
-    <Item>
-      <Name>Zbroja ćwiekowana</Name>
-      <Specials />
-      <Cost>150</Cost>
-      <AC>4</AC>
-      <MaxDexterityBonus>5</MaxDexterityBonus>
-      <Panalty>1</Panalty>
     </Item>
     <Item>
       <Name>Miecz długi</Name>
@@ -555,36 +1035,441 @@
       <MaxDexterityBonus>100</MaxDexterityBonus>
       <Panalty>0</Panalty>
     </Item>
+    <Item>
+      <Name>Skórzana ćwiekowana</Name>
+      <Specials />
+      <Cost>250</Cost>
+      <AC>3</AC>
+      <MaxDexterityBonus>5</MaxDexterityBonus>
+      <Panalty>1</Panalty>
+    </Item>
+    <Item>
+      <Name>Miecz długi +1</Name>
+      <Specials />
+      <Cost>900</Cost>
+      <Damage>K8+1</Damage>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Pawęż</Name>
+      <Specials />
+      <Cost>50</Cost>
+      <AC>3</AC>
+      <MaxDexterityBonus>3</MaxDexterityBonus>
+      <Panalty>2</Panalty>
+    </Item>
+    <Item>
+      <Name>Zbroja płytowa</Name>
+      <Specials />
+      <Cost>500</Cost>
+      <AC>7</AC>
+      <MaxDexterityBonus>2</MaxDexterityBonus>
+      <Panalty>3</Panalty>
+    </Item>
+    <Item>
+      <Name>Młot bojowy +1, +k4 elektryczność</Name>
+      <Specials>+k4 od elektryczności</Specials>
+      <Cost>1100</Cost>
+      <Damage>K4+1</Damage>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Zbroja pełna płytowa</Name>
+      <Specials />
+      <Cost>1000</Cost>
+      <AC>8</AC>
+      <MaxDexterityBonus>1</MaxDexterityBonus>
+      <Panalty>3</Panalty>
+    </Item>
+    <Item>
+      <Name>Topór dwuręczny</Name>
+      <Specials />
+      <Cost>80</Cost>
+      <Damage>K12</Damage>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Sztylet</Name>
+      <Specials />
+      <Cost>1</Cost>
+      <Damage>K4</Damage>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Miecz krótki</Name>
+      <Specials />
+      <Cost>20</Cost>
+      <Damage>K6</Damage>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Sztylet +1 (trucizna)</Name>
+      <Specials>Rzut ST. 12 (Wytrwałość), Trucizna K4</Specials>
+      <Cost>1</Cost>
+      <Damage>K4+1</Damage>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Zbroja skórzana</Name>
+      <Specials />
+      <Cost>250</Cost>
+      <AC>2</AC>
+      <MaxDexterityBonus>6</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Miecz krótki + 1</Name>
+      <Specials />
+      <Cost>200</Cost>
+      <Damage>K6+1</Damage>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Miecz dwuręczny +1 Dar drowów</Name>
+      <Specials>+3 przeciwko Elfom</Specials>
+      <Cost>2000</Cost>
+      <Damage>2K6+1</Damage>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
   </Items>
   <Spells>
     <SpellDefinition>
       <Name>Magiczny pocisk</Name>
-      <Type>Mage</Type>
+      <Types>Mage</Types>
       <Shool>Wywoływanie</Shool>
       <Level>1</Level>
       <Description>K4+1 nigdy za dużo</Description>
     </SpellDefinition>
     <SpellDefinition>
       <Name>Tarcza</Name>
-      <Type>Mage</Type>
+      <Types>Mage</Types>
       <Shool>Iluzje</Shool>
       <Level>1</Level>
-      <Description>+4 KP na 10 rund</Description>
+      <Description>+4 KP na 10 rund, blokuje Magiczne Pociski</Description>
     </SpellDefinition>
     <SpellDefinition>
       <Name>Leczenie lekkich ran</Name>
-      <Type>Cleric</Type>
+      <Types>Cleric,Druid</Types>
       <Shool>Dobro, Leczenie</Shool>
       <Level>1</Level>
       <Description>Leczy K8+2 P.Z</Description>
     </SpellDefinition>
     <SpellDefinition>
       <Name>Niewidzialność</Name>
-      <Type>Mage</Type>
+      <Types>Mage</Types>
       <Shool>Iluzje</Shool>
       <Level>2</Level>
       <Description>na 10 rund</Description>
     </SpellDefinition>
+    <SpellDefinition>
+      <Name>Dotyk chłodu</Name>
+      <Types>Mage</Types>
+      <Shool>Nekromancja</Shool>
+      <Level>1</Level>
+      <Description>Zadaje K6 obrażeń.
+Rzut na wytrwałość albo obniżenie Siły o 1</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Promień osłabienia</Name>
+      <Types>Mage</Types>
+      <Shool>Nekromancja</Shool>
+      <Level>1</Level>
+      <Description>Obniża siłę o K6+1 na dwa poziomy</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Wywołanie strachu</Name>
+      <Types>Mage</Types>
+      <Shool>Nekromancja</Shool>
+      <Level>1</Level>
+      <Description>Zasięg bliski 
+K4+1 rund strachu lub 1 runda gdy rzut 
+na Wolę się powiedzie.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Identyfikacja</Name>
+      <Types>Mage</Types>
+      <Shool>Poznanie</Shool>
+      <Level>1</Level>
+      <Description>Wyjawia właściwości</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Wykrycie nieumarłych</Name>
+      <Types>Mage,Cleric</Types>
+      <Shool>Poznanie</Shool>
+      <Level>1</Level>
+      <Description>W promieniu 18 m, trwa 1 min/poz.
+1 r. - brak lub obecność nieumarłych
+2 r. - Liczba aur oraz siła najpotężniejszej
+3 r. - Siła i położenie każdej z aur
+KW/Aura:
+1 Słaba
+2-4 Umiarkowana
+5-10 Silna
+11&gt; Przytłaczająca</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Wykrycie sekretnych drzwi</Name>
+      <Types>Mage</Types>
+      <Shool>Poznanie</Shool>
+      <Level>1</Level>
+      <Description>Zasięg 18m, 1 min/ poziom
+</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Płonące dłonie</Name>
+      <Types>Mage</Types>
+      <Shool>Wywoływanie</Shool>
+      <Level>1</Level>
+      <Description>1k4 obrażen od ognia/poziom (max. 5K4)</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Porażający uścick</Name>
+      <Types>Mage</Types>
+      <Shool>Wywoływanie</Shool>
+      <Level>1</Level>
+      <Description>K6 /poz od elektryczności (max. 5K6) - 
+na dotyk</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Lustrzane odbicie</Name>
+      <Types>Mage</Types>
+      <Shool>Iluzje</Shool>
+      <Level>2</Level>
+      <Description>1K4+1 na 3 poz. odbić (max. 8)</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Płomienny promień</Name>
+      <Types>Mage</Types>
+      <Shool>Wywoływanie</Shool>
+      <Level>2</Level>
+      <Description>Atak dystandowy dotykowy zadający 
+4k6 obrażeń (+1 promień na każde 3 poz)</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Płomienie Agannazara</Name>
+      <Types>Mage</Types>
+      <Shool>Wywoływanie</Shool>
+      <Level>2</Level>
+      <Description>Promień o zas. 12 m zadający 2K8 obrażeń
+od ognia. Promień utrzymuje się 2 rundy.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Kołatka</Name>
+      <Types>Mage</Types>
+      <Shool>Przemiany</Shool>
+      <Level>2</Level>
+      <Description>Otwiera zamki/drzwi</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Siła Byka</Name>
+      <Types>Mage,Cleric</Types>
+      <Shool>Przemiany</Shool>
+      <Level>2</Level>
+      <Description>Zwiększa SI o 4 na 1 min/ poz.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Błogosławieństwo</Name>
+      <Types>Cleric</Types>
+      <Shool>Dobro</Shool>
+      <Level>1</Level>
+      <Description>Zwiększa atak, rzuty i obrażenia o 1</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Rozkaz</Name>
+      <Types>Cleric</Types>
+      <Shool>Oczarowania</Shool>
+      <Level>1</Level>
+      <Description>1 rozkaz (Wola neguje):
+1. Podejdź
+2. Upuść
+3. Padnij
+4. Uciekaj
+5. Stój
+Trwa 1 rundę</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Tarcza wiary</Name>
+      <Types>Cleric</Types>
+      <Shool>Odrzucanie</Shool>
+      <Level>1</Level>
+      <Description>KP: +2 / + 1 na 6 poz.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Leczenie średnich ran</Name>
+      <Types>Cleric</Types>
+      <Shool>Leczenie</Shool>
+      <Level>2</Level>
+      <Description>2K8 + 4 P.Ż</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Unieruchomienie osoby</Name>
+      <Types>Cleric</Types>
+      <Shool>Oczarowania</Shool>
+      <Level>2</Level>
+      <Description>Paraliż na 1 runde/poziom. Teoretycznie co runę można rzucać na SW :)</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Przyzwanie potwora 3</Name>
+      <Types>Mage,Cleric</Types>
+      <Shool>Przywoływanie</Shool>
+      <Level>3</Level>
+      <Description>Przyzywa następujące potwory:
+1. Zły: Piekielny ogar</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Rozproszenie magii</Name>
+      <Types>Mage,Cleric</Types>
+      <Shool>Odrzucanie</Shool>
+      <Level>3</Level>
+      <Description>Podręcznik :)</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Kwasowa strzała</Name>
+      <Types>Mage</Types>
+      <Shool>Przywoływanie</Shool>
+      <Level>2</Level>
+      <Description>K6 + (k4+3 od kwasu) co rundę k4+2
+przez 3 rundy.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Ognista kula</Name>
+      <Types>Mage</Types>
+      <Shool>Wywoływanie</Shool>
+      <Level>3</Level>
+      <Description>Zadaje K6 obrażeń od ognia/poz</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Alarm</Name>
+      <Types>Mage,Bard</Types>
+      <Shool>Odrzucanie</Shool>
+      <Level>1</Level>
+      <Description>Trwa 2 godz/poz., uruchamiają je stworzenia malutkie lub większe.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Bezpieczne schronienie</Name>
+      <Types>Mage,Bard</Types>
+      <Shool>Przywoływanie</Shool>
+      <Level>5</Level>
+      <Description>Tworzy chatkę z materiałów dostępnych nieopodal. Czas rzucania:10 min, trwa 2 godz/poz.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Bluźnierstwo</Name>
+      <Types>Cleric</Types>
+      <Shool>Zło</Shool>
+      <Level>7</Level>
+      <Description>Czas rzucania: 1 runda
+Zasięg: Fala o promieniu 12 m od rzucającego 
+Brak rzutu obronnego
+W zależności od KW wzgledem rzucającego:
+0: Otumanienie
+-1: Wycieńczenie, Otumanienie
+-5: Sparaliżowanie, Otumanienie, Wycieńczenie
+-10: Śmierć
+Otumanienie - trwa 1 rundę
+Wycieńczenie - utrata 2K6 SI na 2K4 rund
+Sparaliżowanie - 10 min paraliżu</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Błogosławione jagody</Name>
+      <Types>Druid</Types>
+      <Shool>Przemiany</Shool>
+      <Level>1</Level>
+      <Description>Zmienia 2K4 normalnych jagód w magiczne, każda z nich syci na jeden dzień dowolną osobę, dodatkowo leczy 1 PW.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Błyskawica</Name>
+      <Types>Mage</Types>
+      <Shool>Wywoływanie</Shool>
+      <Level>3</Level>
+      <Description>Zadaje K6 obrażeń od elektryczności na poziom (do 10K6), ma zasięg 36 m.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Boska moc</Name>
+      <Types>Cleric</Types>
+      <Shool>Wojna</Shool>
+      <Level>4</Level>
+      <Description>Trwa 1r/poz.
+Premia do ataku (bazowa) = poziom postaci
++6 SI
++1 PW/poz</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Celny cios</Name>
+      <Types>Mage</Types>
+      <Shool>Poznanie</Shool>
+      <Level>1</Level>
+      <Description>Do następnego ataku premia +20 (tylko na siebie)</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Chmura mgły</Name>
+      <Types>Mage,Druid</Types>
+      <Shool>Przywoływanie</Shool>
+      <Level>2</Level>
+      <Description>Tworzy chmurę mgły, w promieniu 6m i wys. 6m. Widoczność do 1,5 m wewnątrz.
+Trwa 10 min/poz.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Chmura kwasu</Name>
+      <Types>Mage,Druid</Types>
+      <Shool>Przywoływanie</Shool>
+      <Level>2</Level>
+      <Description>Tworzy chmurę mgły, w promieniu 6m i wys. 6m. Widoczność do 1,5 m wewnątrz.
+Trwa 1 rundę/poz</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Chodzenie po wodzie</Name>
+      <Types>Druid</Types>
+      <Shool>Woda</Shool>
+      <Level>3</Level>
+      <Description>Na dotyk, trwa 10 min/poz.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Ciało w kamień</Name>
+      <Types>Mage</Types>
+      <Shool>Przemiany</Shool>
+      <Level>6</Level>
+      <Description>Zasięg średni, rzut obronny na Wytrwałość</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Ciemność</Name>
+      <Types>Mage,Cleric,Bard</Types>
+      <Shool>Iluzje</Shool>
+      <Level>2</Level>
+      <Description>Promień 6m, trwa 10 min/poz.</Description>
+    </SpellDefinition>
   </Spells>
-  <CurrentTime>1300-05-14T23:00:00</CurrentTime>
+  <Effects>
+    <Effect>
+      <Name>Szał</Name>
+      <Description>+4 SI, +4 KON</Description>
+      <Duration>10</Duration>
+    </Effect>
+    <Effect>
+      <Name>Niewrażliwość na magię</Name>
+      <Description>50 %</Description>
+      <Duration xsi:nil="true" />
+    </Effect>
+    <Effect>
+      <Name>Paraliż</Name>
+      <Description />
+      <Duration>5</Duration>
+    </Effect>
+  </Effects>
+  <CurrentTime>1300-06-16T07:00:00</CurrentTime>
 </Helper>

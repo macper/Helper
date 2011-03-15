@@ -14,32 +14,27 @@ using System.Windows.Shapes;
 namespace DnDHelper
 {
     /// <summary>
-    /// Interaction logic for DoDamageWindow.xaml
+    /// Interaction logic for AttackCustomWindow.xaml
     /// </summary>
-    public partial class DoDamageWindow : Window
+    public partial class AttackCustomWindow : Window
     {
-        Character _target;
         Battle _battle;
 
-        public DoDamageWindow(Character target, Battle battle)
+        public AttackCustomWindow(Battle battle)
         {
             InitializeComponent();
-            _target = target;
             _battle = battle;
-            textBox1.Focus();
-            textBox1.SelectAll();
+            comboBox1.ItemsSource = _battle.Members;
+            comboBox2.ItemsSource = _battle.Members;
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if (comboBox1.SelectedItem != null && comboBox2.SelectedItem != null)
             {
-                _battle.DoDamage(_target, int.Parse(textBox1.Text));
-                DialogResult = true;
+                AttackWindow wnd = new AttackWindow((Character)comboBox1.SelectedItem, (Character)comboBox2.SelectedItem, _battle);
+                wnd.Show();
                 Close();
-            }
-            catch
-            {
             }
         }
     }

@@ -17,16 +17,30 @@ namespace DnDHelper
         public List<CharacterGroup> Groups;
         public List<Item> Items;
         public List<SpellDefinition> Spells;
+        public List<Effect> Effects;
 
         public Helper()
         {
             Groups = new List<CharacterGroup>();
             Items = new List<Item>();
+            Effects = new List<Effect>();
+        }
+
+        public SpellDefinition GetSpell(string name)
+        {
+            return Spells.SingleOrDefault(s => s.Name == name);
         }
 
         public void SaveState()
         {
             System.Xml.Serialization.XmlSerializer xmlSerializer = new System.Xml.Serialization.XmlSerializer(typeof(Helper));
+            foreach (CharacterGroup chGr in Groups)
+            {
+                foreach (Character ch in chGr.Members)
+                {
+                    ch.SerializeSelf();
+                }
+            }
             using (FileStream fs = new FileStream("Helper.xml", FileMode.Create))
             {
                 xmlSerializer.Serialize(fs, this);
@@ -40,6 +54,13 @@ namespace DnDHelper
             using (FileStream fs = new FileStream("Helper.xml", FileMode.Open))
             {
                 helper = (Helper)xmlSerializer.Deserialize(fs);
+            }
+            foreach (CharacterGroup chGr in helper.Groups)
+            {
+                foreach (Character ch in chGr.Members)
+                {
+                    ch.DeserializeSelf(helper);
+                }
             }
             return helper;
         }

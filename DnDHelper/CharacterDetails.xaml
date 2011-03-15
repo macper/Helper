@@ -4,54 +4,54 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300" Width="491" Height="616">
+             d:DesignHeight="300" d:DesignWidth="300" Width="578" Height="652">
     <Grid x:Name="ContentGrid">
         <Label Content="Nazwa:" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="64,14,0,0" Name="tbName" VerticalAlignment="Top" Width="162" Text="{Binding Path=Name}" />
         <Label Content="Rasa:" Height="28" HorizontalAlignment="Left" Margin="232,14,0,0" Name="label2" VerticalAlignment="Top" />
-        <TextBox Text="{Binding Path=Race}" Height="23" HorizontalAlignment="Right" Margin="0,16,12,0" Name="tbRace" VerticalAlignment="Top" Width="162" />
+        <TextBox Text="{Binding Path=Race}" Height="23" HorizontalAlignment="Right" Margin="0,14,122,0" Name="tbRace" VerticalAlignment="Top" Width="162" />
         <Label Content="Klasa:" Height="28" HorizontalAlignment="Left" Margin="12,41,0,0" Name="label3" VerticalAlignment="Top" />
-        <TextBox Text="{Binding Path=Class}" Height="23" HorizontalAlignment="Right" Margin="0,43,265,0" Name="tbClass" VerticalAlignment="Top" Width="162" />
+        <TextBox Text="{Binding Path=Class}" Height="23" HorizontalAlignment="Right" Margin="0,43,352,0" Name="tbClass" VerticalAlignment="Top" Width="162" />
         <Label Content="Poziom:" Height="28" HorizontalAlignment="Left" Margin="231,39,0,0" Name="label4" VerticalAlignment="Top" />
-        <TextBox Text="{Binding Path=Level}" Height="23" HorizontalAlignment="Left" Margin="317,41,0,0" Name="tbLevel" VerticalAlignment="Top" Width="60" />
+        <TextBox Text="{Binding Path=Level}" Height="23" HorizontalAlignment="Left" Margin="294,41,0,0" Name="tbLevel" VerticalAlignment="Top" Width="60" />
         <Label Content="Siła:" Height="28" HorizontalAlignment="Left" Margin="12,70,0,0" Name="label5" VerticalAlignment="Top" />
-        <TextBox Text="{Binding Path=CurrentStats.Strength}" Height="23" HorizontalAlignment="Right" Margin="0,75,328,0" Name="tbStrength" VerticalAlignment="Top" Width="59" />
-        <TextBox Text="{Binding Path=OriginalStats.Strength}" Height="23" HorizontalAlignment="Right" Margin="0,75,263,0" Name="tbStrengthOryg" VerticalAlignment="Top" Width="59" />
+        <TextBox Text="{Binding Path=CurrentStats.Strength}" Height="23" HorizontalAlignment="Right" Margin="0,72,415,0" Name="tbStrength" VerticalAlignment="Top" Width="59" />
+        <TextBox Text="{Binding Path=OriginalStats.Strength}" Height="23" HorizontalAlignment="Right" Margin="0,72,349,0" Name="tbStrengthOryg" VerticalAlignment="Top" Width="59" />
         <Label Content="Zreczność:" Height="28" HorizontalAlignment="Left" Margin="12,99,0,0" Name="label6" VerticalAlignment="Top" />
-        <TextBox Text="{Binding Path=CurrentStats.Dexterity}" Height="23" HorizontalAlignment="Right" Margin="0,104,328,0" Name="tbDexterity" VerticalAlignment="Top" Width="59" />
-        <TextBox Text="{Binding Path=OriginalStats.Dexterity}" Height="23" HorizontalAlignment="Right" Margin="0,104,263,0" Name="tbDexterityOryg" VerticalAlignment="Top" Width="59" />
+        <TextBox Text="{Binding Path=CurrentStats.Dexterity}" Height="23" HorizontalAlignment="Right" Margin="0,101,415,0" Name="tbDexterity" VerticalAlignment="Top" Width="59" />
+        <TextBox Text="{Binding Path=OriginalStats.Dexterity}" Height="23" HorizontalAlignment="Right" Margin="0,101,349,0" Name="tbDexterityOryg" VerticalAlignment="Top" Width="59" />
         <Label Content="Kondycja:" Height="28" HorizontalAlignment="Left" Margin="11,130,0,0" Name="label7" VerticalAlignment="Top" />
         <TextBox Text="{Binding Path=CurrentStats.Constitution}" Height="23" HorizontalAlignment="Left" Margin="104,133,0,0" Name="tbConstitution" VerticalAlignment="Top" Width="59" />
-        <TextBox Text="{Binding Path=OriginalStats.Constitution}" Height="23" HorizontalAlignment="Right" Margin="0,133,263,0" Name="tbConstitutionOryg" VerticalAlignment="Top" Width="59" />
+        <TextBox Text="{Binding Path=OriginalStats.Constitution}" Height="23" HorizontalAlignment="Right" Margin="0,132,349,0" Name="tbConstitutionOryg" VerticalAlignment="Top" Width="59" />
         <Label Content="Mądrosc:" Height="28" HorizontalAlignment="Left" Margin="12,160,0,0" Name="label8" VerticalAlignment="Top" />
-        <TextBox Text="{Binding Path=CurrentStats.Wisdom}" Height="23" HorizontalAlignment="Right" Margin="0,162,328,0" Name="tbWisdom" VerticalAlignment="Top" Width="59" />
-        <TextBox Text="{Binding Path=OriginalStats.Wisdom}" Height="23" HorizontalAlignment="Right" Margin="0,162,263,0" Name="tbWisdomOryg" VerticalAlignment="Top" Width="59" />
+        <TextBox Text="{Binding Path=CurrentStats.Wisdom}" Height="23" HorizontalAlignment="Left" Margin="104,162,0,0" Name="tbWisdom" VerticalAlignment="Top" Width="59" />
+        <TextBox Text="{Binding Path=OriginalStats.Wisdom}" Height="23" HorizontalAlignment="Right" Margin="0,162,349,0" Name="tbWisdomOryg" VerticalAlignment="Top" Width="59" />
         <Label Content="Inteligencja:" Height="28" HorizontalAlignment="Left" Margin="12,189,0,0" Name="label9" VerticalAlignment="Top" />
         <TextBox Text="{Binding Path=CurrentStats.Inteligence}" Height="23" HorizontalAlignment="Left" Margin="104,191,0,0" Name="tbInteligence" VerticalAlignment="Top" Width="59" />
-        <TextBox Text="{Binding Path=OriginalStats.Inteligence}" Height="23" HorizontalAlignment="Right" Margin="0,191,263,0" Name="tbInteligenceOryg" VerticalAlignment="Top" Width="59" />
-        <Label Content="Rzut na Wole:" Height="28" HorizontalAlignment="Left" Margin="12,218,0,0" Name="label10" VerticalAlignment="Top" />
-        <TextBox Text="{Binding Path=CurrentStats.WillThrow}" Height="23" HorizontalAlignment="Left" Margin="104,220,0,0" Name="tbWill" VerticalAlignment="Top" Width="59" />
-        <TextBox Text="{Binding Path=OriginalStats.WillThrow}" Height="23" HorizontalAlignment="Right" Margin="0,220,263,0" Name="tbWillOryg" VerticalAlignment="Top" Width="59" />
-        <Label Content="Rzut na refleks:" Height="28" HorizontalAlignment="Left" Margin="12,247,0,0" Name="label11" VerticalAlignment="Top" />
-        <TextBox Text="{Binding Path=CurrentStats.ReflexThrow}" Height="23" HorizontalAlignment="Left" Margin="104,249,0,0" Name="tbReflex" VerticalAlignment="Top" Width="59" />
-        <TextBox Text="{Binding Path=OriginalStats.ReflexThrow}" Height="23" HorizontalAlignment="Right" Margin="0,249,263,0" Name="tbReflexOryg" VerticalAlignment="Top" Width="59" />
-        <Label Content="Rzut na wytrwałość" Height="28" HorizontalAlignment="Left" Margin="12,276,0,0" Name="label12" VerticalAlignment="Top" />
-        <TextBox Text="{Binding Path=CurrentStats.StrongThrow}" Height="23" HorizontalAlignment="Left" Margin="104,278,0,0" Name="tbWytrwalosc" VerticalAlignment="Top" Width="59" />
-        <TextBox Text="{Binding Path=OriginalStats.StrongThrow}" Height="23" HorizontalAlignment="Right" Margin="0,278,263,0" Name="tbWytrwaloscOryg" VerticalAlignment="Top" Width="59" />
+        <TextBox Text="{Binding Path=OriginalStats.Inteligence}" Height="23" HorizontalAlignment="Right" Margin="0,192,349,0" Name="tbInteligenceOryg" VerticalAlignment="Top" Width="59" />
+        <Label Content="Rzut na Wole:" Height="28" HorizontalAlignment="Left" Margin="12,251,0,0" Name="label10" VerticalAlignment="Top" />
+        <TextBox Text="{Binding Path=CurrentStats.WillThrow}" Height="23" HorizontalAlignment="Left" Margin="104,253,0,0" Name="tbWill" VerticalAlignment="Top" Width="59" />
+        <TextBox Text="{Binding Path=OriginalStats.WillThrow}" Height="23" HorizontalAlignment="Right" Margin="0,253,349,0" Name="tbWillOryg" VerticalAlignment="Top" Width="59" />
+        <Label Content="Rzut na refleks:" Height="28" HorizontalAlignment="Left" Margin="12,280,0,0" Name="label11" VerticalAlignment="Top" />
+        <TextBox Text="{Binding Path=CurrentStats.ReflexThrow}" Height="23" HorizontalAlignment="Left" Margin="104,282,0,0" Name="tbReflex" VerticalAlignment="Top" Width="59" />
+        <TextBox Text="{Binding Path=OriginalStats.ReflexThrow}" Height="23" HorizontalAlignment="Right" Margin="0,280,349,0" Name="tbReflexOryg" VerticalAlignment="Top" Width="59" />
+        <Label Content="Rzut na wytrwałość" Height="28" HorizontalAlignment="Left" Margin="12,309,0,0" Name="label12" VerticalAlignment="Top" />
+        <TextBox Text="{Binding Path=CurrentStats.StrongThrow}" Height="23" HorizontalAlignment="Left" Margin="104,311,0,0" Name="tbWytrwalosc" VerticalAlignment="Top" Width="59" />
+        <TextBox Text="{Binding Path=OriginalStats.StrongThrow}" Height="23" HorizontalAlignment="Right" Margin="0,311,349,0" Name="tbWytrwaloscOryg" VerticalAlignment="Top" Width="59" />
         <Label Content="KP:" Height="28" HorizontalAlignment="Left" Margin="235,73,0,0" Name="label13" VerticalAlignment="Top" />
         <TextBox Text="{Binding Path=CurrentStats.AC}" Height="23" HorizontalAlignment="Left" Margin="355,78,0,0" Name="tbAC" VerticalAlignment="Top" Width="59" />
-        <TextBox Text="{Binding Path=OriginalStats.AC}" Height="23" HorizontalAlignment="Right" Margin="0,78,12,0" Name="tbACOryg" VerticalAlignment="Top" Width="59" />
+        <TextBox Text="{Binding Path=OriginalStats.AC}" Height="23" HorizontalAlignment="Right" Margin="0,79,99,0" Name="tbACOryg" VerticalAlignment="Top" Width="59" />
         <Label Content="P.Ż" Height="28" HorizontalAlignment="Left" Margin="235,102,0,0" Name="label14" VerticalAlignment="Top" />
         <TextBox Text="{Binding Path=CurrentStats.HP}" Height="23" HorizontalAlignment="Left" Margin="355,104,0,0" Name="tbHP" VerticalAlignment="Top" Width="59" />
-        <TextBox Text="{Binding Path=OriginalStats.HP}" Height="23" HorizontalAlignment="Right" Margin="0,104,12,0" Name="tbHPOryg" VerticalAlignment="Top" Width="59" />
+        <TextBox Text="{Binding Path=OriginalStats.HP}" Height="23" HorizontalAlignment="Right" Margin="0,104,99,0" Name="tbHPOryg" VerticalAlignment="Top" Width="59" />
         <Label Content="Atak (bazowy):" Height="28" HorizontalAlignment="Left" Margin="235,128,0,0" Name="label15" VerticalAlignment="Top" />
         <TextBox Text="{Binding Path=CurrentStats.AttackSkill}" Height="23" HorizontalAlignment="Left" Margin="355,130,0,0" Name="tbAttack" VerticalAlignment="Top" Width="59" />
-        <TextBox Text="{Binding Path=OriginalStats.AttackSkill}" Height="23" HorizontalAlignment="Right" Margin="0,130,12,0" Name="tbAttackOryg" VerticalAlignment="Top" Width="59" />
-        <Label Content="Ataki:" Height="28" HorizontalAlignment="Left" Margin="328,162,0,0" Name="label16" VerticalAlignment="Top" />
-        <TabControl Height="262" HorizontalAlignment="Left" Margin="15,310,0,0" Name="tabControl1" VerticalAlignment="Top" Width="464">
+        <TextBox Text="{Binding Path=OriginalStats.AttackSkill}" Height="23" HorizontalAlignment="Right" Margin="0,130,99,0" Name="tbAttackOryg" VerticalAlignment="Top" Width="59" />
+        <Label Content="Ataki:" Height="28" HorizontalAlignment="Left" Margin="442,192,0,0" Name="label16" VerticalAlignment="Top" />
+        <TabControl Height="262" HorizontalAlignment="Left" Margin="13,349,0,0" Name="tabControl1" VerticalAlignment="Top" Width="553">
             <TabItem Header="Efekty" Name="tabItem1">
                 <Grid>
-                    <ListView Height="225" HorizontalAlignment="Left" Margin="6,6,0,0" Name="listView2" VerticalAlignment="Top" Width="441">
+                    <ListView Height="225" HorizontalAlignment="Left" Margin="6,6,0,0" Name="listView2" VerticalAlignment="Top" Width="530">
                         <ListView.ContextMenu>
                             <ContextMenu>
                                 <MenuItem Header="Dodaj" Click="DodajEfekt_Click"  />
@@ -71,30 +71,36 @@
             </TabItem>
             <TabItem Header="Ekwipunek">
                 <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="174*" />
+                        <ColumnDefinition Width="368*" />
+                    </Grid.ColumnDefinitions>
                     <Label ToolTip="{Binding Path=RightHand}"  Content="Prawa ręka:" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="label17" VerticalAlignment="Top" />
                     <Label ToolTip="{Binding Path=LeftHand}" Content="Lewa ręka:" Height="28" HorizontalAlignment="Left" Margin="6,35,0,0" Name="label18" VerticalAlignment="Top" />
                     <Label ToolTip="{Binding Path=Torso}" Content="Tors:" Height="28" HorizontalAlignment="Left" Margin="6,64,0,0" Name="label19" VerticalAlignment="Top" />
-                    <Button Content="Przedmioty" Height="23" HorizontalAlignment="Left" Margin="317,6,0,0" Name="button1" VerticalAlignment="Top" Width="131" Click="button1_Click" />
-                    <Button Content="Odswież" Height="23" HorizontalAlignment="Left" Margin="317,33,0,0" Name="button2" VerticalAlignment="Top" Width="130" Click="button2_Click" />
-                    <TextBox Text="{Binding Path=Items}" Height="95" HorizontalAlignment="Left" Margin="6,130,0,0" Name="textBox1" VerticalAlignment="Top" Width="441" AcceptsReturn="True" AcceptsTab="True" />
+                    <Button Content="Przedmioty" Height="23" HorizontalAlignment="Left" Margin="228,6,0,0" Name="button1" VerticalAlignment="Top" Width="131" Click="button1_Click" Grid.Column="1" />
+                    <Button Content="Odswież" Height="23" HorizontalAlignment="Left" Margin="229,33,0,0" Name="button2" VerticalAlignment="Top" Width="130" Click="button2_Click" Grid.Column="1" />
+                    <TextBox Text="{Binding Path=Items}" Height="95" HorizontalAlignment="Left" Margin="6,130,0,0" Name="textBox1" VerticalAlignment="Top" Width="526" AcceptsReturn="True" AcceptsTab="True" Grid.ColumnSpan="2" />
                     <Label Content="Inne:" Height="28" HorizontalAlignment="Left" Margin="6,106,0,0" Name="label20" VerticalAlignment="Top" />
-                    <Button Content="..." Height="23" HorizontalAlignment="Right" Margin="0,8,181,0" Name="button3" VerticalAlignment="Top" Width="39" Click="button3_Click" />
-                    <TextBox Text="{Binding Path=RightHand.Name, Mode=TwoWay}" Height="23" HorizontalAlignment="Right" Margin="0,8,226,0" Name="textBox2" VerticalAlignment="Top" Width="147" IsEnabled="True" IsReadOnly="True" />
-                    <Button Content="..." Height="23" HorizontalAlignment="Right" Margin="0,35,181,0" Name="button4" VerticalAlignment="Top" Width="39" Click="button4_Click" />
-                    <TextBox Text="{Binding Path=LeftHand.Name, Mode=TwoWay}" Height="23" HorizontalAlignment="Left" Margin="80,35,0,0" Name="textBox3" VerticalAlignment="Top" Width="147" />
-                    <Button Content="..." Height="23" HorizontalAlignment="Right" Margin="0,64,181,0" Name="button5" VerticalAlignment="Top" Width="39" Click="button5_Click" />
-                    <TextBox Text="{Binding Path=Torso.Name, Mode=TwoWay}" Height="23" HorizontalAlignment="Left" Margin="80,64,0,0" Name="textBox4" VerticalAlignment="Top" Width="147" />
-                    <Button Content="Oblicz" Height="23" HorizontalAlignment="Left" Margin="317,62,0,0" Name="button10" VerticalAlignment="Top" Width="131" Click="button10_Click" />
-                    <Label Content="Złoto:" Height="28" HorizontalAlignment="Left" Margin="170,96,0,0" Name="label28" VerticalAlignment="Top" />
-                    <TextBox Text="{Binding Path=Gold}" Height="23" HorizontalAlignment="Left" Margin="212,98,0,0" Name="textBox11" VerticalAlignment="Top" Width="120" />
+                    <Button Content="..." Height="23" HorizontalAlignment="Right" Margin="0,8,270,0" Name="button3" VerticalAlignment="Top" Width="39" Click="button3_Click" Grid.Column="1" />
+                    <TextBox Text="{Binding Path=RightHand.Name, Mode=TwoWay}" Height="23" HorizontalAlignment="Right" Margin="0,8,315,0" Name="textBox2" VerticalAlignment="Top" Width="147" IsEnabled="True" IsReadOnly="True" Grid.ColumnSpan="2" />
+                    <Button Content="..." Height="23" HorizontalAlignment="Right" Margin="0,35,270,0" Name="button4" VerticalAlignment="Top" Width="39" Click="button4_Click" Grid.Column="1" />
+                    <TextBox Text="{Binding Path=LeftHand.Name, Mode=TwoWay}" Height="23" HorizontalAlignment="Left" Margin="80,35,0,0" Name="textBox3" VerticalAlignment="Top" Width="147" Grid.ColumnSpan="2" />
+                    <Button Content="..." Height="23" HorizontalAlignment="Right" Margin="0,64,270,0" Name="button5" VerticalAlignment="Top" Width="39" Click="button5_Click" Grid.Column="1" />
+                    <TextBox Text="{Binding Path=Torso.Name, Mode=TwoWay}" Height="23" HorizontalAlignment="Left" Margin="80,64,0,0" Name="textBox4" VerticalAlignment="Top" Width="147" Grid.ColumnSpan="2" />
+                    <Button Content="Oblicz" Height="23" HorizontalAlignment="Left" Margin="228,62,0,0" Name="button10" VerticalAlignment="Top" Width="131" Click="button10_Click" Grid.Column="1" />
+                    <Label Content="Złoto:" Height="28" HorizontalAlignment="Left" Margin="118,89,0,0" Name="label28" VerticalAlignment="Top" Grid.Column="1" />
+                    <TextBox Text="{Binding Path=Gold}" Height="23" HorizontalAlignment="Left" Margin="160,91,0,0" Name="textBox11" VerticalAlignment="Top" Width="120" Grid.Column="1" />
+                    <Button Content="+" Height="23" HorizontalAlignment="Left" Margin="283,91,0,0" Name="button11" VerticalAlignment="Top" Width="37" Click="button11_Click" Grid.Column="1" />
+                    <Button Content="-" Height="23" HorizontalAlignment="Left" Margin="321,91,0,0" Name="button12" VerticalAlignment="Top" Width="37" Click="button12_Click" Grid.Column="1" />
                 </Grid>
             </TabItem>
             <TabItem Header="Czary" >
                 <Grid>
-                    <TabControl Height="231" HorizontalAlignment="Left" Margin="3,0,0,0" Name="tabControl2" VerticalAlignment="Top" Width="450">
+                    <TabControl Height="231" HorizontalAlignment="Left" Margin="3,0,0,0" Name="tabControl2" VerticalAlignment="Top" Width="539">
                         <TabItem Header="Zapamiętane" Name="tabItem2">
                             <Grid>
-                                <ListView Height="187" HorizontalAlignment="Left" Margin="6,6,0,0" Name="listView6" VerticalAlignment="Top" Width="314">
+                                <ListView Height="187" HorizontalAlignment="Left" Margin="6,6,0,0" Name="listView6" VerticalAlignment="Top" Width="308" SelectionChanged="listView6_SelectionChanged">
                                     <ListView.ContextMenu>
                                         <ContextMenu>
                                             <MenuItem Header="Rzucony" Click="CzarRzuc_Click" />
@@ -108,10 +114,15 @@
                                         </GridView>
                                     </ListView.View>
                                 </ListView>
+                                <TextBox Height="186" HorizontalAlignment="Left" Margin="320,7,0,0" Name="textBox15" VerticalAlignment="Top" Width="202" AcceptsReturn="True" AcceptsTab="True" TextWrapping="Wrap" />
                             </Grid>
                         </TabItem>
                         <TabItem Header="Znane">
-                            <Grid>
+                            <Grid Width="535">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="436*" />
+                                    <ColumnDefinition Width="99*" />
+                                </Grid.ColumnDefinitions>
                                 <ListView Height="188" HorizontalAlignment="Left" Margin="6,6,0,0" Name="listView3" VerticalAlignment="Top" Width="173" SelectionChanged="listView3_SelectionChanged">
                                     <ListView.ContextMenu>
                                         <ContextMenu>
@@ -125,8 +136,8 @@
                                         </GridView>
                                     </ListView.View>
                                 </ListView>
-                                <TextBox Height="166" HorizontalAlignment="Right" Margin="0,28,6,0" Name="textBox5" VerticalAlignment="Top" Width="248" />
-                                <Label Content="Opis" Height="28" HorizontalAlignment="Left" Margin="289,6,0,0" Name="label21" VerticalAlignment="Top" />
+                                <TextBox Height="166" HorizontalAlignment="Right" Margin="0,29,6,0" Name="textBox5" VerticalAlignment="Top" Width="344" AcceptsReturn="True" AcceptsTab="True" Grid.ColumnSpan="2" TextWrapping="Wrap" />
+                                <Label Content="Opis" Height="28" HorizontalAlignment="Left" Margin="338,5,0,0" Name="label21" VerticalAlignment="Top" />
                             </Grid>
                         </TabItem>
                         <TabItem Header="Czary na poziom">
@@ -152,7 +163,7 @@
                                 <Label Content="Poziom:" Height="28" HorizontalAlignment="Left" Margin="179,35,0,0" Name="label23" VerticalAlignment="Top" />
                                 <TextBox Text="{Binding Path=Level}" Height="23" HorizontalAlignment="Left" Margin="242,37,0,0" Name="textBox6" VerticalAlignment="Top" Width="120" />
                                 <Label Content="Liczba:" Height="28" HorizontalAlignment="Left" Margin="179,64,0,0" Name="label24" VerticalAlignment="Top" />
-                                <TextBox Text="{Binding Path=Count}" Height="23" HorizontalAlignment="Right" Margin="0,66,78,0" Name="textBox7" VerticalAlignment="Top" Width="120" />
+                                <TextBox Text="{Binding Path=Count}" Height="23" HorizontalAlignment="Right" Margin="0,64,166,0" Name="textBox7" VerticalAlignment="Top" Width="120" />
                             </Grid>
                         </TabItem>
                         <TabItem Header="Przygotowane">
@@ -205,7 +216,7 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <ListView Height="115" HorizontalAlignment="Left" Margin="235,189,0,0" Name="listView1" VerticalAlignment="Top" Width="238" UseLayoutRounding="False" IsManipulationEnabled="True" Grid.Row="1" Grid.Column="1">
+        <ListView Height="115" HorizontalAlignment="Left" Margin="235,0,0,317" Name="listView1" VerticalAlignment="Bottom" Width="331" UseLayoutRounding="False" IsManipulationEnabled="True">
             <ListView.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Dodaj" Click="DodajAtak_Click" />
@@ -215,15 +226,20 @@
             </ListView.ContextMenu>
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Trafienie" Width="100" DisplayMemberBinding="{Binding Path=ToHit}"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Damage}" Header="Obrażenia" Width="120" />
+                    <GridViewColumn Header="Nazwa" Width="150" DisplayMemberBinding="{Binding Path=Name}" />
+                    <GridViewColumn Header="Trafienie" Width="80" DisplayMemberBinding="{Binding Path=ToHit}"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Damage}" Header="Obrażenia" Width="100" />
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Odpoczynek" Height="23" HorizontalAlignment="Left" Margin="404,581,0,0" Name="button7" VerticalAlignment="Top" Width="75" Click="button7_Click" />
-        <Button Content="Przywrócenie" Height="23" HorizontalAlignment="Left" Margin="317,581,0,0" Name="button8" VerticalAlignment="Top" Width="75" Click="button8_Click" />
-        <Label Content="Inic." Height="28" HorizontalAlignment="Left" Margin="383,38,0,0" Name="label25" VerticalAlignment="Top" />
-        <TextBox Text="{Binding Path=Initiative}" Height="23" HorizontalAlignment="Left" Margin="420,41,0,0" Name="textBox8" VerticalAlignment="Top" Width="60" />
-        <Button Content="Oblicz" Height="23" HorizontalAlignment="Left" Margin="405,160,0,0" Name="button9" VerticalAlignment="Top" Width="75" Click="button9_Click" />
+        <Button Content="Odpoczynek" Height="23" HorizontalAlignment="Left" Margin="491,617,0,0" Name="button7" VerticalAlignment="Top" Width="75" Click="button7_Click" />
+        <Button Content="Przywrócenie" Height="23" HorizontalAlignment="Left" Margin="405,617,0,0" Name="button8" VerticalAlignment="Top" Width="75" Click="button8_Click" />
+        <Label Content="Inic." Height="28" HorizontalAlignment="Left" Margin="239,162,0,0" Name="label25" VerticalAlignment="Top" />
+        <TextBox Text="{Binding Path=Initiative}" Height="23" HorizontalAlignment="Left" Margin="354,162,0,0" Name="textBox8" VerticalAlignment="Top" Width="60" />
+        <Button Content="Oblicz" Height="23" HorizontalAlignment="Left" Margin="491,192,0,0" Name="button9" VerticalAlignment="Top" Width="75" Click="button9_Click" />
+        <Label Content="Charyzma:" Height="28" HorizontalAlignment="Left" Margin="13,219,0,0" Name="label29" VerticalAlignment="Top" />
+        <TextBox Text="{Binding Path=CurrentStats.Charisma}" Height="23" HorizontalAlignment="Left" Margin="104,223,0,0" Name="textBox12" VerticalAlignment="Top" Width="59" />
+        <TextBox Text="{Binding Path=OriginalStats.Charisma}"  Height="23" HorizontalAlignment="Right" Margin="0,223,349,0" Name="textBox13" VerticalAlignment="Top" Width="59" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="419,162,0,0" Name="textBox14" Text="{Binding Path=BaseInitiative}" VerticalAlignment="Top" Width="60" />
     </Grid>
 </UserControl>

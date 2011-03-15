@@ -42,6 +42,7 @@ namespace DnDHelper
                 retTable["Barbarzyńca"] = Barbarian;
                 retTable["Tropiciel"] = Ranger;
                 retTable["Mag"] = Mage;
+                retTable["Bard"] = Bard;
                 return retTable;
             }
         }
@@ -117,6 +118,65 @@ namespace DnDHelper
                     ThrowPerLevel = GetMageThrowTable(),
                     SpellsPerLevel = GetMageSpellCastings(),
                     PW = 4
+                };
+            }
+        }
+
+        public static Class Bard
+        {
+            get
+            {
+                return new Class()
+                {
+                    Name = "Bard",
+                    AttackPerLevel = GetAttackMedium(),
+                    ThrowPerLevel = GetBardThrowTable(),
+                    SpellsPerLevel = GetBardSpellCastings(),
+                    PW = 6
+                };
+            }
+        }
+
+        public static Class Druid
+        {
+            get
+            {
+                return new Class()
+                {
+                    Name = "Druid",
+                    AttackPerLevel = GetAttackMedium(),
+                    ThrowPerLevel = GetDruidThrowTable(),
+                    SpellsPerLevel = GetDruidSpellCastings(),
+                    PW = 8
+                };
+            }
+        }
+
+        public static Class Cleric
+        {
+            get
+            {
+                return new Class()
+                {
+                    Name = "Kapłan",
+                    AttackPerLevel = GetAttackMedium(),
+                    ThrowPerLevel = GetDruidThrowTable(),
+                    SpellsPerLevel = GetClericSpellCastings(),
+                    PW = 8
+                };
+            }
+        }
+
+        public static Class Thief
+        {
+            get
+            {
+                return new Class()
+                {
+                    Name = "Łotrzyk",
+                    AttackPerLevel = GetAttackMedium(),
+                    ThrowPerLevel = GetThiefThrowTable(),
+                    PW = 6
                 };
             }
         }
@@ -232,6 +292,22 @@ namespace DnDHelper
             return dict;
         }
 
+        public static Dictionary<int, string> GetAttackMedium()
+        {
+            Dictionary<int, string> dict = new Dictionary<int, string>();
+            dict[1] = "0";
+            dict[2] = "1";
+            dict[3] = "2";
+            dict[4] = "3";
+            dict[5] = "3";
+            dict[6] = "4";
+            dict[7] = "5";
+            dict[8] = "6\\1";
+            dict[9] = "6\\1";
+            dict[10] = "7\\2";
+            return dict;
+        }
+
         public static Dictionary<int, Throw> GetWarriorThrowTable()
         {
             Dictionary<int, Throw> dict = new Dictionary<int,Throw>();
@@ -280,6 +356,54 @@ namespace DnDHelper
             return dict;
         }
 
+        public static Dictionary<int, Throw> GetBardThrowTable()
+        {
+            Dictionary<int, Throw> dict = new Dictionary<int, Throw>();
+            dict[1] = new Throw() { EnduranceThrow = 0, ReflexThrow = 2, WillThrow = 2 };
+            dict[2] = new Throw() { EnduranceThrow = 0, ReflexThrow = 3, WillThrow = 3 };
+            dict[3] = new Throw() { EnduranceThrow = 1, ReflexThrow = 3, WillThrow = 3 };
+            dict[4] = new Throw() { EnduranceThrow = 1, ReflexThrow = 4, WillThrow = 4 };
+            dict[5] = new Throw() { EnduranceThrow = 1, ReflexThrow = 4, WillThrow = 4 };
+            dict[6] = new Throw() { EnduranceThrow = 2, ReflexThrow = 5, WillThrow = 5 };
+            dict[7] = new Throw() { EnduranceThrow = 2, ReflexThrow = 5, WillThrow = 5 };
+            dict[8] = new Throw() { EnduranceThrow = 2, ReflexThrow = 6, WillThrow = 6 };
+            dict[9] = new Throw() { EnduranceThrow = 3, ReflexThrow = 6, WillThrow = 6 };
+            dict[10] = new Throw() { EnduranceThrow = 3, ReflexThrow = 7, WillThrow = 7 };
+            return dict;
+        }
+
+        public static Dictionary<int, Throw> GetDruidThrowTable()
+        {
+            Dictionary<int, Throw> dict = new Dictionary<int, Throw>();
+            dict[1] = new Throw() { EnduranceThrow = 2, ReflexThrow = 0, WillThrow = 2 };
+            dict[2] = new Throw() { EnduranceThrow = 3, ReflexThrow = 0, WillThrow = 3 };
+            dict[3] = new Throw() { EnduranceThrow = 3, ReflexThrow = 1, WillThrow = 3 };
+            dict[4] = new Throw() { EnduranceThrow = 4, ReflexThrow = 1, WillThrow = 4 };
+            dict[5] = new Throw() { EnduranceThrow = 5, ReflexThrow = 2, WillThrow = 5 };
+            dict[6] = new Throw() { EnduranceThrow = 5, ReflexThrow = 2, WillThrow = 5 };
+            dict[7] = new Throw() { EnduranceThrow = 6, ReflexThrow = 2, WillThrow = 6 };
+            dict[8] = new Throw() { EnduranceThrow = 6, ReflexThrow = 3, WillThrow = 6 };
+            dict[9] = new Throw() { EnduranceThrow = 7, ReflexThrow = 3, WillThrow = 7 };
+            dict[10] = new Throw() { EnduranceThrow = 7, ReflexThrow = 3, WillThrow = 7 };
+            return dict;
+        }
+
+        public static Dictionary<int, Throw> GetThiefThrowTable()
+        {
+            Dictionary<int, Throw> dict = new Dictionary<int, Throw>();
+            dict[1] = new Throw() { EnduranceThrow = 0, ReflexThrow = 2, WillThrow = 0 };
+            dict[2] = new Throw() { EnduranceThrow = 0, ReflexThrow = 3, WillThrow = 0 };
+            dict[3] = new Throw() { EnduranceThrow = 1, ReflexThrow = 3, WillThrow = 1 };
+            dict[4] = new Throw() { EnduranceThrow = 1, ReflexThrow = 4, WillThrow = 1 };
+            dict[5] = new Throw() { EnduranceThrow = 1, ReflexThrow = 4, WillThrow = 1 };
+            dict[6] = new Throw() { EnduranceThrow = 2, ReflexThrow = 5, WillThrow = 2 };
+            dict[7] = new Throw() { EnduranceThrow = 2, ReflexThrow = 5, WillThrow = 2 };
+            dict[8] = new Throw() { EnduranceThrow = 2, ReflexThrow = 6, WillThrow = 2 };
+            dict[9] = new Throw() { EnduranceThrow = 2, ReflexThrow = 6, WillThrow = 2 };
+            dict[10] = new Throw() { EnduranceThrow = 3, ReflexThrow = 7, WillThrow = 3 };
+            return dict;
+        }
+
         public static Dictionary<int, List<SpellCasting>> GetMageSpellCastings()
         {
             Dictionary<int, List<SpellCasting>> dict = new Dictionary<int, List<SpellCasting>>();
@@ -323,6 +447,135 @@ namespace DnDHelper
             dict[10].Add(new SpellCasting() { Type = "Mage", Level = 3, Count = 4 });
             dict[10].Add(new SpellCasting() { Type = "Mage", Level = 4, Count = 4 });
             dict[10].Add(new SpellCasting() { Type = "Mage", Level = 5, Count = 3 });
+            return dict;
+        }
+
+        public static Dictionary<int, List<SpellCasting>> GetBardSpellCastings()
+        {
+            Dictionary<int, List<SpellCasting>> dict = new Dictionary<int, List<SpellCasting>>();
+            dict[1] = new List<SpellCasting>();
+            dict[2] = new List<SpellCasting>();
+            dict[2].Add(new SpellCasting() { Type = "Bard", Level = 1, Count = 2 });
+            dict[3] = new List<SpellCasting>();
+            dict[3].Add(new SpellCasting() { Type = "Bard", Level = 1, Count = 3 });
+            dict[4] = new List<SpellCasting>();
+            dict[4].Add(new SpellCasting() { Type = "Bard", Level = 1, Count = 3 });
+            dict[4].Add(new SpellCasting() { Type = "Bard", Level = 2, Count = 2 });
+            dict[5] = new List<SpellCasting>();
+            dict[5].Add(new SpellCasting() { Type = "Bard", Level = 1, Count = 4 });
+            dict[5].Add(new SpellCasting() { Type = "Bard", Level = 2, Count = 3 });
+            dict[6] = new List<SpellCasting>();
+            dict[6].Add(new SpellCasting() { Type = "Bard", Level = 1, Count = 4 });
+            dict[6].Add(new SpellCasting() { Type = "Bard", Level = 2, Count = 3 });
+            dict[7] = new List<SpellCasting>();
+            dict[7].Add(new SpellCasting() { Type = "Bard", Level = 1, Count = 4 });
+            dict[7].Add(new SpellCasting() { Type = "Bard", Level = 2, Count = 4 });
+            dict[7].Add(new SpellCasting() { Type = "Bard", Level = 3, Count = 2 });
+            dict[8] = new List<SpellCasting>();
+            dict[8].Add(new SpellCasting() { Type = "Bard", Level = 1, Count = 4 });
+            dict[8].Add(new SpellCasting() { Type = "Bard", Level = 2, Count = 4 });
+            dict[8].Add(new SpellCasting() { Type = "Bard", Level = 3, Count = 3 });
+            dict[9] = new List<SpellCasting>();
+            dict[9].Add(new SpellCasting() { Type = "Bard", Level = 1, Count = 4 });
+            dict[9].Add(new SpellCasting() { Type = "Bard", Level = 2, Count = 4 });
+            dict[9].Add(new SpellCasting() { Type = "Bard", Level = 3, Count = 3 });
+            dict[10] = new List<SpellCasting>();
+            dict[10].Add(new SpellCasting() { Type = "Bard", Level = 1, Count = 4 });
+            dict[10].Add(new SpellCasting() { Type = "Bard", Level = 2, Count = 4 });
+            dict[10].Add(new SpellCasting() { Type = "Bard", Level = 3, Count = 4 });
+            dict[10].Add(new SpellCasting() { Type = "Bard", Level = 4, Count = 2 });
+            return dict;
+        }
+
+        public static Dictionary<int, List<SpellCasting>> GetDruidSpellCastings()
+        {
+            Dictionary<int, List<SpellCasting>> dict = new Dictionary<int, List<SpellCasting>>();
+            dict[1] = new List<SpellCasting>();
+            dict[1].Add(new SpellCasting() { Type = "Druid", Level = 1, Count = 2 });
+            dict[2] = new List<SpellCasting>();
+            dict[2].Add(new SpellCasting() { Type = "Druid", Level = 1, Count = 3 });
+            dict[3] = new List<SpellCasting>();
+            dict[3].Add(new SpellCasting() { Type = "Druid", Level = 1, Count = 3 });
+            dict[3].Add(new SpellCasting() { Type = "Druid", Level = 2, Count = 2 });
+            dict[4] = new List<SpellCasting>();
+            dict[4].Add(new SpellCasting() { Type = "Druid", Level = 1, Count = 4 });
+            dict[4].Add(new SpellCasting() { Type = "Druid", Level = 2, Count = 3 });
+            dict[5] = new List<SpellCasting>();
+            dict[5].Add(new SpellCasting() { Type = "Druid", Level = 1, Count = 4 });
+            dict[5].Add(new SpellCasting() { Type = "Druid", Level = 2, Count = 3 });
+            dict[5].Add(new SpellCasting() { Type = "Druid", Level = 3, Count = 2 });
+            dict[6] = new List<SpellCasting>();
+            dict[6].Add(new SpellCasting() { Type = "Druid", Level = 1, Count = 4 });
+            dict[6].Add(new SpellCasting() { Type = "Druid", Level = 2, Count = 4 });
+            dict[6].Add(new SpellCasting() { Type = "Druid", Level = 3, Count = 3 });
+            dict[7] = new List<SpellCasting>();
+            dict[7].Add(new SpellCasting() { Type = "Druid", Level = 1, Count = 5 });
+            dict[7].Add(new SpellCasting() { Type = "Druid", Level = 2, Count = 4 });
+            dict[7].Add(new SpellCasting() { Type = "Druid", Level = 3, Count = 3 });
+            dict[7].Add(new SpellCasting() { Type = "Druid", Level = 4, Count = 2 });
+            dict[8] = new List<SpellCasting>();
+            dict[8].Add(new SpellCasting() { Type = "Druid", Level = 1, Count = 5 });
+            dict[8].Add(new SpellCasting() { Type = "Druid", Level = 2, Count = 4 });
+            dict[8].Add(new SpellCasting() { Type = "Druid", Level = 3, Count = 4 });
+            dict[8].Add(new SpellCasting() { Type = "Druid", Level = 4, Count = 3 });
+            dict[9] = new List<SpellCasting>();
+            dict[9].Add(new SpellCasting() { Type = "Druid", Level = 1, Count = 5 });
+            dict[9].Add(new SpellCasting() { Type = "Druid", Level = 2, Count = 5 });
+            dict[9].Add(new SpellCasting() { Type = "Druid", Level = 3, Count = 4 });
+            dict[9].Add(new SpellCasting() { Type = "Druid", Level = 4, Count = 3 });
+            dict[9].Add(new SpellCasting() { Type = "Druid", Level = 5, Count = 2 });
+            dict[10] = new List<SpellCasting>();
+            dict[10].Add(new SpellCasting() { Type = "Druid", Level = 1, Count = 5 });
+            dict[10].Add(new SpellCasting() { Type = "Druid", Level = 2, Count = 5 });
+            dict[10].Add(new SpellCasting() { Type = "Druid", Level = 3, Count = 4 });
+            dict[10].Add(new SpellCasting() { Type = "Druid", Level = 4, Count = 4 });
+            dict[10].Add(new SpellCasting() { Type = "Druid", Level = 5, Count = 3 });
+            return dict;
+        }
+
+        public static Dictionary<int, List<SpellCasting>> GetClericSpellCastings()
+        {
+            Dictionary<int, List<SpellCasting>> dict = new Dictionary<int, List<SpellCasting>>();
+            dict[1] = new List<SpellCasting>();
+            dict[1].Add(new SpellCasting() { Type = "Cleric", Level = 1, Count = 2 });
+            dict[2] = new List<SpellCasting>();
+            dict[2].Add(new SpellCasting() { Type = "Cleric", Level = 1, Count = 3 });
+            dict[3] = new List<SpellCasting>();
+            dict[3].Add(new SpellCasting() { Type = "Cleric", Level = 1, Count = 3 });
+            dict[3].Add(new SpellCasting() { Type = "Cleric", Level = 2, Count = 2 });
+            dict[4] = new List<SpellCasting>();
+            dict[4].Add(new SpellCasting() { Type = "Cleric", Level = 1, Count = 4 });
+            dict[4].Add(new SpellCasting() { Type = "Cleric", Level = 2, Count = 3 });
+            dict[5] = new List<SpellCasting>();
+            dict[5].Add(new SpellCasting() { Type = "Cleric", Level = 1, Count = 4 });
+            dict[5].Add(new SpellCasting() { Type = "Cleric", Level = 2, Count = 3 });
+            dict[5].Add(new SpellCasting() { Type = "Cleric", Level = 3, Count = 2 });
+            dict[6] = new List<SpellCasting>();
+            dict[6].Add(new SpellCasting() { Type = "Cleric", Level = 1, Count = 4 });
+            dict[6].Add(new SpellCasting() { Type = "Cleric", Level = 2, Count = 4 });
+            dict[6].Add(new SpellCasting() { Type = "Cleric", Level = 3, Count = 3 });
+            dict[7] = new List<SpellCasting>();
+            dict[7].Add(new SpellCasting() { Type = "Cleric", Level = 1, Count = 5 });
+            dict[7].Add(new SpellCasting() { Type = "Cleric", Level = 2, Count = 4 });
+            dict[7].Add(new SpellCasting() { Type = "Cleric", Level = 3, Count = 3 });
+            dict[7].Add(new SpellCasting() { Type = "Cleric", Level = 4, Count = 2 });
+            dict[8] = new List<SpellCasting>();
+            dict[8].Add(new SpellCasting() { Type = "Cleric", Level = 1, Count = 5 });
+            dict[8].Add(new SpellCasting() { Type = "Cleric", Level = 2, Count = 4 });
+            dict[8].Add(new SpellCasting() { Type = "Cleric", Level = 3, Count = 4 });
+            dict[8].Add(new SpellCasting() { Type = "Cleric", Level = 4, Count = 3 });
+            dict[9] = new List<SpellCasting>();
+            dict[9].Add(new SpellCasting() { Type = "Cleric", Level = 1, Count = 5 });
+            dict[9].Add(new SpellCasting() { Type = "Cleric", Level = 2, Count = 5 });
+            dict[9].Add(new SpellCasting() { Type = "Cleric", Level = 3, Count = 4 });
+            dict[9].Add(new SpellCasting() { Type = "Cleric", Level = 4, Count = 3 });
+            dict[9].Add(new SpellCasting() { Type = "Cleric", Level = 5, Count = 2 });
+            dict[10] = new List<SpellCasting>();
+            dict[10].Add(new SpellCasting() { Type = "Cleric", Level = 1, Count = 5 });
+            dict[10].Add(new SpellCasting() { Type = "Cleric", Level = 2, Count = 5 });
+            dict[10].Add(new SpellCasting() { Type = "Cleric", Level = 3, Count = 4 });
+            dict[10].Add(new SpellCasting() { Type = "Cleric", Level = 4, Count = 4 });
+            dict[10].Add(new SpellCasting() { Type = "Cleric", Level = 5, Count = 3 });
             return dict;
         }
     }

@@ -57,7 +57,10 @@ namespace DnDHelper
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult = true;
+            if (System.Windows.Interop.ComponentDispatcher.IsThreadModal)
+            {
+                DialogResult = true;
+            }
             Close();
         }
     }

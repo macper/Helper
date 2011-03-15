@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.ComponentModel;
 
 namespace DnDHelper
 {
@@ -18,30 +19,48 @@ namespace DnDHelper
     /// </summary>
     public partial class SpellEditWindow : Window
     {
+
         Helper _helper;
         Character _character;
         public static readonly string [] Types = new string [] { "Mage", "Cleric", "Druid", "Bard" };
+        public static readonly string[] Levels = new string[] { "Wszystkie", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
         public SpellEditWindow(Helper helper, Character character)
         {
             InitializeComponent();
             _helper = helper;
             _character = character;
-            listView1.ItemsSource = _helper.Spells;
+            comboBox1.ItemsSource = Types;
+            comboBox2.ItemsSource = Levels;
+            listView1.ItemsSource = _helper.Spells.OrderBy(s => s.Name);
             listView2.ItemsSource = _character.KnownSpells;
-            comboBox1.ItemsSource = comboBox2.ItemsSource = Types;
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            SpellDefinition newSpell = new SpellDefinition() { Name = "Nowy czar" };
-            _helper.Spells.Add(newSpell);
-            ContentGrid.DataContext = newSpell;
+            textBox2.Text = "Nowy czar";
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            listView1.Items.Refresh();
+            try
+            {
+                SpellDefinition sd = _helper.GetSpell(textBox2.Text);
+                if (sd == null)
+                {
+                    sd = new SpellDefinition() { Name = textBox2.Text };
+                    _helper.Spells.Add(sd);
+                }
+                sd.Level = int.Parse(textBox3.Text);
+                sd.Shool = textBox4.Text;
+                sd.Description = textBox5.Text;
+                sd.Types = textBox6.Text;
+            }
+            catch
+            {
+                MessageBox.Show("Błąd walidacji");
+            }
+            listView1.ItemsSource = _helper.Spells.OrderBy(s => s.Name);
         }
 
         private void listView1_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -88,5 +107,20 @@ namespace DnDHelper
             DialogResult = true;
             Close();
         }
+
+        private void button7_Click(object sender, RoutedEventArgs e)
+        {
+            if ((string)comboBox2.SelectedItem == "Wszystkie")
+            {
+                listView1.ItemsSource = _helper.Spells.Where(f => f.Types.Contains((string)comboBox1.SelectedItem)).OrderBy(o => o.Name);
+            }
+            else
+            {
+                listView1.ItemsSource = _helper.Spells.Where(f => f.Level == int.Parse((string)comboBox2.SelectedItem) && f.Types.Contains((string)comboBox1.SelectedItem)).OrderBy(o => o.Name);
+            }
+        }
+
+       
+
     }
 }

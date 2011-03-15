@@ -129,7 +129,7 @@ namespace DnDHelper
         private void DodajEfekt_Click(object sender, RoutedEventArgs e)
         {
             Effect newEfekt = new DnDHelper.Effect();
-            EffectEditWindow efWnd = new EffectEditWindow(newEfekt);
+            EffectEditWindow efWnd = new EffectEditWindow(newEfekt, _helper);
             if (efWnd.ShowDialog() == true)
             {
                 _character.Effects.Add(newEfekt);
@@ -145,7 +145,7 @@ namespace DnDHelper
                 return;
             }
             DnDHelper.Effect efekt = (DnDHelper.Effect)listView2.SelectedItem;
-            EffectEditWindow efWnd = new EffectEditWindow(efekt);
+            EffectEditWindow efWnd = new EffectEditWindow(efekt, _helper);
             if (efWnd.ShowDialog() == true)
             {
                 listView2.Items.Refresh();
@@ -210,11 +210,11 @@ namespace DnDHelper
             if (comboBox2.SelectedItem != null)
             {
                 SpellCasting sCast = (SpellCasting)comboBox2.SelectedItem;
-                var spells = _character.KnownSpells.Where(f => f.Type == sCast.Type && f.Level == sCast.Level);
+                var spells = _character.KnownSpells.Where(f => f.Types_Array.Contains(sCast.Type) && f.Level == sCast.Level);
                 comboBox3.DataContext = spells;
                 comboBox3.ItemsSource = spells;
                 comboBox3.DisplayMemberPath = "Name";
-                listView5.ItemsSource = _character.Spells.Where(f => f.Definition.Type == sCast.Type && f.Definition.Level == sCast.Level);
+                listView5.ItemsSource = _character.Spells.Where(f => f.Definition.Types_Array.Contains(sCast.Type) && f.Definition.Level == sCast.Level);
             }
         }
 
@@ -223,7 +223,7 @@ namespace DnDHelper
             if (comboBox2.SelectedItem != null)
             {
                 SpellCasting sCast = (SpellCasting)comboBox2.SelectedItem;
-                var spells = _character.Spells.Where(f => f.Definition.Type == sCast.Type && f.Definition.Level == sCast.Level);
+                var spells = _character.Spells.Where(f => f.Definition.Types_Array.Contains(sCast.Type) && f.Definition.Level == sCast.Level);
                 if (spells.Count() == sCast.Count)
                 {
                     MessageBox.Show("Osiągnięo limit czarów");
@@ -236,7 +236,7 @@ namespace DnDHelper
                 }
                 Spell spell = new Spell() { Definition = (SpellDefinition)comboBox3.SelectedItem };
                 _character.Spells.Add(spell);
-                listView5.ItemsSource = _character.Spells.Where(f => f.Definition.Type == sCast.Type && f.Definition.Level == sCast.Level);
+                listView5.ItemsSource = _character.Spells.Where(f => f.Definition.Types_Array.Contains(sCast.Type) && f.Definition.Level == sCast.Level);
                 listView5.Items.Refresh();
             }
         }
@@ -247,7 +247,7 @@ namespace DnDHelper
             {
                 _character.Spells.Remove((Spell)listView5.SelectedItem);
                 SpellCasting sCast = (SpellCasting)comboBox2.SelectedItem;
-                listView5.ItemsSource = _character.Spells.Where(f => f.Definition.Type == sCast.Type && f.Definition.Level == sCast.Level);
+                listView5.ItemsSource = _character.Spells.Where(f => f.Definition.Types_Array.Contains(sCast.Type) && f.Definition.Level == sCast.Level);
                 listView5.Items.Refresh();
             }
         }
@@ -268,7 +268,7 @@ namespace DnDHelper
             {
                 spell.IsCasted = false;
             }
-            Init(_helper, _character);
+            RefreshCharacter();
         }
 
         private void button8_Click(object sender, RoutedEventArgs e)
@@ -283,7 +283,7 @@ namespace DnDHelper
             _character.CurrentStats.StrongThrow = _character.OriginalStats.StrongThrow;
             _character.CurrentStats.WillThrow = _character.OriginalStats.WillThrow;
             _character.CurrentStats.Wisdom = _character.OriginalStats.Wisdom;
-            Init(_helper, _character);
+            RefreshCharacter();
         }
 
         private void AddSkill_Click(object sender, RoutedEventArgs e)
@@ -387,6 +387,7 @@ namespace DnDHelper
                     _character.OriginalStats.WillThrow += Rules.GetStandardBonus(_character.OriginalStats.Wisdom);
 
                 Class cl = Rules.ClassTable[tbClass.Text];
+                _character.AvailableCastings = new List<SpellCasting>();
                 if (cl.SpellsPerLevel != null)
                 {
                     foreach (SpellCasting sc in cl.SpellsPerLevel[level])
@@ -396,7 +397,7 @@ namespace DnDHelper
                 }
                 
                 MessageBox.Show("Policzono");
-               
+                RefreshCharacter();
             }
             MessageBox.Show("Nie udało się obliczyć - nie znaleziono rasy albo klasy");
         }
@@ -470,6 +471,7 @@ namespace DnDHelper
                     _character.Attacks.Add(atak);
                 }
                 MessageBox.Show("Policzono");
+                RefreshCharacter();
             }
             catch (Exception exc)
             {
@@ -482,11 +484,33 @@ namespace DnDHelper
             AddGold wnd = new AddGold(_character, true);
             if (wnd.ShowDialog() == true)
             {
-
+                RefreshCharacter();
             }
         }
 
+        private void RefreshCharacter()
+        {
+            Character tmp = _character;
+            Init(_helper, new Character());
+            Init(_helper, tmp);
+        }
 
+        private void button12_Click(object sender, RoutedEventArgs e)
+        {
+            AddGold wnd = new AddGold(_character, false);
+            if (wnd.ShowDialog() == true)
+            {
+                RefreshCharacter();
+            }
+        }
+
+        private void listView6_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (listView6.SelectedItem != null)
+            {
+                textBox15.Text = ((Spell)listView6.SelectedItem).Definition.Description;
+            }
+        }
         
     }
 }

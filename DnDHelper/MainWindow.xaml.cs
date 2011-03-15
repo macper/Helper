@@ -28,6 +28,7 @@ namespace DnDHelper
             try
             {
                 _helper = Helper.LoadState();
+                _battle = new Battle();
             }
             catch
             {
@@ -267,6 +268,24 @@ namespace DnDHelper
             {
                 button9_Click(sender, e);
             }
+        }
+
+        private void AttackCustom_Click(object sender, RoutedEventArgs e)
+        {
+            AttackCustomWindow wnd = new AttackCustomWindow(_battle);
+            wnd.Show();
+        }
+
+        private void ZapiszButton_Click(object sender, RoutedEventArgs e)
+        {
+            Cursor = Cursors.Wait;
+            _helper.SaveState();
+            Cursor = Cursors.Arrow;
+        }
+
+        private void WyjdzButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
 
             
