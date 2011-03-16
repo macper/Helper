@@ -19,22 +19,16 @@ namespace DnDHelper
     public partial class EffectEditWindow : Window
     {
         Effect _effect;
+        Helper _helper;
 
-        public EffectEditWindow(Effect effect)
+        public EffectEditWindow(Effect effect, Helper helper)
         {
             InitializeComponent();
             _effect = effect;
-            textBox1.Text = effect.Name;
-            textBox2.Text = effect.Description;
-            if (effect.Duration == null)
-            {
-                checkBox1.IsChecked = true;
-                textBox3.IsEnabled = false;
-            }
-            else
-            {
-                textBox3.Text = effect.Duration.ToString();
-            }
+            _helper = helper;
+            GridContent.DataContext = _effect;
+            comboBox1.ItemsSource = _helper.Effects;
+            comboBox1.DisplayMemberPath = "Name";
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -45,18 +39,41 @@ namespace DnDHelper
             {
                 _effect.Duration = int.Parse(textBox3.Text);
             }
+            if (checkBox2.IsChecked == true)
+            {
+                if (_helper.Effects.Any(f => f.Name == _effect.Name))
+                {
+                    MessageBox.Show("Istnieje już efekt o tej nazwie");
+                    return;
+                }
+                _helper.Effects.Add(_effect);
+            }
             DialogResult = true;
             Close();
         }
 
         private void checkBox1_Checked(object sender, RoutedEventArgs e)
         {
-            textBox3.IsEnabled = false;
+            if (textBox3 != null)
+            {
+                textBox3.IsEnabled = false;
+            }
         }
 
         private void checkBox1_Unchecked(object sender, RoutedEventArgs e)
         {
-            textBox3.IsEnabled = true;
+            if (textBox3 != null)
+            {
+                textBox3.IsEnabled = true;
+            }
+        }
+
+        private void comboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (comboBox1.SelectedItem != null)
+            {
+                GridContent.DataContext = comboBox1.SelectedItem;
+            }
         }
     }
 }

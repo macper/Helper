@@ -14,38 +14,38 @@ using System.Windows.Shapes;
 namespace DnDHelper
 {
     /// <summary>
-    /// Interaction logic for AttackEditWindow.xaml
+    /// Interaction logic for AddGold.xaml
     /// </summary>
-    public partial class AttackEditWindow : Window
+    public partial class AddGold : Window
     {
-        Attack _attack;
+        Character _character;
+        bool _addGold;
 
-        public AttackEditWindow(Attack at)
+        public AddGold(Character character, bool added)
         {
             InitializeComponent();
-            _attack = at;
-            textBox1.Text = at.ToHit.ToString();
-            textBox2.Text = at.Damage;
-            textBox3.Text = at.Name;
+            _character = character;
+            _addGold = added;
+            textBox1.Focus();
+            textBox1.SelectAll();
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                _attack.ToHit = int.Parse(textBox1.Text);
-                _attack.Damage = textBox2.Text;
-                _attack.Name = textBox3.Text;
+                int count = int.Parse(textBox1.Text);
+                if (!_addGold)
+                {
+                    count = -count;
+                }
+                _character.Gold += count;
+                DialogResult = true;
+                Close();
             }
             catch
             {
-                MessageBox.Show("Dane nieprawidłowe!");
-                return;
             }
-            DialogResult = true;
-            Close();
         }
-
-
     }
 }

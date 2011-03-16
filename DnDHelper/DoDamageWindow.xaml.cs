@@ -14,38 +14,33 @@ using System.Windows.Shapes;
 namespace DnDHelper
 {
     /// <summary>
-    /// Interaction logic for AttackEditWindow.xaml
+    /// Interaction logic for DoDamageWindow.xaml
     /// </summary>
-    public partial class AttackEditWindow : Window
+    public partial class DoDamageWindow : Window
     {
-        Attack _attack;
+        Character _target;
+        Battle _battle;
 
-        public AttackEditWindow(Attack at)
+        public DoDamageWindow(Character target, Battle battle)
         {
             InitializeComponent();
-            _attack = at;
-            textBox1.Text = at.ToHit.ToString();
-            textBox2.Text = at.Damage;
-            textBox3.Text = at.Name;
+            _target = target;
+            _battle = battle;
+            textBox1.Focus();
+            textBox1.SelectAll();
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                _attack.ToHit = int.Parse(textBox1.Text);
-                _attack.Damage = textBox2.Text;
-                _attack.Name = textBox3.Text;
+                _battle.DoDamage(_target, int.Parse(textBox1.Text));
+                DialogResult = true;
+                Close();
             }
             catch
             {
-                MessageBox.Show("Dane nieprawidłowe!");
-                return;
             }
-            DialogResult = true;
-            Close();
         }
-
-
     }
 }

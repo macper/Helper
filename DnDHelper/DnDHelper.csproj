@@ -55,14 +55,39 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddGold.xaml.cs">
+      <DependentUpon>AddGold.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AttackCustomWindow.xaml.cs">
+      <DependentUpon>AttackCustomWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AttackWindow.xaml.cs">
+      <DependentUpon>AttackWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Battle.cs" />
     <Compile Include="BattleMemberAddWindow.xaml.cs">
       <DependentUpon>BattleMemberAddWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DoDamageWindow.xaml.cs">
+      <DependentUpon>DoDamageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Rules.cs" />
     <Compile Include="SpellEditWindow.xaml.cs">
       <DependentUpon>SpellEditWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddGold.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AttackCustomWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AttackEditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AttackWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -71,6 +96,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CharacterDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DoDamageWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

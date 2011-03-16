@@ -17,6 +17,7 @@ namespace DnDHelper
         public Stats CurrentStats { get; set; }
         public Stats OriginalStats { get; set; }
         public int Initiative { get; set; }
+        public int BaseInitiative { get; set; }
         public List<Attack> Attacks { get; set; }
         public Item RightHand { get; set; }
         public Item LeftHand { get; set; }
@@ -24,9 +25,18 @@ namespace DnDHelper
         public string Items { get; set; }
         public int Gold { get; set; }
         public List<Effect> Effects { get; set; }
+        [System.Xml.Serialization.XmlIgnore]
         public List<SpellDefinition> KnownSpells { get; set; }
+        [System.Xml.Serialization.XmlIgnore]
         public List<Spell> Spells { get; set; }
+        public List<string> KnownSpellsS { get; set; }
+        public List<SpellS> SpellsS { get; set; }
         public List<SpellCasting> AvailableCastings { get; set; }
+        public List<Skill> Skills { get; set; }
+
+        // Chujowy hack bo już mnie kurwica bierze z tym WPF-em pierdolonym
+        public bool IsActiveMember { get; set; }
+        public bool IsAlive { get { return CurrentStats.HP > 0; } }
 
         public Character()
         {
@@ -36,6 +46,40 @@ namespace DnDHelper
             Effects = new List<Effect>();
             KnownSpells = new List<SpellDefinition>();
             Spells = new List<Spell>();
+            Skills = new List<Skill>();
+            KnownSpellsS = new List<string>();
+            SpellsS = new List<SpellS>();
+        }
+
+        public void DeserializeSelf(Helper _helper)
+        {
+            foreach (string spellDef in KnownSpellsS)
+            {
+                SpellDefinition sd = _helper.GetSpell(spellDef);
+                if (sd != null)
+                {
+                    KnownSpells.Add(sd);
+                }
+            }
+            foreach (SpellS spell in SpellsS)
+            {
+                SpellDefinition sd = _helper.GetSpell(spell.Name);
+                Spells.Add(new Spell() { Definition = sd, IsCasted = spell.IsCasted });
+            }
+        }
+
+        public void SerializeSelf()
+        {
+            KnownSpellsS = new List<string>();
+            foreach (SpellDefinition sd in KnownSpells)
+            {
+                KnownSpellsS.Add(sd.Name);
+            }
+            SpellsS = new List<SpellS>();
+            foreach (Spell spell in Spells)
+            {
+                SpellsS.Add(new SpellS() { Name = spell.Definition.Name, IsCasted = spell.IsCasted });
+            }
         }
 
         public string Description
@@ -48,7 +92,7 @@ namespace DnDHelper
                     strEffects += string.Format("{0} ({1}) ", ef.Name, ef.Duration.ToString());
                 }
 
-                return string.Format("PŻ:{0} KP:{1} Rzt:{2}/{3}/{4} Efekty: {5}", CurrentStats.HP.ToString(), CurrentStats.AC.ToString(), CurrentStats.ReflexThrow.ToString(), CurrentStats.WillThrow.ToString(), CurrentStats.StrongThrow.ToString(), strEffects);
+                return string.Format("PŻ:{0} Efekty: {1}", CurrentStats.HP.ToString(), strEffects);
             }
         }
 
@@ -56,7 +100,7 @@ namespace DnDHelper
 
         public int CompareTo(object obj)
         {
-            return Initiative - ((Character)obj).Initiative;
+            return ((Character)obj).Initiative - Initiative;
         }
 
         #endregion
@@ -70,6 +114,7 @@ namespace DnDHelper
         public int Constitution { get; set; }
         public int Wisdom { get; set; }
         public int Inteligence { get; set; }
+        public int Charisma { get; set; }
         public int HP { get; set; }
         public int AC { get; set; }
         public string AttackSkill { get; set; }
@@ -127,8 +172,14 @@ namespace DnDHelper
     [Serializable]
     public class Attack
     {
+        public string Name { get; set; }
         public int ToHit { get; set; }
         public string Damage { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("({2}) +{0} {1}", ToHit.ToString(), Damage.ToString(), Name);
+        }
     }
 
     [Serializable]
@@ -137,13 +188,17 @@ namespace DnDHelper
         public string Name { get; set; }
         public string Description { get; set; }
         public int? Duration { get; set; }
+        [System.Xml.Serialization.XmlIgnore]
+        public bool IsPermanent { get { return Duration == null; } }
     }
 
     [Serializable]
     public class SpellDefinition
     {
         public string Name { get; set; }
-        public string Type { get; set; }
+        public string Types { get; set; }
+        [System.Xml.Serialization.XmlIgnore]
+        public string[] Types_Array { get { return Types == null ? new string [] {} : Types.Split(','); } }
         public string Shool { get; set; }
         public int Level { get; set; }
         public string Description { get; set; }
@@ -153,19 +208,24 @@ namespace DnDHelper
             return string.Format(@"Nazwa: {0}
 Typ: {1}
 Poziom: {2}
-Szkoła: {3}
+Szkoły: {3}
 Opis:
-{4}", Name, Type, Level.ToString(), Shool, Description);
+{4}", Name, Types, Level.ToString(), Shool, Description);
         }
     }
 
-    [Serializable]
     public class Spell
     {
         public SpellDefinition Definition { get; set; }
         public bool IsCasted { get; set; }
     }
 
+    [Serializable]
+    public class SpellS
+    {
+        public string Name { get; set; }
+        public bool IsCasted { get; set; }
+    }
     [Serializable]
     public class SpellCasting
     {

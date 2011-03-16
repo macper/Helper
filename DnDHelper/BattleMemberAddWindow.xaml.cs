@@ -31,6 +31,7 @@ namespace DnDHelper
             _battle = battle;
             listBox1.ItemsSource = _helper.Groups;
             listBox1.DisplayMemberPath = "GroupName";
+            listBox3.ItemsSource = _battle.Members;
         }
 
         private void listBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -47,11 +48,23 @@ namespace DnDHelper
             if (listBox2.SelectedItem != null)
             {
                 Character character = (Character)listBox2.SelectedItem;
-                character.Initiative = int.Parse(textBox1.Text) + character.CurrentStats.Dexterity;
-                _battle.AddMember(character);
-
-                DialogResult = true;
-                Close();
+                try
+                {
+                    if (_battle.Members.Contains(character))
+                    {
+                        MessageBox.Show("Ten członek został już dodany:)");
+                        return;
+                    }
+                    character.IsActiveMember = false;
+                    character.Initiative = int.Parse(textBox1.Text) + character.BaseInitiative;
+                    _battle.AddMember(character);
+                    listBox3.Items.Refresh();
+                    
+                }
+                catch
+                {
+                    MessageBox.Show("Wartość rzutu inicjatywy nieprawidłowa!");
+                }
             }
         }
 
@@ -60,18 +73,61 @@ namespace DnDHelper
             if (listBox2.SelectedItem != null)
             {
                 Character character = (Character)listBox2.SelectedItem;
-                character.Initiative = int.Parse(textBox1.Text) + character.CurrentStats.Dexterity;
-                using (MemoryStream ms = new MemoryStream())
+                try
                 {
-                    XmlSerializer xmlSerializer = new XmlSerializer(typeof(Character));
-                    xmlSerializer.Serialize(ms, character);
-                    ms.Position = 0;
-                    Character newCharacter = (Character)xmlSerializer.Deserialize(ms);
-                    _battle.AddMember(newCharacter);
+                    
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        XmlSerializer xmlSerializer = new XmlSerializer(typeof(Character));
+                        xmlSerializer.Serialize(ms, character);
+                        ms.Position = 0;
+                        Character newCharacter = (Character)xmlSerializer.Deserialize(ms);
+                        newCharacter.Name = textBox2.Text;
+                        if (_battle.Members.FirstOrDefault(f => f.Name == newCharacter.Name) != null)
+                        {
+                            int counter = 2;
+                            IEnumerable<Character> lst = _battle.Members.Where(f => f.Name.Contains('_'));
+                            if (lst.Count() > 0)
+                            {
+                                string[] parts = lst.OrderByDescending(o => o.Name).ToArray().First().Name.Split('_');
+                                if (parts.Length > 1)
+                                {
+                                    try
+                                    {
+                                        int number = int.Parse(parts[1]);
+                                        counter = ++number;
+                                    }
+                                    catch
+                                    {
+                                    }
+                                }
+                            }
+                            newCharacter.Name += "_" + counter.ToString();
+                        }
+                        newCharacter.Initiative = int.Parse(textBox1.Text) + newCharacter.BaseInitiative;
+                        _battle.AddMember(newCharacter);
+                        listBox3.Items.Refresh();
+                    }
                 }
-                DialogResult = true;
-                Close();
+                catch
+                {
+                    MessageBox.Show("Nieprawidłowa inicjatywa!");
+                }
             }
+        }
+
+        private void listBox2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (listBox2.SelectedItem != null)
+            {
+                textBox2.Text = ((Character)listBox2.SelectedItem).Name;
+            }
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = true;
+            Close();
         }
     }
 }

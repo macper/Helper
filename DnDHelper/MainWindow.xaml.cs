@@ -20,7 +20,7 @@ namespace DnDHelper
     public partial class MainWindow : Window
     {
         protected Helper _helper;
-        protected Battle _battle;
+        public Battle _battle;
 
         public MainWindow()
         {
@@ -28,6 +28,7 @@ namespace DnDHelper
             try
             {
                 _helper = Helper.LoadState();
+                _battle = new Battle();
             }
             catch
             {
@@ -173,6 +174,7 @@ namespace DnDHelper
         private void BattleBegin_Click(object sender, RoutedEventArgs e)
         {
             _battle.Start();
+            listView1.Items.Refresh();
         }
 
         private void AddMember_Click(object sender, RoutedEventArgs e)
@@ -186,7 +188,109 @@ namespace DnDHelper
 
         private void RemoveMember_Click(object sender, RoutedEventArgs e)
         {
-
+            if (listView1.SelectedItem != null)
+            {
+                if (MessageBox.Show("Czy na pewno usunąć ?", "Czy na pewno?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    _battle.Members.Remove((Character)listView1.SelectedItem);
+                    listView1.Items.Refresh();
+                }
+            }
         }
+
+        private void button10_Click(object sender, RoutedEventArgs e)
+        {
+            if ((string)button10.Content == "Nowa")
+            {
+                button10.Content = "Start";
+                NewBattle_Click(this, e);
+            }
+            else
+            {
+                _battle.Start();
+                button10.Content = "Nowa";
+                listView1.Items.Refresh();
+                characterDetails2.Init(_helper, _battle.ActiveMember);
+                label5.GetBindingExpression(Label.ContentProperty).UpdateTarget();
+            }
+        }
+
+        private void listView1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (listView1.SelectedItem != null)
+            {
+                characterDetails2.Init(_helper, (Character)listView1.SelectedItem);
+            }
+        }
+
+        private void RefreshMembers_Click(object sender, RoutedEventArgs e)
+        {
+            listView1.Items.Refresh();
+        }
+
+        private void button9_Click(object sender, RoutedEventArgs e)
+        {
+            _battle.NextMember();
+            characterDetails2.Init(_helper, _battle.ActiveMember);
+            listView1.Items.Refresh();
+            label5.GetBindingExpression(Label.ContentProperty).UpdateTarget();
+        }
+
+        private void AttackMember_Click(object sender, RoutedEventArgs e)
+        {
+            if (listView1.SelectedItem != null)
+            {
+                Character defender = (Character)listView1.SelectedItem;
+                AttackWindow wnd = new AttackWindow(_battle.ActiveMember, defender, _battle);
+                if (wnd.ShowDialog() == true)
+                {
+                    listView1.Items.Refresh();
+                }
+            }
+        }
+
+        private void DoDamage_Click(object sender, RoutedEventArgs e)
+        {
+            if (listView1.SelectedItem != null)
+            {
+                Character defender = (Character)listView1.SelectedItem;
+                DoDamageWindow wnd = new DoDamageWindow(defender, _battle);
+                if (wnd.ShowDialog() == true)
+                {
+                    listView1.Items.Refresh();
+                }
+            }
+        }
+
+        private void listView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.N)
+            {
+                button9_Click(sender, e);
+            }
+        }
+
+        private void AttackCustom_Click(object sender, RoutedEventArgs e)
+        {
+            AttackCustomWindow wnd = new AttackCustomWindow(_battle);
+            wnd.Show();
+        }
+
+        private void ZapiszButton_Click(object sender, RoutedEventArgs e)
+        {
+            Cursor = Cursors.Wait;
+            _helper.SaveState();
+            Cursor = Cursors.Arrow;
+        }
+
+        private void WyjdzButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+            
+
     }
+
+   
 }

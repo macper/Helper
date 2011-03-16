@@ -27,6 +27,7 @@ namespace DnDHelper
         {
             Turn = 1;
             ActiveMember = Members[0];
+            ActiveMember.IsActiveMember = true;
         }
 
         public void NextMember()
@@ -37,17 +38,26 @@ namespace DnDHelper
                 NewTurn();
                 return;
             }
-            ActiveMember = Members[index++];
+            ActiveMember.IsActiveMember = false;
+            ActiveMember = Members[++index];
+            if (!ActiveMember.IsAlive)
+            {
+                NextMember();
+            }
+            ActiveMember.IsActiveMember = true;
         }
 
         private void NewTurn()
         {
             Turn++;
+            ActiveMember.IsActiveMember = false;
             ActiveMember = Members[0];
+            ActiveMember.IsActiveMember = true;
             foreach (Character character in Members)
             {
-                foreach (Effect efekt in character.Effects)
+                for (int i = 0; i < character.Effects.Count; i++)
                 {
+                    Effect efekt = character.Effects[i];
                     if (efekt.Duration != null)
                     {
                         efekt.Duration--;
