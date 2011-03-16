@@ -157,6 +157,8 @@ namespace DnDHelper
         }
     }
 
+    public enum BaseTypes { LightBlade, HeavyBlade, Axe, Bow, Crossbow, Spear, Blunt, LightArmor, HeavyArmor, Shield }
+
     [Serializable]
     public class CharacterGroup
     {

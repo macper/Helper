@@ -21,12 +21,16 @@ namespace DnDHelper
         Helper _helper;
         int? _local;
         Character _character;
+        static string[] _baseTypes = Enum.GetNames(typeof(BaseTypes));
 
         public ItemsWindow(Helper help)
         {
             InitializeComponent();
             _helper = help;
             listView1.ItemsSource = _helper.Items;
+            comboBox1.ItemsSource = new string[] { "Broń", "Zbroja" };
+            comboBox2.ItemsSource = _baseTypes;
+            comboBox3.ItemsSource = _baseTypes;
         }
 
         public ItemsWindow(Helper help, int? local, Character ch)
@@ -34,6 +38,9 @@ namespace DnDHelper
             InitializeComponent();
             _helper = help;
             listView1.ItemsSource = _helper.Items;
+            comboBox1.ItemsSource = new string[] { "Broń", "Zbroja" };
+            comboBox2.ItemsSource = _baseTypes;
+            comboBox3.ItemsSource = _baseTypes;
             _local = local;
             _character = ch;
         }
@@ -45,14 +52,15 @@ namespace DnDHelper
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            if (_helper.Items.Any(el => el.Name == textBox1.Text))
+            Item newIt = _helper.Items.FirstOrDefault(el => el.Name == textBox1.Text);
+            if (newIt == null)
             {
-                MessageBox.Show("Istnieje już przedmiot o takiej nazwie");
-                return;
+                newIt = new Item();
+                _helper.Items.Add(newIt);
             }
+            
             try
             {
-                Item newIt = new Item();
                 if (comboBox1.SelectedIndex == 0)
                 {
                     newIt.Damage = textBox3.Text.ToUpper();
@@ -63,10 +71,10 @@ namespace DnDHelper
                     newIt.MaxDexterityBonus = int.Parse(textBox5.Text);
                     newIt.Panalty = int.Parse(textBox6.Text);
                 }
+                newIt.BaseType = (string)comboBox2.SelectedItem;
                 newIt.Name = textBox1.Text;
                 newIt.Cost = int.Parse(textBox2.Text);
                 newIt.Specials = textBox7.Text;
-                _helper.Items.Add(newIt);
                 listView1.Items.Refresh();
             }
             catch
@@ -91,6 +99,8 @@ namespace DnDHelper
             try
             {
                 Item it = (Item)listView1.SelectedItem;
+                comboBox1.SelectedItem = it.Type;
+                comboBox2.SelectedItem = it.BaseType;
                 textBox1.Text = it.Name;
                 textBox2.Text = it.Cost.ToString();
                 textBox3.Text = it.Damage;
@@ -130,6 +140,14 @@ namespace DnDHelper
                 }
             }
             Close();
+        }
+
+        private void button5_Click(object sender, RoutedEventArgs e)
+        {
+            if (comboBox3.SelectedItem != null)
+            {
+                listView1.ItemsSource = _helper.Items.Where(f => f.BaseType == (string)comboBox3.SelectedItem).OrderBy(o => o.Name);
+            }
         }
     }
 }

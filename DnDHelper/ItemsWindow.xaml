@@ -3,36 +3,39 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Przedmioty" Height="479" Width="792">
     <Grid>
-        <ListView Height="388" HorizontalAlignment="Left" Margin="12,12,0,0" Name="listView1" VerticalAlignment="Top" Width="261" SelectionChanged="listView1_SelectionChanged">
+        <ListView Height="358" HorizontalAlignment="Left" Margin="12,42,0,0" Name="listView1" VerticalAlignment="Top" Width="435" SelectionChanged="listView1_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Nazwa" Width="150" DisplayMemberBinding="{Binding Path=Name}" />
                     <GridViewColumn Header="Typ" Width="110" DisplayMemberBinding="{Binding Path=Type}" />
+                    <GridViewColumn Header="Typ bazowy" Width="160" DisplayMemberBinding="{Binding Path=BaseType}" />
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content="Nazwa:" Height="28" HorizontalAlignment="Left" Margin="279,11,0,0" Name="label1" VerticalAlignment="Top" />
+        <Label Content="Nazwa:" Height="28" HorizontalAlignment="Left" Margin="453,12,0,0" Name="label1" VerticalAlignment="Top" />
         <Button Content="Nowy" Height="23" HorizontalAlignment="Left" Margin="12,405,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
         <Button Content="Usuń" Height="23" HorizontalAlignment="Left" Margin="93,405,0,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="331,13,0,0" Name="textBox1" VerticalAlignment="Top" Width="253" />
-        <Label Content="Koszt:" Height="28" HorizontalAlignment="Left" Margin="279,40,0,0" Name="label2" VerticalAlignment="Top" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="457,42,0,0" Name="textBox2" VerticalAlignment="Top" Width="127" />
-        <Label Content="Typ:" Height="28" HorizontalAlignment="Left" Margin="279,70,0,0" Name="label3" VerticalAlignment="Top" />
-        <ComboBox Height="23" HorizontalAlignment="Left" Margin="331,70,0,0" Name="comboBox1" VerticalAlignment="Top" Width="253">
-            <ComboBoxItem Content="Broń" />
-            <ComboBoxItem Content="Zbroja" />
-        </ComboBox>
-        <Label Content="Obrażenia:" Height="28" HorizontalAlignment="Left" Margin="279,97,0,0" Name="label4" VerticalAlignment="Top" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="348,99,0,0" Name="textBox3" VerticalAlignment="Top" Width="236" />
-        <Label Content="KP:" Height="28" HorizontalAlignment="Left" Margin="279,126,0,0" Name="label5" VerticalAlignment="Top" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="348,128,0,0" Name="textBox4" VerticalAlignment="Top" Width="236" />
-        <Label Content="Max. premia" Height="28" HorizontalAlignment="Left" Margin="279,155,0,0" Name="label6" VerticalAlignment="Top" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="348,157,0,0" Name="textBox5" VerticalAlignment="Top" Width="236" />
-        <Label Content="Kary:" Height="28" HorizontalAlignment="Left" Margin="279,184,0,0" Name="label7" VerticalAlignment="Top" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="348,186,0,0" Name="textBox6" VerticalAlignment="Top" Width="236" />
-        <Button Content="Zapisz" Height="23" HorizontalAlignment="Left" Margin="509,307,0,0" Name="button3" VerticalAlignment="Top" Width="75" Click="button3_Click" />
-        <Label Content="Specjalne:" Height="28" HorizontalAlignment="Left" Margin="279,213,0,0" Name="label8" VerticalAlignment="Top" />
-        <TextBox Height="86" HorizontalAlignment="Left" Margin="348,215,0,0" Name="textBox7" VerticalAlignment="Top" Width="236" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="505,14,0,0" Name="textBox1" VerticalAlignment="Top" Width="253" />
+        <Label Content="Koszt:" Height="28" HorizontalAlignment="Left" Margin="453,41,0,0" Name="label2" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="631,43,0,0" Name="textBox2" VerticalAlignment="Top" Width="127" />
+        <Label Content="Typ:" Height="28" HorizontalAlignment="Left" Margin="453,71,0,0" Name="label3" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="522,71,0,0" Name="comboBox1" VerticalAlignment="Top" Width="236"></ComboBox>
+        <Label Content="Obrażenia:" Height="28" HorizontalAlignment="Left" Margin="453,125,0,0" Name="label4" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="522,127,0,0" Name="textBox3" VerticalAlignment="Top" Width="236" />
+        <Label Content="KP:" Height="28" HorizontalAlignment="Left" Margin="453,154,0,0" Name="label5" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="522,156,0,0" Name="textBox4" VerticalAlignment="Top" Width="236" />
+        <Label Content="Max. premia" Height="28" HorizontalAlignment="Left" Margin="453,183,0,0" Name="label6" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="522,185,0,0" Name="textBox5" VerticalAlignment="Top" Width="236" />
+        <Label Content="Kary:" Height="28" HorizontalAlignment="Left" Margin="453,212,0,0" Name="label7" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="522,214,0,0" Name="textBox6" VerticalAlignment="Top" Width="236" />
+        <Button Content="Zapisz" Height="23" HorizontalAlignment="Left" Margin="683,377,0,0" Name="button3" VerticalAlignment="Top" Width="75" Click="button3_Click" />
+        <Label Content="Specjalne:" Height="28" HorizontalAlignment="Left" Margin="453,241,0,0" Name="label8" VerticalAlignment="Top" />
+        <TextBox Height="86" HorizontalAlignment="Left" Margin="522,243,0,0" Name="textBox7" VerticalAlignment="Top" Width="236" AcceptsReturn="True" AcceptsTab="True" />
         <Button Content="OK" Height="23" HorizontalAlignment="Right" Margin="0,405,12,0" Name="button4" VerticalAlignment="Top" Width="75" Click="button4_Click" />
+        <Label Content="Bazowe:" Height="28" HorizontalAlignment="Left" Margin="453,100,0,0" Name="label9" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="522,100,0,0" Name="comboBox2" VerticalAlignment="Top" Width="236"></ComboBox>
+        <Label Content="Typ bazowy:" Height="28" HorizontalAlignment="Left" Margin="12,9,0,0" Name="label10" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="93,14,0,0" Name="comboBox3" VerticalAlignment="Top" Width="236"></ComboBox>
+        <Button Content="Filtr" Height="23" HorizontalAlignment="Left" Margin="335,13,0,0" Name="button5" VerticalAlignment="Top" Width="75" Click="button5_Click" />
     </Grid>
 </Window>

@@ -15,7 +15,7 @@
             <Constitution>13</Constitution>
             <Wisdom>9</Wisdom>
             <Inteligence>10</Inteligence>
-            <Charisma>0</Charisma>
+            <Charisma>8</Charisma>
             <HP>34</HP>
             <AC>15</AC>
             <AttackSkill>3</AttackSkill>
@@ -29,7 +29,7 @@
             <Constitution>13</Constitution>
             <Wisdom>9</Wisdom>
             <Inteligence>10</Inteligence>
-            <Charisma>0</Charisma>
+            <Charisma>8</Charisma>
             <HP>34</HP>
             <AC>15</AC>
             <AttackSkill>3</AttackSkill>
@@ -51,6 +51,7 @@
             <Specials>+3 przeciwko Elfom</Specials>
             <Cost>2000</Cost>
             <Damage>2K6+1</Damage>
+            <BaseType>HeavyBlade</BaseType>
             <AC>0</AC>
             <MaxDexterityBonus>0</MaxDexterityBonus>
             <Panalty>0</Panalty>
@@ -169,6 +170,15 @@ Jedzenie x3
             <MaxDexterityBonus>0</MaxDexterityBonus>
             <Panalty>0</Panalty>
           </RightHand>
+          <Torso>
+            <Name>Szata Arcymaga, pomniejsza</Name>
+            <Specials>+2 do rzutów obronnych, odporność na obrażenia fizyczne /5</Specials>
+            <Cost>1000</Cost>
+            <BaseType>LightArmor</BaseType>
+            <AC>2</AC>
+            <MaxDexterityBonus>100</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </Torso>
           <Gold>15</Gold>
           <Effects>
             <Effect>
@@ -327,7 +337,7 @@ Jedzenie x3
             <Wisdom>13</Wisdom>
             <Inteligence>12</Inteligence>
             <Charisma>0</Charisma>
-            <HP>-8</HP>
+            <HP>27</HP>
             <AC>16</AC>
             <AttackSkill>3</AttackSkill>
             <WillThrow>2</WillThrow>
@@ -359,7 +369,7 @@ Jedzenie x3
             <Attack>
               <Name>Lewa ręka</Name>
               <ToHit>6</ToHit>
-              <Damage>k4+1</Damage>
+              <Damage>k4+2</Damage>
             </Attack>
             <Attack>
               <Name>Krótki łuk</Name>
@@ -980,6 +990,7 @@ Zł. narzędzia x1</Items>
       <Specials>Odporność na mróz + 20 %</Specials>
       <Cost>50</Cost>
       <Damage>K6+1</Damage>
+      <BaseType>Blunt</BaseType>
       <AC>0</AC>
       <MaxDexterityBonus>0</MaxDexterityBonus>
       <Panalty>0</Panalty>
@@ -989,6 +1000,7 @@ Zł. narzędzia x1</Items>
       <Specials />
       <Cost>20</Cost>
       <Damage>K8</Damage>
+      <BaseType>HeavyBlade</BaseType>
       <AC>0</AC>
       <MaxDexterityBonus>0</MaxDexterityBonus>
       <Panalty>0</Panalty>
@@ -998,6 +1010,7 @@ Zł. narzędzia x1</Items>
       <Specials />
       <Cost>30</Cost>
       <Damage>2K6</Damage>
+      <BaseType>HeavyBlade</BaseType>
       <AC>0</AC>
       <MaxDexterityBonus>0</MaxDexterityBonus>
       <Panalty>0</Panalty>
@@ -1006,6 +1019,7 @@ Zł. narzędzia x1</Items>
       <Name>Średnia Tarcza</Name>
       <Specials />
       <Cost>10</Cost>
+      <BaseType>Shield</BaseType>
       <AC>3</AC>
       <MaxDexterityBonus>4</MaxDexterityBonus>
       <Panalty>2</Panalty>
@@ -1014,6 +1028,7 @@ Zł. narzędzia x1</Items>
       <Name>Kolczuga</Name>
       <Specials />
       <Cost>200</Cost>
+      <BaseType>HeavyArmor</BaseType>
       <AC>6</AC>
       <MaxDexterityBonus>2</MaxDexterityBonus>
       <Panalty>3</Panalty>
@@ -1023,6 +1038,7 @@ Zł. narzędzia x1</Items>
       <Specials>Zwiększa KP + 2</Specials>
       <Cost>2000</Cost>
       <Damage>K6+4</Damage>
+      <BaseType>Blunt</BaseType>
       <AC>0</AC>
       <MaxDexterityBonus>0</MaxDexterityBonus>
       <Panalty>0</Panalty>
@@ -1031,6 +1047,7 @@ Zł. narzędzia x1</Items>
       <Name>Szata Arcymaga, pomniejsza</Name>
       <Specials>+2 do rzutów obronnych, odporność na obrażenia fizyczne /5</Specials>
       <Cost>1000</Cost>
+      <BaseType>LightArmor</BaseType>
       <AC>2</AC>
       <MaxDexterityBonus>100</MaxDexterityBonus>
       <Panalty>0</Panalty>
@@ -1039,6 +1056,7 @@ Zł. narzędzia x1</Items>
       <Name>Skórzana ćwiekowana</Name>
       <Specials />
       <Cost>250</Cost>
+      <BaseType>LightArmor</BaseType>
       <AC>3</AC>
       <MaxDexterityBonus>5</MaxDexterityBonus>
       <Panalty>1</Panalty>
@@ -1048,6 +1066,7 @@ Zł. narzędzia x1</Items>
       <Specials />
       <Cost>900</Cost>
       <Damage>K8+1</Damage>
+      <BaseType>HeavyBlade</BaseType>
       <AC>0</AC>
       <MaxDexterityBonus>0</MaxDexterityBonus>
       <Panalty>0</Panalty>
@@ -1056,6 +1075,7 @@ Zł. narzędzia x1</Items>
       <Name>Pawęż</Name>
       <Specials />
       <Cost>50</Cost>
+      <BaseType>Shield</BaseType>
       <AC>3</AC>
       <MaxDexterityBonus>3</MaxDexterityBonus>
       <Panalty>2</Panalty>
@@ -1064,6 +1084,7 @@ Zł. narzędzia x1</Items>
       <Name>Zbroja płytowa</Name>
       <Specials />
       <Cost>500</Cost>
+      <BaseType>HeavyArmor</BaseType>
       <AC>7</AC>
       <MaxDexterityBonus>2</MaxDexterityBonus>
       <Panalty>3</Panalty>
@@ -1073,6 +1094,7 @@ Zł. narzędzia x1</Items>
       <Specials>+k4 od elektryczności</Specials>
       <Cost>1100</Cost>
       <Damage>K4+1</Damage>
+      <BaseType>Blunt</BaseType>
       <AC>0</AC>
       <MaxDexterityBonus>0</MaxDexterityBonus>
       <Panalty>0</Panalty>
@@ -1081,6 +1103,7 @@ Zł. narzędzia x1</Items>
       <Name>Zbroja pełna płytowa</Name>
       <Specials />
       <Cost>1000</Cost>
+      <BaseType>HeavyArmor</BaseType>
       <AC>8</AC>
       <MaxDexterityBonus>1</MaxDexterityBonus>
       <Panalty>3</Panalty>
@@ -1090,6 +1113,7 @@ Zł. narzędzia x1</Items>
       <Specials />
       <Cost>80</Cost>
       <Damage>K12</Damage>
+      <BaseType>Axe</BaseType>
       <AC>0</AC>
       <MaxDexterityBonus>0</MaxDexterityBonus>
       <Panalty>0</Panalty>
@@ -1099,6 +1123,7 @@ Zł. narzędzia x1</Items>
       <Specials />
       <Cost>1</Cost>
       <Damage>K4</Damage>
+      <BaseType>LightBlade</BaseType>
       <AC>0</AC>
       <MaxDexterityBonus>0</MaxDexterityBonus>
       <Panalty>0</Panalty>
@@ -1108,6 +1133,7 @@ Zł. narzędzia x1</Items>
       <Specials />
       <Cost>20</Cost>
       <Damage>K6</Damage>
+      <BaseType>LightBlade</BaseType>
       <AC>0</AC>
       <MaxDexterityBonus>0</MaxDexterityBonus>
       <Panalty>0</Panalty>
@@ -1117,6 +1143,7 @@ Zł. narzędzia x1</Items>
       <Specials>Rzut ST. 12 (Wytrwałość), Trucizna K4</Specials>
       <Cost>1</Cost>
       <Damage>K4+1</Damage>
+      <BaseType>LightBlade</BaseType>
       <AC>0</AC>
       <MaxDexterityBonus>0</MaxDexterityBonus>
       <Panalty>0</Panalty>
@@ -1125,6 +1152,7 @@ Zł. narzędzia x1</Items>
       <Name>Zbroja skórzana</Name>
       <Specials />
       <Cost>250</Cost>
+      <BaseType>LightArmor</BaseType>
       <AC>2</AC>
       <MaxDexterityBonus>6</MaxDexterityBonus>
       <Panalty>0</Panalty>
@@ -1134,6 +1162,7 @@ Zł. narzędzia x1</Items>
       <Specials />
       <Cost>200</Cost>
       <Damage>K6+1</Damage>
+      <BaseType>LightBlade</BaseType>
       <AC>0</AC>
       <MaxDexterityBonus>0</MaxDexterityBonus>
       <Panalty>0</Panalty>
@@ -1143,9 +1172,19 @@ Zł. narzędzia x1</Items>
       <Specials>+3 przeciwko Elfom</Specials>
       <Cost>2000</Cost>
       <Damage>2K6+1</Damage>
+      <BaseType>HeavyBlade</BaseType>
       <AC>0</AC>
       <MaxDexterityBonus>0</MaxDexterityBonus>
       <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Zbroja Paskowa</Name>
+      <Specials />
+      <Cost>300</Cost>
+      <BaseType>HeavyArmor</BaseType>
+      <AC>6</AC>
+      <MaxDexterityBonus>2</MaxDexterityBonus>
+      <Panalty>2</Panalty>
     </Item>
   </Items>
   <Spells>
@@ -1471,5 +1510,5 @@ Trwa 1 rundę/poz</Description>
       <Duration>5</Duration>
     </Effect>
   </Effects>
-  <CurrentTime>1300-06-16T07:00:00</CurrentTime>
+  <CurrentTime>1300-06-16T08:00:00</CurrentTime>
 </Helper>
