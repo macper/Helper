@@ -1148,6 +1148,80 @@ Zł. narzędzia x1</Items>
           <Skills />
           <IsActiveMember>false</IsActiveMember>
         </Character>
+        <Character>
+          <Name>Wódz orków 1</Name>
+          <Race>Ork</Race>
+          <Level>7</Level>
+          <Class>Wojownik</Class>
+          <CurrentStats>
+            <Strength>17</Strength>
+            <Dexterity>12</Dexterity>
+            <Constitution>14</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>45</HP>
+            <AC>16</AC>
+            <AttackSkill>7</AttackSkill>
+            <WillThrow>3</WillThrow>
+            <ReflexThrow>5</ReflexThrow>
+            <StrongThrow>7</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>17</Strength>
+            <Dexterity>12</Dexterity>
+            <Constitution>14</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>45</HP>
+            <AC>16</AC>
+            <AttackSkill>7</AttackSkill>
+            <WillThrow>3</WillThrow>
+            <ReflexThrow>5</ReflexThrow>
+            <StrongThrow>7</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>1</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <Name>1 Atak</Name>
+              <ToHit>12</ToHit>
+              <Damage>K12+5</Damage>
+            </Attack>
+            <Attack>
+              <Name>2 Atak</Name>
+              <ToHit>7</ToHit>
+              <Damage>K12+5</Damage>
+            </Attack>
+          </Attacks>
+          <RightHand>
+            <Name>Topór Buz-Griga +2</Name>
+            <Specials>-1 KP
+Tylko dla Ork/półork</Specials>
+            <Cost>1200</Cost>
+            <Damage>K12+2</Damage>
+            <BaseType>Axe</BaseType>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </RightHand>
+          <Torso>
+            <Name>Zbroja płytowa</Name>
+            <Specials />
+            <Cost>500</Cost>
+            <BaseType>HeavyArmor</BaseType>
+            <AC>6</AC>
+            <MaxDexterityBonus>2</MaxDexterityBonus>
+            <Panalty>3</Panalty>
+          </Torso>
+          <Gold>0</Gold>
+          <Effects />
+          <KnownSpellsS />
+          <SpellsS />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
       </Members>
     </CharacterGroup>
     <CharacterGroup>
@@ -1216,6 +1290,7 @@ Zł. narzędzia x1</Items>
           <Effects />
           <KnownSpellsS />
           <SpellsS />
+          <AvailableCastings />
           <Skills />
           <IsActiveMember>false</IsActiveMember>
         </Character>
@@ -1278,6 +1353,7 @@ Zł. narzędzia x1</Items>
           </Effects>
           <KnownSpellsS />
           <SpellsS />
+          <AvailableCastings />
           <Skills />
           <IsActiveMember>false</IsActiveMember>
         </Character>
@@ -1335,6 +1411,7 @@ Zł. narzędzia x1</Items>
           </Effects>
           <KnownSpellsS />
           <SpellsS />
+          <AvailableCastings />
           <Skills>
             <Skill>
               <Name>Ciche poruszanie się</Name>
@@ -1413,6 +1490,7 @@ Zł. narzędzia x1</Items>
           </Effects>
           <KnownSpellsS />
           <SpellsS />
+          <AvailableCastings />
           <Skills />
           <IsActiveMember>false</IsActiveMember>
         </Character>
@@ -1469,6 +1547,7 @@ Zł. narzędzia x1</Items>
           <Effects />
           <KnownSpellsS />
           <SpellsS />
+          <AvailableCastings />
           <Skills />
           <IsActiveMember>false</IsActiveMember>
         </Character>
@@ -1526,6 +1605,7 @@ Zł. narzędzia x1</Items>
           </Effects>
           <KnownSpellsS />
           <SpellsS />
+          <AvailableCastings />
           <Skills />
           <IsActiveMember>false</IsActiveMember>
         </Character>
@@ -1578,6 +1658,7 @@ Zł. narzędzia x1</Items>
           </Effects>
           <KnownSpellsS />
           <SpellsS />
+          <AvailableCastings />
           <Skills />
           <IsActiveMember>false</IsActiveMember>
         </Character>
@@ -1624,6 +1705,7 @@ Zł. narzędzia x1</Items>
           <Effects />
           <KnownSpellsS />
           <SpellsS />
+          <AvailableCastings />
           <Skills />
           <IsActiveMember>false</IsActiveMember>
         </Character>
@@ -1675,6 +1757,7 @@ Zł. narzędzia x1</Items>
           </Effects>
           <KnownSpellsS />
           <SpellsS />
+          <AvailableCastings />
           <Skills />
           <IsActiveMember>false</IsActiveMember>
         </Character>
@@ -1747,6 +1830,7 @@ Zł. narzędzia x1</Items>
           </Effects>
           <KnownSpellsS />
           <SpellsS />
+          <AvailableCastings />
           <Skills />
           <IsActiveMember>false</IsActiveMember>
         </Character>
@@ -1981,6 +2065,17 @@ Zł. narzędzia x1</Items>
       <Cost>10</Cost>
       <Damage>2K6</Damage>
       <BaseType>Blunt</BaseType>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Topór Buz-Griga +2</Name>
+      <Specials>-1 KP
+Tylko dla Ork/półork</Specials>
+      <Cost>1200</Cost>
+      <Damage>K12+2</Damage>
+      <BaseType>Axe</BaseType>
       <AC>0</AC>
       <MaxDexterityBonus>0</MaxDexterityBonus>
       <Panalty>0</Panalty>
