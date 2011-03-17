@@ -983,6 +983,775 @@ Zł. narzędzia x1</Items>
         </Character>
       </Members>
     </CharacterGroup>
+    <CharacterGroup>
+      <GroupName>Humanoidy</GroupName>
+      <Members>
+        <Character>
+          <Name>Ork 1</Name>
+          <Race>Ork</Race>
+          <Level>3</Level>
+          <Class>Słaby</Class>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>12</HP>
+            <AC>14</AC>
+            <AttackSkill>4</AttackSkill>
+            <WillThrow>1</WillThrow>
+            <ReflexThrow>1</ReflexThrow>
+            <StrongThrow>4</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>12</HP>
+            <AC>14</AC>
+            <AttackSkill>4</AttackSkill>
+            <WillThrow>1</WillThrow>
+            <ReflexThrow>1</ReflexThrow>
+            <StrongThrow>4</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>0</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <Name>Topór</Name>
+              <ToHit>6</ToHit>
+              <Damage>K12+2</Damage>
+            </Attack>
+            <Attack>
+              <Name>Kusza</Name>
+              <ToHit>4</ToHit>
+              <Damage>K12</Damage>
+            </Attack>
+          </Attacks>
+          <RightHand>
+            <Name>Topór dwuręczny</Name>
+            <Specials />
+            <Cost>80</Cost>
+            <Damage>K12</Damage>
+            <BaseType>Axe</BaseType>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </RightHand>
+          <LeftHand>
+            <Name>Ciężka kusza</Name>
+            <Specials />
+            <Cost>80</Cost>
+            <Damage>K12</Damage>
+            <BaseType>Crossbow</BaseType>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </LeftHand>
+          <Torso>
+            <Name>Kolczuga</Name>
+            <Specials />
+            <Cost>200</Cost>
+            <BaseType>HeavyArmor</BaseType>
+            <AC>4</AC>
+            <MaxDexterityBonus>2</MaxDexterityBonus>
+            <Panalty>3</Panalty>
+          </Torso>
+          <Gold>0</Gold>
+          <Effects />
+          <KnownSpellsS />
+          <SpellsS />
+          <AvailableCastings />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Ork 2</Name>
+          <Race>Ork</Race>
+          <Level>5</Level>
+          <Class>Średni</Class>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>20</HP>
+            <AC>17</AC>
+            <AttackSkill>6</AttackSkill>
+            <WillThrow>1</WillThrow>
+            <ReflexThrow>2</ReflexThrow>
+            <StrongThrow>6</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>15</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>20</HP>
+            <AC>17</AC>
+            <AttackSkill>6</AttackSkill>
+            <WillThrow>1</WillThrow>
+            <ReflexThrow>2</ReflexThrow>
+            <StrongThrow>6</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>1</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <Name>Topór</Name>
+              <ToHit>8</ToHit>
+              <Damage>K8+2</Damage>
+            </Attack>
+          </Attacks>
+          <RightHand>
+            <Name>Topór</Name>
+            <Specials />
+            <Cost>5</Cost>
+            <Damage>K8</Damage>
+            <BaseType>Axe</BaseType>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </RightHand>
+          <LeftHand>
+            <Name>Średnia Tarcza</Name>
+            <Specials />
+            <Cost>10</Cost>
+            <BaseType>Shield</BaseType>
+            <AC>2</AC>
+            <MaxDexterityBonus>4</MaxDexterityBonus>
+            <Panalty>2</Panalty>
+          </LeftHand>
+          <Torso>
+            <Name>Zbroja Paskowa</Name>
+            <Specials />
+            <Cost>300</Cost>
+            <BaseType>HeavyArmor</BaseType>
+            <AC>5</AC>
+            <MaxDexterityBonus>2</MaxDexterityBonus>
+            <Panalty>2</Panalty>
+          </Torso>
+          <Gold>0</Gold>
+          <Effects />
+          <KnownSpellsS />
+          <SpellsS />
+          <AvailableCastings />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+      </Members>
+    </CharacterGroup>
+    <CharacterGroup>
+      <GroupName>Potwory 2 (duże humanoidy)</GroupName>
+      <Members>
+        <Character>
+          <Name>Ogr</Name>
+          <Race>Ogr</Race>
+          <Level>3</Level>
+          <Class>Duży humanoid</Class>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>30</HP>
+            <AC>16</AC>
+            <WillThrow>0</WillThrow>
+            <ReflexThrow>0</ReflexThrow>
+            <StrongThrow>0</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>21</Strength>
+            <Dexterity>8</Dexterity>
+            <Constitution>15</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>6</Inteligence>
+            <Charisma>7</Charisma>
+            <HP>30</HP>
+            <AC>16</AC>
+            <WillThrow>1</WillThrow>
+            <ReflexThrow>0</ReflexThrow>
+            <StrongThrow>6</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>-1</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <Name>Główny</Name>
+              <ToHit>8</ToHit>
+              <Damage>2K6+7</Damage>
+            </Attack>
+          </Attacks>
+          <RightHand>
+            <Name>Ogromna maczuga</Name>
+            <Specials />
+            <Cost>10</Cost>
+            <Damage>2K6</Damage>
+            <BaseType>Blunt</BaseType>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </RightHand>
+          <Torso>
+            <Name>Zbroja skórzana</Name>
+            <Specials />
+            <Cost>250</Cost>
+            <BaseType>LightArmor</BaseType>
+            <AC>2</AC>
+            <MaxDexterityBonus>6</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </Torso>
+          <Gold>0</Gold>
+          <Effects />
+          <KnownSpellsS />
+          <SpellsS />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+      </Members>
+    </CharacterGroup>
+    <CharacterGroup>
+      <GroupName>Potwory 3 (Bestie)</GroupName>
+      <Members>
+        <Character>
+          <Name>Ankheg</Name>
+          <Race>Bestia (duża)</Race>
+          <Level>1</Level>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>25</HP>
+            <AC>18</AC>
+            <WillThrow>2</WillThrow>
+            <ReflexThrow>3</ReflexThrow>
+            <StrongThrow>6</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>25</HP>
+            <AC>18</AC>
+            <WillThrow>2</WillThrow>
+            <ReflexThrow>3</ReflexThrow>
+            <StrongThrow>6</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>0</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <Name>Ugryzienie</Name>
+              <ToHit>6</ToHit>
+              <Damage>2K6+7</Damage>
+            </Attack>
+          </Attacks>
+          <Gold>0</Gold>
+          <Effects>
+            <Effect>
+              <Name>Poprawione łapanie</Name>
+              <Description>Po udanym ataku wręcz ofiara jest chwytana</Description>
+              <Duration xsi:nil="true" />
+            </Effect>
+            <Effect>
+              <Name>Strumień kwasu</Name>
+              <Description>Raz na 6 godzin, zadaje 4K4 obrażeń od kwasu (ST. 14 Refleks - tylko połowę)</Description>
+              <Duration xsi:nil="true" />
+            </Effect>
+          </Effects>
+          <KnownSpellsS />
+          <SpellsS />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Pantera widmowa</Name>
+          <Race>Magiczna bestia</Race>
+          <Level>3</Level>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>30</HP>
+            <AC>16</AC>
+            <WillThrow>3</WillThrow>
+            <ReflexThrow>4</ReflexThrow>
+            <StrongThrow>6</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>30</HP>
+            <AC>16</AC>
+            <WillThrow>3</WillThrow>
+            <ReflexThrow>4</ReflexThrow>
+            <StrongThrow>6</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>5</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <Name>Ugryzienie</Name>
+              <ToHit>6</ToHit>
+              <Damage>K8+6</Damage>
+            </Attack>
+          </Attacks>
+          <Gold>0</Gold>
+          <Effects>
+            <Effect>
+              <Name>Aura strachu</Name>
+              <Description>O promieniu 9m, ST.13 (Wola) = -2 do rzutów i testów</Description>
+              <Duration xsi:nil="true" />
+            </Effect>
+            <Effect>
+              <Name>Widmowa forma</Name>
+              <Description>Bezcielestność na 10 min</Description>
+              <Duration xsi:nil="true" />
+            </Effect>
+          </Effects>
+          <KnownSpellsS />
+          <SpellsS />
+          <Skills>
+            <Skill>
+              <Name>Ciche poruszanie się</Name>
+              <BaseValue>11</BaseValue>
+              <BonusValue>0</BonusValue>
+            </Skill>
+            <Skill>
+              <Name>Ukrywanie się</Name>
+              <BaseValue>6</BaseValue>
+              <BonusValue>0</BonusValue>
+            </Skill>
+          </Skills>
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+      </Members>
+    </CharacterGroup>
+    <CharacterGroup>
+      <GroupName>Zwierzęta</GroupName>
+      <Members>
+        <Character>
+          <Name>Niedźwiedź brunatny</Name>
+          <Race>Niedźwiedź</Race>
+          <Level>5</Level>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>52</HP>
+            <AC>15</AC>
+            <WillThrow>3</WillThrow>
+            <ReflexThrow>6</ReflexThrow>
+            <StrongThrow>9</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>52</HP>
+            <AC>15</AC>
+            <WillThrow>3</WillThrow>
+            <ReflexThrow>6</ReflexThrow>
+            <StrongThrow>9</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>1</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <Name>Łapa 1</Name>
+              <ToHit>11</ToHit>
+              <Damage>K8+8</Damage>
+            </Attack>
+            <Attack>
+              <Name>Łapa 2</Name>
+              <ToHit>11</ToHit>
+              <Damage>K8+8</Damage>
+            </Attack>
+            <Attack>
+              <Name>Ugryzienie</Name>
+              <ToHit>6</ToHit>
+              <Damage>2K8+4</Damage>
+            </Attack>
+          </Attacks>
+          <Gold>0</Gold>
+          <Effects>
+            <Effect>
+              <Name>Poprawione łapanie</Name>
+              <Description>Po udanym ataku wręcz ofiara jest chwytana</Description>
+              <Duration xsi:nil="true" />
+            </Effect>
+          </Effects>
+          <KnownSpellsS />
+          <SpellsS />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Niedźwiedź czarny</Name>
+          <Race>Niedzwiedz</Race>
+          <Level>1</Level>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>20</HP>
+            <AC>13</AC>
+            <WillThrow>0</WillThrow>
+            <ReflexThrow>0</ReflexThrow>
+            <StrongThrow>0</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>20</HP>
+            <AC>13</AC>
+            <WillThrow>2</WillThrow>
+            <ReflexThrow>4</ReflexThrow>
+            <StrongThrow>5</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>1</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <Name>Łapa 1</Name>
+              <ToHit>6</ToHit>
+              <Damage>K4+4</Damage>
+            </Attack>
+            <Attack>
+              <Name>Łapa 2</Name>
+              <ToHit>6</ToHit>
+              <Damage>K4+4</Damage>
+            </Attack>
+            <Attack>
+              <Name>Ugryzienie</Name>
+              <ToHit>1</ToHit>
+              <Damage>K6+2</Damage>
+            </Attack>
+          </Attacks>
+          <Gold>0</Gold>
+          <Effects />
+          <KnownSpellsS />
+          <SpellsS />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Wąż, dusiciel</Name>
+          <Race>Wąż</Race>
+          <Level>2</Level>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>16</HP>
+            <AC>15</AC>
+            <WillThrow>2</WillThrow>
+            <ReflexThrow>6</ReflexThrow>
+            <StrongThrow>4</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>16</HP>
+            <AC>15</AC>
+            <WillThrow>2</WillThrow>
+            <ReflexThrow>6</ReflexThrow>
+            <StrongThrow>4</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>3</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <Name>Ugryzienie</Name>
+              <ToHit>5</ToHit>
+              <Damage>K4+4</Damage>
+            </Attack>
+          </Attacks>
+          <Gold>0</Gold>
+          <Effects>
+            <Effect>
+              <Name>Poprawione łapanie</Name>
+              <Description>Po udanym ataku wręcz ofiara jest chwytana</Description>
+              <Duration xsi:nil="true" />
+            </Effect>
+            <Effect>
+              <Name>Duszenie</Name>
+              <Description>K4+4 co rundę.</Description>
+              <Duration xsi:nil="true" />
+            </Effect>
+          </Effects>
+          <KnownSpellsS />
+          <SpellsS />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Wąż, żmija</Name>
+          <Race>Wąż</Race>
+          <Level>1</Level>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>6</HP>
+            <AC>17</AC>
+            <WillThrow>1</WillThrow>
+            <ReflexThrow>5</ReflexThrow>
+            <StrongThrow>2</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>6</HP>
+            <AC>17</AC>
+            <WillThrow>1</WillThrow>
+            <ReflexThrow>5</ReflexThrow>
+            <StrongThrow>2</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>3</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <Name>Ugryzienie</Name>
+              <ToHit>4</ToHit>
+              <Damage>K2</Damage>
+            </Attack>
+          </Attacks>
+          <Gold>0</Gold>
+          <Effects>
+            <Effect>
+              <Name>Zatrucie</Name>
+              <Description>-K6 Budowy. K4 na 10 min.</Description>
+              <Duration xsi:nil="true" />
+            </Effect>
+          </Effects>
+          <KnownSpellsS />
+          <SpellsS />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Wilk</Name>
+          <Race>Zwierz</Race>
+          <Level>2</Level>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>15</HP>
+            <AC>14</AC>
+            <WillThrow>1</WillThrow>
+            <ReflexThrow>5</ReflexThrow>
+            <StrongThrow>5</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>15</HP>
+            <AC>14</AC>
+            <WillThrow>1</WillThrow>
+            <ReflexThrow>5</ReflexThrow>
+            <StrongThrow>5</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>2</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <Name>Ugryzienie</Name>
+              <ToHit>3</ToHit>
+              <Damage>K6+1</Damage>
+            </Attack>
+          </Attacks>
+          <Gold>0</Gold>
+          <Effects />
+          <KnownSpellsS />
+          <SpellsS />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Złowieszcza łasica</Name>
+          <Level>1</Level>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>13</HP>
+            <AC>16</AC>
+            <WillThrow>4</WillThrow>
+            <ReflexThrow>7</ReflexThrow>
+            <StrongThrow>3</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>13</HP>
+            <AC>16</AC>
+            <WillThrow>4</WillThrow>
+            <ReflexThrow>7</ReflexThrow>
+            <StrongThrow>3</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>4</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <Name>Ugryzienie</Name>
+              <ToHit>6</ToHit>
+              <Damage>K6+3</Damage>
+            </Attack>
+          </Attacks>
+          <Gold>0</Gold>
+          <Effects>
+            <Effect>
+              <Name>Wyssanie krwi</Name>
+              <Description>Wczepienie i wyssanie K4 pkt. budowy</Description>
+              <Duration xsi:nil="true" />
+            </Effect>
+          </Effects>
+          <KnownSpellsS />
+          <SpellsS />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+      </Members>
+    </CharacterGroup>
+    <CharacterGroup>
+      <GroupName>Rośliny</GroupName>
+      <Members>
+        <Character>
+          <Name>Zabójcza winorośl</Name>
+          <Race>Roślina</Race>
+          <Level>2</Level>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>35</HP>
+            <AC>15</AC>
+            <WillThrow>0</WillThrow>
+            <ReflexThrow>0</ReflexThrow>
+            <StrongThrow>0</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>10</Dexterity>
+            <Constitution>10</Constitution>
+            <Wisdom>10</Wisdom>
+            <Inteligence>10</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>35</HP>
+            <AC>15</AC>
+            <WillThrow>1</WillThrow>
+            <ReflexThrow>2</ReflexThrow>
+            <StrongThrow>7</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>0</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <Name>Walnięcie</Name>
+              <ToHit>7</ToHit>
+              <Damage>K6+7</Damage>
+            </Attack>
+          </Attacks>
+          <Gold>0</Gold>
+          <Effects>
+            <Effect>
+              <Name>Poprawione łapanie</Name>
+              <Description>Po udanym ataku wręcz ofiara jest chwytana</Description>
+              <Duration xsi:nil="true" />
+            </Effect>
+            <Effect>
+              <Name>Duszenie</Name>
+              <Description>K6+7</Description>
+              <Duration xsi:nil="true" />
+            </Effect>
+            <Effect>
+              <Name>Oplątanie</Name>
+              <Description>ST. 14 (Wytrwałość)</Description>
+              <Duration xsi:nil="true" />
+            </Effect>
+            <Effect>
+              <Name>Kamuflaż</Name>
+              <Description>ST. 20 (Spostrzegawczość)</Description>
+              <Duration xsi:nil="true" />
+            </Effect>
+          </Effects>
+          <KnownSpellsS />
+          <SpellsS />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+      </Members>
+    </CharacterGroup>
   </Groups>
   <Items>
     <Item>
@@ -1020,7 +1789,7 @@ Zł. narzędzia x1</Items>
       <Specials />
       <Cost>10</Cost>
       <BaseType>Shield</BaseType>
-      <AC>3</AC>
+      <AC>2</AC>
       <MaxDexterityBonus>4</MaxDexterityBonus>
       <Panalty>2</Panalty>
     </Item>
@@ -1029,7 +1798,7 @@ Zł. narzędzia x1</Items>
       <Specials />
       <Cost>200</Cost>
       <BaseType>HeavyArmor</BaseType>
-      <AC>6</AC>
+      <AC>4</AC>
       <MaxDexterityBonus>2</MaxDexterityBonus>
       <Panalty>3</Panalty>
     </Item>
@@ -1085,7 +1854,7 @@ Zł. narzędzia x1</Items>
       <Specials />
       <Cost>500</Cost>
       <BaseType>HeavyArmor</BaseType>
-      <AC>7</AC>
+      <AC>6</AC>
       <MaxDexterityBonus>2</MaxDexterityBonus>
       <Panalty>3</Panalty>
     </Item>
@@ -1104,7 +1873,7 @@ Zł. narzędzia x1</Items>
       <Specials />
       <Cost>1000</Cost>
       <BaseType>HeavyArmor</BaseType>
-      <AC>8</AC>
+      <AC>7</AC>
       <MaxDexterityBonus>1</MaxDexterityBonus>
       <Panalty>3</Panalty>
     </Item>
@@ -1182,9 +1951,39 @@ Zł. narzędzia x1</Items>
       <Specials />
       <Cost>300</Cost>
       <BaseType>HeavyArmor</BaseType>
-      <AC>6</AC>
+      <AC>5</AC>
       <MaxDexterityBonus>2</MaxDexterityBonus>
       <Panalty>2</Panalty>
+    </Item>
+    <Item>
+      <Name>Ciężka kusza</Name>
+      <Specials />
+      <Cost>80</Cost>
+      <Damage>K12</Damage>
+      <BaseType>Crossbow</BaseType>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Topór</Name>
+      <Specials />
+      <Cost>5</Cost>
+      <Damage>K8</Damage>
+      <BaseType>Axe</BaseType>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Ogromna maczuga</Name>
+      <Specials />
+      <Cost>10</Cost>
+      <Damage>2K6</Damage>
+      <BaseType>Blunt</BaseType>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
     </Item>
   </Items>
   <Spells>
@@ -1508,6 +2307,11 @@ Trwa 1 rundę/poz</Description>
       <Name>Paraliż</Name>
       <Description />
       <Duration>5</Duration>
+    </Effect>
+    <Effect>
+      <Name>Poprawione łapanie</Name>
+      <Description>Po udanym ataku wręcz ofiara jest chwytana</Description>
+      <Duration xsi:nil="true" />
     </Effect>
   </Effects>
   <CurrentTime>1300-06-16T08:00:00</CurrentTime>
