@@ -43,6 +43,9 @@ namespace DnDHelper
                 retTable["Tropiciel"] = Ranger;
                 retTable["Mag"] = Mage;
                 retTable["Bard"] = Bard;
+                retTable["Kapłan"] = Cleric;
+                retTable["Złodziej"] = Thief;
+                retTable["Druid"] = Druid;
                 return retTable;
             }
         }

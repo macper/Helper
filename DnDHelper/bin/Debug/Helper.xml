@@ -981,6 +981,453 @@ Zł. narzędzia x1</Items>
           <Skills />
           <IsActiveMember>false</IsActiveMember>
         </Character>
+        <Character>
+          <Name>Ilmater - przywódca</Name>
+          <Race>Człowiek</Race>
+          <Level>1</Level>
+          <Class>Wojownik</Class>
+          <CurrentStats>
+            <Strength>16</Strength>
+            <Dexterity>15</Dexterity>
+            <Constitution>17</Constitution>
+            <Wisdom>18</Wisdom>
+            <Inteligence>12</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>85</HP>
+            <AC>23</AC>
+            <AttackSkill>10\5</AttackSkill>
+            <WillThrow>3</WillThrow>
+            <ReflexThrow>3</ReflexThrow>
+            <StrongThrow>7</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>16</Strength>
+            <Dexterity>15</Dexterity>
+            <Constitution>17</Constitution>
+            <Wisdom>18</Wisdom>
+            <Inteligence>12</Inteligence>
+            <Charisma>17</Charisma>
+            <HP>85</HP>
+            <AC>23</AC>
+            <AttackSkill>10\5</AttackSkill>
+            <WillThrow>7</WillThrow>
+            <ReflexThrow>5</ReflexThrow>
+            <StrongThrow>10</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>0</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <Name>1 Atak</Name>
+              <ToHit>15</ToHit>
+              <Damage>K8+5</Damage>
+            </Attack>
+            <Attack>
+              <Name>Drugi atak</Name>
+              <ToHit>10</ToHit>
+              <Damage>K8+5</Damage>
+            </Attack>
+          </Attacks>
+          <RightHand>
+            <Name>Miecz długi +2</Name>
+            <Specials />
+            <Cost>2000</Cost>
+            <Damage>K8+2</Damage>
+            <BaseType>HeavyBlade</BaseType>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </RightHand>
+          <LeftHand>
+            <Name>Średnia Tarcza+1</Name>
+            <Specials />
+            <Cost>500</Cost>
+            <BaseType>Shield</BaseType>
+            <AC>3</AC>
+            <MaxDexterityBonus>3</MaxDexterityBonus>
+            <Panalty>2</Panalty>
+          </LeftHand>
+          <Torso>
+            <Name>Pełna płytowa+1</Name>
+            <Specials />
+            <Cost>3000</Cost>
+            <BaseType>HeavyArmor</BaseType>
+            <AC>8</AC>
+            <MaxDexterityBonus>1</MaxDexterityBonus>
+            <Panalty>4</Panalty>
+          </Torso>
+          <Gold>0</Gold>
+          <Effects />
+          <KnownSpellsS>
+            <string>Błogosławieństwo</string>
+            <string>Leczenie lekkich ran</string>
+          </KnownSpellsS>
+          <SpellsS>
+            <SpellS>
+              <Name>Błogosławieństwo</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Leczenie lekkich ran</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Leczenie lekkich ran</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+          </SpellsS>
+          <AvailableCastings>
+            <SpellCasting>
+              <Level>1</Level>
+              <Count>3</Count>
+              <Type>Cleric</Type>
+            </SpellCasting>
+          </AvailableCastings>
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Ilmater - wojownik</Name>
+          <Race>Człowiek</Race>
+          <Level>7</Level>
+          <Class>Wojownik</Class>
+          <CurrentStats>
+            <Strength>15</Strength>
+            <Dexterity>13</Dexterity>
+            <Constitution>15</Constitution>
+            <Wisdom>13</Wisdom>
+            <Inteligence>14</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>54</HP>
+            <AC>18</AC>
+            <WillThrow>0</WillThrow>
+            <ReflexThrow>0</ReflexThrow>
+            <StrongThrow>0</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>15</Strength>
+            <Dexterity>13</Dexterity>
+            <Constitution>15</Constitution>
+            <Wisdom>13</Wisdom>
+            <Inteligence>14</Inteligence>
+            <Charisma>15</Charisma>
+            <HP>54</HP>
+            <AC>18</AC>
+            <AttackSkill>7\2</AttackSkill>
+            <WillThrow>3</WillThrow>
+            <ReflexThrow>3</ReflexThrow>
+            <StrongThrow>7</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>0</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <ToHit>9</ToHit>
+              <Damage>2K6+2</Damage>
+            </Attack>
+            <Attack>
+              <ToHit>4</ToHit>
+              <Damage>2K6+2</Damage>
+            </Attack>
+          </Attacks>
+          <RightHand>
+            <Name>Miecz dwuręczny</Name>
+            <Specials />
+            <Cost>30</Cost>
+            <Damage>2K6</Damage>
+            <BaseType>HeavyBlade</BaseType>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </RightHand>
+          <Torso>
+            <Name>Zbroja pełna płytowa</Name>
+            <Specials />
+            <Cost>1000</Cost>
+            <BaseType>HeavyArmor</BaseType>
+            <AC>7</AC>
+            <MaxDexterityBonus>1</MaxDexterityBonus>
+            <Panalty>3</Panalty>
+          </Torso>
+          <Gold>0</Gold>
+          <Effects />
+          <KnownSpellsS />
+          <SpellsS />
+          <AvailableCastings />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Ilmater - kapłan</Name>
+          <Race>Człowiek</Race>
+          <Level>8</Level>
+          <Class>Kapłan</Class>
+          <CurrentStats>
+            <Strength>13</Strength>
+            <Dexterity>11</Dexterity>
+            <Constitution>13</Constitution>
+            <Wisdom>17</Wisdom>
+            <Inteligence>13</Inteligence>
+            <Charisma>14</Charisma>
+            <HP>44</HP>
+            <AC>19</AC>
+            <AttackSkill>6\1</AttackSkill>
+            <WillThrow>9</WillThrow>
+            <ReflexThrow>3</ReflexThrow>
+            <StrongThrow>7</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>13</Strength>
+            <Dexterity>11</Dexterity>
+            <Constitution>13</Constitution>
+            <Wisdom>17</Wisdom>
+            <Inteligence>13</Inteligence>
+            <Charisma>14</Charisma>
+            <HP>44</HP>
+            <AC>19</AC>
+            <AttackSkill>6\1</AttackSkill>
+            <WillThrow>9</WillThrow>
+            <ReflexThrow>3</ReflexThrow>
+            <StrongThrow>7</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>0</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <Name />
+              <ToHit>8</ToHit>
+              <Damage>K6+2</Damage>
+            </Attack>
+            <Attack>
+              <Name />
+              <ToHit>3</ToHit>
+              <Damage>K6+2</Damage>
+            </Attack>
+          </Attacks>
+          <RightHand>
+            <Name>Morgensztern+1</Name>
+            <Specials />
+            <Cost>600</Cost>
+            <Damage>K6+1</Damage>
+            <BaseType>Blunt</BaseType>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </RightHand>
+          <LeftHand>
+            <Name>Średnia Tarcza</Name>
+            <Specials />
+            <Cost>10</Cost>
+            <BaseType>Shield</BaseType>
+            <AC>2</AC>
+            <MaxDexterityBonus>4</MaxDexterityBonus>
+            <Panalty>2</Panalty>
+          </LeftHand>
+          <Torso>
+            <Name>Zbroja pełna płytowa</Name>
+            <Specials />
+            <Cost>1000</Cost>
+            <BaseType>HeavyArmor</BaseType>
+            <AC>7</AC>
+            <MaxDexterityBonus>1</MaxDexterityBonus>
+            <Panalty>3</Panalty>
+          </Torso>
+          <Gold>0</Gold>
+          <Effects />
+          <KnownSpellsS>
+            <string>Błogosławieństwo</string>
+            <string>Boska moc</string>
+            <string>Leczenie lekkich ran</string>
+            <string>Leczenie średnich ran</string>
+            <string>Rozkaz</string>
+            <string>Rozproszenie magii</string>
+            <string>Siła Byka</string>
+            <string>Tarcza wiary</string>
+            <string>Unieruchomienie osoby</string>
+          </KnownSpellsS>
+          <SpellsS>
+            <SpellS>
+              <Name>Błogosławieństwo</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Leczenie lekkich ran</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Leczenie lekkich ran</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Rozkaz</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Tarcza wiary</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Leczenie średnich ran</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Leczenie średnich ran</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Leczenie średnich ran</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Unieruchomienie osoby</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Rozproszenie magii</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Rozproszenie magii</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Rozproszenie magii</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Rozproszenie magii</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Boska moc</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Boska moc</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Boska moc</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+          </SpellsS>
+          <AvailableCastings>
+            <SpellCasting>
+              <Level>1</Level>
+              <Count>5</Count>
+              <Type>Cleric</Type>
+            </SpellCasting>
+            <SpellCasting>
+              <Level>2</Level>
+              <Count>4</Count>
+              <Type>Cleric</Type>
+            </SpellCasting>
+            <SpellCasting>
+              <Level>3</Level>
+              <Count>4</Count>
+              <Type>Cleric</Type>
+            </SpellCasting>
+            <SpellCasting>
+              <Level>4</Level>
+              <Count>3</Count>
+              <Type>Cleric</Type>
+            </SpellCasting>
+          </AvailableCastings>
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Brelond</Name>
+          <Race>Półelf</Race>
+          <Level>6</Level>
+          <Class>Tropiciel</Class>
+          <CurrentStats>
+            <Strength>12</Strength>
+            <Dexterity>19</Dexterity>
+            <Constitution>15</Constitution>
+            <Wisdom>13</Wisdom>
+            <Inteligence>11</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>40</HP>
+            <AC>18</AC>
+            <AttackSkill>6\1</AttackSkill>
+            <WillThrow>3</WillThrow>
+            <ReflexThrow>9</ReflexThrow>
+            <StrongThrow>7</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>12</Strength>
+            <Dexterity>19</Dexterity>
+            <Constitution>15</Constitution>
+            <Wisdom>13</Wisdom>
+            <Inteligence>11</Inteligence>
+            <Charisma>11</Charisma>
+            <HP>40</HP>
+            <AC>18</AC>
+            <AttackSkill>6\1</AttackSkill>
+            <WillThrow>3</WillThrow>
+            <ReflexThrow>9</ReflexThrow>
+            <StrongThrow>7</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>4</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <Name>Kusza</Name>
+              <ToHit>13</ToHit>
+              <Damage>K12+1</Damage>
+            </Attack>
+            <Attack>
+              <Name>Włócznia - 1</Name>
+              <ToHit>9</ToHit>
+              <Damage>K6+3</Damage>
+            </Attack>
+            <Attack>
+              <Name>Włócznia-2</Name>
+              <ToHit>4</ToHit>
+              <Damage>K6+3</Damage>
+            </Attack>
+          </Attacks>
+          <RightHand>
+            <Name>Ciężka kusza celności+1</Name>
+            <Specials>+3 do trafienia
+Zwiększony zasięg (200m)</Specials>
+            <Cost>1300</Cost>
+            <Damage>K12+1</Damage>
+            <BaseType>Crossbow</BaseType>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </RightHand>
+          <LeftHand>
+            <Name>Włócznia+2,Odrzucacz</Name>
+            <Specials>Po trafieniu ST:15 (Wytrwałość) albo odrzucenie o 2m</Specials>
+            <Cost>2300</Cost>
+            <Damage>K6+2</Damage>
+            <BaseType>Spear</BaseType>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </LeftHand>
+          <Torso>
+            <Name>Skórzana ćwiekowana+1</Name>
+            <Specials />
+            <Cost>250</Cost>
+            <BaseType>LightArmor</BaseType>
+            <AC>4</AC>
+            <MaxDexterityBonus>5</MaxDexterityBonus>
+            <Panalty>1</Panalty>
+          </Torso>
+          <Items>Wnyki (ST:14/17)
+Bełt z trucizną (ST:16/Wytr) -K4 Budowy/godz. -&gt; trwa K6 godzin.</Items>
+          <Gold>500</Gold>
+          <Effects />
+          <KnownSpellsS />
+          <SpellsS />
+          <AvailableCastings />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
       </Members>
     </CharacterGroup>
     <CharacterGroup>
@@ -1837,6 +2284,223 @@ Tylko dla Ork/półork</Specials>
         </Character>
       </Members>
     </CharacterGroup>
+    <CharacterGroup>
+      <GroupName>Enklawa druidów</GroupName>
+      <Members>
+        <Character>
+          <Name>Kleressan</Name>
+          <Race>Elf</Race>
+          <Level>10</Level>
+          <Class>Druid</Class>
+          <CurrentStats>
+            <Strength>12</Strength>
+            <Dexterity>15</Dexterity>
+            <Constitution>14</Constitution>
+            <Wisdom>18</Wisdom>
+            <Inteligence>18</Inteligence>
+            <Charisma>13</Charisma>
+            <HP>64</HP>
+            <AC>16</AC>
+            <AttackSkill>7\2</AttackSkill>
+            <WillThrow>11</WillThrow>
+            <ReflexThrow>5</ReflexThrow>
+            <StrongThrow>9</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>12</Strength>
+            <Dexterity>15</Dexterity>
+            <Constitution>14</Constitution>
+            <Wisdom>18</Wisdom>
+            <Inteligence>18</Inteligence>
+            <Charisma>13</Charisma>
+            <HP>64</HP>
+            <AC>16</AC>
+            <AttackSkill>7\2</AttackSkill>
+            <WillThrow>11</WillThrow>
+            <ReflexThrow>5</ReflexThrow>
+            <StrongThrow>9</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>0</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <ToHit>8</ToHit>
+              <Damage>K6+4</Damage>
+            </Attack>
+            <Attack>
+              <ToHit>3</ToHit>
+              <Damage>K6+4</Damage>
+            </Attack>
+          </Attacks>
+          <RightHand>
+            <Name>Kij+3</Name>
+            <Specials />
+            <Cost>600</Cost>
+            <Damage>K6+3</Damage>
+            <BaseType>Blunt</BaseType>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </RightHand>
+          <Torso>
+            <Name>Skórzana ćwiekowana+1</Name>
+            <Specials />
+            <Cost>250</Cost>
+            <BaseType>LightArmor</BaseType>
+            <AC>4</AC>
+            <MaxDexterityBonus>5</MaxDexterityBonus>
+            <Panalty>1</Panalty>
+          </Torso>
+          <Gold>0</Gold>
+          <Effects />
+          <KnownSpellsS>
+            <string>Chmura kwasu</string>
+            <string>Chodzenie po wodzie</string>
+            <string>Cierniste kamienie</string>
+            <string>Drzewny krok</string>
+            <string>Drzewny kształt</string>
+            <string>Gąszcz cierni</string>
+            <string>Kontrolowanie pogody</string>
+            <string>Kontrolowanie wiatru</string>
+            <string>Kontrolowanie wody</string>
+            <string>Korowa skóra</string>
+            <string>Kamienna skóra</string>
+            <string>Leczenie krytycznych ran</string>
+            <string>Leczenie lekkich ran</string>
+            <string>Leczenie poważnych ran</string>
+            <string>Lodowa nawałnica</string>
+            <string>Magiczny kostur</string>
+            <string>Neutralizacja trucizny</string>
+            <string>Odpychanie drewna</string>
+            <string>Odpychanie metalu</string>
+            <string>Ognista burza</string>
+            <string>Ogniste ostrze</string>
+            <string>Plaga insektów</string>
+            <string>Przełamanie choroby</string>
+            <string>Przyzwanie zwierzęcia 1</string>
+            <string>Przyzwanie zwierzęcia 2</string>
+            <string>Przyzwanie zwierzęcia 3</string>
+            <string>Przyzwanie zwierzęcia 4</string>
+            <string>Przyzwanie zwierzęcia 5</string>
+          </KnownSpellsS>
+          <SpellsS>
+            <SpellS>
+              <Name>Leczenie lekkich ran</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Leczenie lekkich ran</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Leczenie lekkich ran</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Magiczny kostur</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Magiczny kostur</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Chmura kwasu</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Chmura kwasu</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Korowa skóra</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Przyzwanie zwierzęcia 2</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Przyzwanie zwierzęcia 2</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Leczenie poważnych ran</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Przełamanie choroby</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Chodzenie po wodzie</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Przyzwanie zwierzęcia 3</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Kontrolowanie wody</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Kamienna skóra</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Kamienna skóra</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Lodowa nawałnica</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Kontrolowanie wiatru</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Plaga insektów</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Kontrolowanie wiatru</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+          </SpellsS>
+          <AvailableCastings>
+            <SpellCasting>
+              <Level>1</Level>
+              <Count>5</Count>
+              <Type>Druid</Type>
+            </SpellCasting>
+            <SpellCasting>
+              <Level>2</Level>
+              <Count>5</Count>
+              <Type>Druid</Type>
+            </SpellCasting>
+            <SpellCasting>
+              <Level>3</Level>
+              <Count>4</Count>
+              <Type>Druid</Type>
+            </SpellCasting>
+            <SpellCasting>
+              <Level>4</Level>
+              <Count>4</Count>
+              <Type>Druid</Type>
+            </SpellCasting>
+            <SpellCasting>
+              <Level>5</Level>
+              <Count>3</Count>
+              <Type>Druid</Type>
+            </SpellCasting>
+          </AvailableCastings>
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+      </Members>
+    </CharacterGroup>
   </Groups>
   <Items>
     <Item>
@@ -2077,6 +2741,84 @@ Tylko dla Ork/półork</Specials>
       <Cost>1200</Cost>
       <Damage>K12+2</Damage>
       <BaseType>Axe</BaseType>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Miecz długi +2</Name>
+      <Specials />
+      <Cost>2000</Cost>
+      <Damage>K8+2</Damage>
+      <BaseType>HeavyBlade</BaseType>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Średnia Tarcza+1</Name>
+      <Specials />
+      <Cost>500</Cost>
+      <BaseType>Shield</BaseType>
+      <AC>3</AC>
+      <MaxDexterityBonus>3</MaxDexterityBonus>
+      <Panalty>2</Panalty>
+    </Item>
+    <Item>
+      <Name>Pełna płytowa+1</Name>
+      <Specials />
+      <Cost>3000</Cost>
+      <BaseType>HeavyArmor</BaseType>
+      <AC>8</AC>
+      <MaxDexterityBonus>1</MaxDexterityBonus>
+      <Panalty>4</Panalty>
+    </Item>
+    <Item>
+      <Name>Morgensztern+1</Name>
+      <Specials />
+      <Cost>600</Cost>
+      <Damage>K6+1</Damage>
+      <BaseType>Blunt</BaseType>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Ciężka kusza celności+1</Name>
+      <Specials>+3 do trafienia
+Zwiększony zasięg (200m)</Specials>
+      <Cost>1300</Cost>
+      <Damage>K12+1</Damage>
+      <BaseType>Crossbow</BaseType>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Włócznia+2,Odrzucacz</Name>
+      <Specials>Po trafieniu ST:15 (Wytrwałość) albo odrzucenie o 2m</Specials>
+      <Cost>2300</Cost>
+      <Damage>K6+2</Damage>
+      <BaseType>Spear</BaseType>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Skórzana ćwiekowana+1</Name>
+      <Specials />
+      <Cost>250</Cost>
+      <BaseType>LightArmor</BaseType>
+      <AC>4</AC>
+      <MaxDexterityBonus>5</MaxDexterityBonus>
+      <Panalty>1</Panalty>
+    </Item>
+    <Item>
+      <Name>Kij+3</Name>
+      <Specials />
+      <Cost>600</Cost>
+      <Damage>K6+3</Damage>
+      <BaseType>Blunt</BaseType>
       <AC>0</AC>
       <MaxDexterityBonus>0</MaxDexterityBonus>
       <Panalty>0</Panalty>
@@ -2386,6 +3128,426 @@ Trwa 1 rundę/poz</Description>
       <Shool>Iluzje</Shool>
       <Level>2</Level>
       <Description>Promień 6m, trwa 10 min/poz.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Cierniste kamienie</Name>
+      <Types>Druid</Types>
+      <Shool>Ziemia</Shool>
+      <Level>4</Level>
+      <Description>Z Kamiennego podłoża wyrastają kolce, zadające K8 obrażeń przechodzącym istotom i zmniejszającym ich prędkość o 1/2.
+Obszar: kwadrat o boku 3m/poz.
+Wykrycie: ST:25</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Cisza</Name>
+      <Types>Cleric,Bard</Types>
+      <Shool>Iluzje</Shool>
+      <Level>2</Level>
+      <Description>Rzut na Wolę neguje, trwa 1 min/poz.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Deszcz ze śniegiem</Name>
+      <Types>Mage,Druid</Types>
+      <Shool>Zimno</Shool>
+      <Level>3</Level>
+      <Description>Czar trwa 1 rundę/poz., walec o promienu 12m i wysokość 6m. Ogranicza pole widzenia, zmniejsza szybkość o 1/2, co rundę ST:10 zachowanie równowagi albo upadek.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Dezorientacja</Name>
+      <Types>Mage,Bard</Types>
+      <Shool>Uroki</Shool>
+      <Level>4</Level>
+      <Description>Trwa 1 rundę/poz, Wola neguje. Efekty:
+01-10 - atak na osobę która rzuciła ten czar
+11-20 - nic
+21-50 - bełkotanie bez sensu
+51-70 - ucieczka od istoty która rzuciła ten czar
+71-100 - atak najbliżej istoty</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Dotyk wampira</Name>
+      <Types>Mage</Types>
+      <Shool>Nekromancja</Shool>
+      <Level>3</Level>
+      <Description>Atak dotykowy zadający K6 obrażeń na 2 poz. (max.10K6), odebrane P.Z dodawane są do aktualnych PZ na okres 1 godz.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Drzewny krok</Name>
+      <Types>Druid</Types>
+      <Shool>Teleportacja</Shool>
+      <Level>5</Level>
+      <Description>Możesz przenośic się z wnętrza jednego drzewa do drugiego (tego samego gatunku).
+Zasięg:
+Dąb, jesion,cis - 900m
+Wiąz, Lipa - 600m
+Inne liściaste - 450m
+Iglaste - 300m</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Drzewny kształt</Name>
+      <Types>Druid</Types>
+      <Shool>Przemiany</Shool>
+      <Level>2</Level>
+      <Description>Zamieniasz się w drzewo na 1 godz/poz. KP+10, zr=0</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Drzwi przez wymiary</Name>
+      <Types>Mage,Bard</Types>
+      <Shool>Przemiany</Shool>
+      <Level>4</Level>
+      <Description>Teleportuje o zas. 120m + 12m/poz.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Fałszywe życie</Name>
+      <Types>Mage</Types>
+      <Shool>Nekromancja</Shool>
+      <Level>2</Level>
+      <Description>Tymczasowe P.Z K10 + 1/poz. na 1 godzinę</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Gąszcz cierni</Name>
+      <Types>Druid</Types>
+      <Shool>Przemiany</Shool>
+      <Level>3</Level>
+      <Description>Trwa 1 godz, obszar: kwadrat o boku 3m/poz.
+Gęste ciernie utrudniają poruszanie się (1/2 szybkości) zadają K4 obrażeń za każde przebyte 2m.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Gracja kota</Name>
+      <Types>Mage,Cleric,Druid,Bard</Types>
+      <Shool>Przemiany</Shool>
+      <Level>2</Level>
+      <Description>ZR+4 na 1 min/poz.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Kamienna skóra</Name>
+      <Types>Mage,Bard,Druid</Types>
+      <Shool>Odrzucanie</Shool>
+      <Level>4</Level>
+      <Description>Redukcja obrażeń /10 do 150 pkt. (10/poz). trwa 10 min/poz.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Klosz niewrażliwości, mniejszy</Name>
+      <Types>Mage,Bard</Types>
+      <Shool>Odrzucanie</Shool>
+      <Level>4</Level>
+      <Description>Odporność na czary 3 poz. i niższego, 1 runda/poz</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Klosz niewrażliwości</Name>
+      <Types>Mage,Bard</Types>
+      <Shool>Odrzucanie</Shool>
+      <Level>6</Level>
+      <Description>Odporność na czary 4 poz. i niższego, 1 runda/poz</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Kontrolowanie pogody</Name>
+      <Types>Mage,Cleric,Druid</Types>
+      <Shool>Przemiany</Shool>
+      <Level>7</Level>
+      <Description>Rzucanie czaru trwa 10min, zmiana pogody też tyle trwa.
+Pora roku/ możliwe efekty:
+Wiosna - Burza, Tornado, deszcz ze śniegiem
+Lato - ulewny deszcz, upał, gradobicie
+Jesień - Mgła, mżawka
+Zima - wiatr o sile huraganu, śnieg</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Kontrolowanie wiatru</Name>
+      <Types>Druid</Types>
+      <Shool>Przemiany</Shool>
+      <Level>5</Level>
+      <Description>Co każde 3 poz. 1 dodatkowy poziom:
+1. Silny wiatr
+2. Potęzny wiatr (uszkodzenia budynków i statków)
+3. Wichura (zrzuca istoty latające, wyrywa mniejsze drzewa)
+4. Huragan
+5. Tornado</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Kontrolowanie wody</Name>
+      <Types>Druid</Types>
+      <Shool>Przemiany</Shool>
+      <Level>4</Level>
+      <Description>Zasięg 3m/poz.
+Zmniejszenie lub podwyśzenie poziomu wody o 60 cm/poz.
+Trwa 10min/poz.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Korowa skóra</Name>
+      <Types>Druid</Types>
+      <Shool>Odrzucanie</Shool>
+      <Level>2</Level>
+      <Description>Trwa 10 min/poz. Zwiększa KP+2 + 1/poz. (max. + 5).</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Kształtowanie drewna</Name>
+      <Types>Druid</Types>
+      <Shool>Przemiany</Shool>
+      <Level>2</Level>
+      <Description>Kształtowanie kawałka drewna</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Kształtowanie kamienia</Name>
+      <Types>Cleric,Druid</Types>
+      <Shool>Leczenie</Shool>
+      <Level>2</Level>
+      <Description>2K8 + 4 P.Ż</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Leczenie poważnych ran</Name>
+      <Types>Cleric,Druid</Types>
+      <Shool>Leczenie</Shool>
+      <Level>3</Level>
+      <Description>3K8 + 1 /poz. (+15 max.)</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Leczenie krytycznych ran</Name>
+      <Types>Cleric,Druid</Types>
+      <Shool>Leczenie</Shool>
+      <Level>4</Level>
+      <Description>4K8 + 1 /poz. (+20 max.)</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Lodowa nawałnica</Name>
+      <Types>Druid,Mage</Types>
+      <Shool>Wywoływanie</Shool>
+      <Level>4</Level>
+      <Description>Walec o promieniu 6m.
+Burza gradowa zadająca wszystkim w obszarze 3K6 obrażeń obuchowych i 2K6 obrażeń od lodu. Szybkość wszystkich spada o połowę.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Magiczny kamień</Name>
+      <Types>Druid,Cleric</Types>
+      <Shool>Przemiany</Shool>
+      <Level>1</Level>
+      <Description>Zamienia do 3 kamyków w kamienie +1</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Magiczny kostur</Name>
+      <Types>Druid</Types>
+      <Shool>Przemiany</Shool>
+      <Level>1</Level>
+      <Description>Drewniany drąg zamienia się w magiczny +1, dodatkowo o kategorię rozmiaru większy -&gt; K8+1). Trwa to 1 min/poz.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Neutralizacja trucizny</Name>
+      <Types>Druid,Cleric</Types>
+      <Shool>Leczenie</Shool>
+      <Level>3</Level>
+      <Description>Leczy z trucizn, dodatkowo przez 10min/poz. obiekt jest odporny na trucizny.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Oddychanie wodą</Name>
+      <Types>Druid,Cleric</Types>
+      <Shool>Przemiany</Shool>
+      <Level>3</Level>
+      <Description>Trwa 10min/poz.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Odporność na żywioły</Name>
+      <Types>Druid,Cleric,Mage,Bard</Types>
+      <Shool>Przemiany</Shool>
+      <Level>1</Level>
+      <Description>Chroni przed temp. od -45 do 60 st. C. , zapewnia redukcję obrażeń 5 od ognia i zimna. Trwa 1 godz/poz.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Odpychanie drewna</Name>
+      <Types>Druid</Types>
+      <Shool>Przemiany</Shool>
+      <Level>6</Level>
+      <Description>Linia od rzucającego 18m, odpycha wszystkie drewniane przedmioty. Trwa 1min/poz.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Odpychanie metalu</Name>
+      <Types>Druid</Types>
+      <Shool>Przemiany</Shool>
+      <Level>8</Level>
+      <Description>Linia od rzucającego 18m, odpycha wszystkie metalowe przedmioty. Trwa 1min/poz.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Ognista burza</Name>
+      <Types>Druid,Cleric</Types>
+      <Shool>Wywołanie</Shool>
+      <Level>7</Level>
+      <Description>Czas rzucania: 1 runda,
+Zasięg średni
+Sześcian o boku 3m/poz.
+Obrażenia od ognia K6/poz. (max. 20K6) - refleks zmniejsza o połowę</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Ogniste nasiona</Name>
+      <Types>Druid</Types>
+      <Shool>Przemiany</Shool>
+      <Level>6</Level>
+      <Description>Zmienia do 4 żołędzi w zadające K6 obrażeń od ognia/poz., można rzucić na max.30 m.
+Trwa 10min/poz.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Ogniste ostrze</Name>
+      <Types>Druid</Types>
+      <Shool>Przemiany</Shool>
+      <Level>2</Level>
+      <Description>Z ręki wystrzela płomienne ostrze zadające K8 +1/2 poz. obrażeń (wymagany atak dotykowy) - bez modyfikatora z siły.Trwa 1 min/poz.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Ogniste uderzenie</Name>
+      <Types>Druid,Cleric</Types>
+      <Shool>Wywoływanie</Shool>
+      <Level>5</Level>
+      <Description>Kolumna ognia zadająca K6 obrażeń na poz. (do 15K6) Połowa od ognia, połowa od boskiej mocy. Refleks zmniejsza o połowę.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Oplątanie</Name>
+      <Types>Druid</Types>
+      <Shool>Przywoływanie</Shool>
+      <Level>1</Level>
+      <Description>Trwa 1 min/poz.
+Obszar o promieniu 12m.
+Refleks neguje ale poruszanie o 1/2 szybkości.
+Test Siły o ST.20 - wyzwolenie.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Oziębienie metalu</Name>
+      <Types>Druid</Types>
+      <Shool>Przemiany</Shool>
+      <Level>2</Level>
+      <Description>Czar trwa 7 rund:
+1. Zimny metal -&gt; nic
+2. Lodowaty - k4 obrażeń
+3-5 Mroźny - 2K4
+6 Lodowaty
+7 - Zimny</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Plaga insektów</Name>
+      <Types>Druid,Cleric</Types>
+      <Shool>Przemiany</Shool>
+      <Level>5</Level>
+      <Description>Trwa 1 min/poz. Rzucanie trwa 1 rundę,
+Przyzywa 1 rój na 3 poziomy (max. 6 rojów) szarańczy.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Podmuch wiatru</Name>
+      <Types>Druid,Mage</Types>
+      <Shool>Przemiany</Shool>
+      <Level>2</Level>
+      <Description>Czas działania 1 runda, zasięg. 18m
+Zdmuchuje małe istoty
+Średnie nie mogą się poruszać w stronę źródła wiatru
+-4 do ataków dystansowych</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Powłoka ochrony przed życiem</Name>
+      <Types>Druid,Cleric</Types>
+      <Shool>Przemiany</Shool>
+      <Level>6</Level>
+      <Description>Zasięg 3m od rzucającego, żyjąće istoty nie mogą przebyć. Trwa 1 min/poziom.</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Przełamanie choroby</Name>
+      <Types>Druid,Cleric</Types>
+      <Shool>Przemiany</Shool>
+      <Level>3</Level>
+      <Description>Leczy istotę z chorób</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Przełamanie klątwy</Name>
+      <Types>Druid,Cleric</Types>
+      <Shool>Przemiany</Shool>
+      <Level>3</Level>
+      <Description>Leczy istotę z klątwy</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Przełamanie paraliżu</Name>
+      <Types>Cleric</Types>
+      <Shool>Przemiany</Shool>
+      <Level>2</Level>
+      <Description>Leczy istotę z paraliżu</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Przełamanie strachu</Name>
+      <Types>Cleric,Bard</Types>
+      <Shool>Przemiany</Shool>
+      <Level>1</Level>
+      <Description>Leczy istotę z strachu</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Przyzwanie zwierzęcia 1</Name>
+      <Types>Druid</Types>
+      <Shool>Przywołanie</Shool>
+      <Level>2</Level>
+      <Description>Czas rzucania:1 runda,
+Czas trwania: 1 runda/poz.
+- Orzeł
+- Sowa
+- Ośmiornica
+- Wilk
+- Mała żmija</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Przyzwanie zwierzęcia 2</Name>
+      <Types>Druid</Types>
+      <Shool>Przywołanie</Shool>
+      <Level>2</Level>
+      <Description>Czas rzucania:1 runda,
+Czas trwania: 1 runda/poz.
+- Kałamarnica
+- Krokodyl
+- Niedźwiedź czarny
+- Wąż, żmija
+- Mały żywiołak</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Przyzwanie zwierzęcia 3</Name>
+      <Types>Druid</Types>
+      <Shool>Przywołanie</Shool>
+      <Level>3</Level>
+      <Description>Czas rzucania:1 runda,
+Czas trwania: 1 runda/poz.
+- Lew
+- Ogromny orzeł
+- Thoqua
+- Wąż dusiciel
+- Złowieszcza łasica</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Przyzwanie zwierzęcia 4</Name>
+      <Types>Druid</Types>
+      <Shool>Przywołanie</Shool>
+      <Level>4</Level>
+      <Description>Czas rzucania:1 runda,
+Czas trwania: 1 runda/poz.
+- Jednorożec
+- Niedźwiedź brunatny
+- Tygrys
+- Żywiołak średni</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Przyzwanie zwierzęcia 5</Name>
+      <Types>Druid</Types>
+      <Shool>Przywołanie</Shool>
+      <Level>5</Level>
+      <Description>Czas rzucania:1 runda,
+Czas trwania: 1 runda/poz.
+-Gryf
+- Niedźwiedź polarny
+- Nosorożec
+- Tojanida
+- Orka
+- Żywiołak duży</Description>
+    </SpellDefinition>
+    <SpellDefinition>
+      <Name>Przyzwanie zwierzęcia 6</Name>
+      <Types>Druid</Types>
+      <Shool>Przywołanie</Shool>
+      <Level>6</Level>
+      <Description>Czas rzucania:1 runda,
+Czas trwania: 1 runda/poz.
+- Ogromna kałamarnica
+- Niewidzialny łowca
+- Tyranozaur
+- Żywiołak, wielki</Description>
     </SpellDefinition>
   </Spells>
   <Effects>
