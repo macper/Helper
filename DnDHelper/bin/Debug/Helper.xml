@@ -1219,6 +1219,7 @@ Tylko dla Ork/półork</Specials>
           <Effects />
           <KnownSpellsS />
           <SpellsS />
+          <AvailableCastings />
           <Skills />
           <IsActiveMember>false</IsActiveMember>
         </Character>
