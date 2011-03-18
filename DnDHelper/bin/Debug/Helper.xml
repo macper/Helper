@@ -996,9 +996,9 @@ Zł. narzędzia x1</Items>
             <HP>85</HP>
             <AC>23</AC>
             <AttackSkill>10\5</AttackSkill>
-            <WillThrow>3</WillThrow>
-            <ReflexThrow>3</ReflexThrow>
-            <StrongThrow>7</StrongThrow>
+            <WillThrow>7</WillThrow>
+            <ReflexThrow>5</ReflexThrow>
+            <StrongThrow>10</StrongThrow>
           </CurrentStats>
           <OriginalStats>
             <Strength>16</Strength>
@@ -1100,9 +1100,10 @@ Zł. narzędzia x1</Items>
             <Charisma>0</Charisma>
             <HP>54</HP>
             <AC>18</AC>
-            <WillThrow>0</WillThrow>
-            <ReflexThrow>0</ReflexThrow>
-            <StrongThrow>0</StrongThrow>
+            <AttackSkill>7\2</AttackSkill>
+            <WillThrow>3</WillThrow>
+            <ReflexThrow>3</ReflexThrow>
+            <StrongThrow>7</StrongThrow>
           </CurrentStats>
           <OriginalStats>
             <Strength>15</Strength>
@@ -1667,6 +1668,174 @@ Tylko dla Ork/półork</Specials>
           <KnownSpellsS />
           <SpellsS />
           <AvailableCastings />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Kuo-Toa wojownik</Name>
+          <Race>Kuo-Toa</Race>
+          <Level>3</Level>
+          <Class>Wojownik</Class>
+          <CurrentStats>
+            <Strength>13</Strength>
+            <Dexterity>17</Dexterity>
+            <Constitution>15</Constitution>
+            <Wisdom>13</Wisdom>
+            <Inteligence>12</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>15</HP>
+            <AC>16</AC>
+            <AttackSkill>3</AttackSkill>
+            <WillThrow>6</WillThrow>
+            <ReflexThrow>6</ReflexThrow>
+            <StrongThrow>7</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>13</Strength>
+            <Dexterity>17</Dexterity>
+            <Constitution>15</Constitution>
+            <Wisdom>13</Wisdom>
+            <Inteligence>12</Inteligence>
+            <Charisma>11</Charisma>
+            <HP>15</HP>
+            <AC>16</AC>
+            <AttackSkill>3</AttackSkill>
+            <WillThrow>6</WillThrow>
+            <ReflexThrow>6</ReflexThrow>
+            <StrongThrow>7</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>3</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <Name>Atak</Name>
+              <ToHit>6</ToHit>
+              <Damage>K6+1</Damage>
+            </Attack>
+          </Attacks>
+          <RightHand>
+            <Name>Sejmitar</Name>
+            <Specials>Kryt. 18-20</Specials>
+            <Cost>45</Cost>
+            <Damage>K6</Damage>
+            <BaseType>LightBlade</BaseType>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </RightHand>
+          <LeftHand>
+            <Name>Średnia Tarcza</Name>
+            <Specials />
+            <Cost>10</Cost>
+            <BaseType>Shield</BaseType>
+            <AC>2</AC>
+            <MaxDexterityBonus>4</MaxDexterityBonus>
+            <Panalty>2</Panalty>
+          </LeftHand>
+          <Gold>0</Gold>
+          <Effects />
+          <KnownSpellsS />
+          <SpellsS />
+          <AvailableCastings />
+          <Skills />
+          <IsActiveMember>false</IsActiveMember>
+        </Character>
+        <Character>
+          <Name>Kuo-Toa Zaklinacz</Name>
+          <Race>Kuo-Toa</Race>
+          <Level>3</Level>
+          <Class>Zaklinacz</Class>
+          <CurrentStats>
+            <Strength>10</Strength>
+            <Dexterity>17</Dexterity>
+            <Constitution>15</Constitution>
+            <Wisdom>15</Wisdom>
+            <Inteligence>15</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>20</HP>
+            <AC>14</AC>
+            <WillThrow>11</WillThrow>
+            <ReflexThrow>5</ReflexThrow>
+            <StrongThrow>6</StrongThrow>
+          </CurrentStats>
+          <OriginalStats>
+            <Strength>10</Strength>
+            <Dexterity>17</Dexterity>
+            <Constitution>15</Constitution>
+            <Wisdom>15</Wisdom>
+            <Inteligence>15</Inteligence>
+            <Charisma>0</Charisma>
+            <HP>20</HP>
+            <AC>14</AC>
+            <WillThrow>11</WillThrow>
+            <ReflexThrow>5</ReflexThrow>
+            <StrongThrow>6</StrongThrow>
+          </OriginalStats>
+          <Initiative>0</Initiative>
+          <BaseInitiative>3</BaseInitiative>
+          <Attacks>
+            <Attack>
+              <Name>Atak</Name>
+              <ToHit>3</ToHit>
+              <Damage>K8</Damage>
+            </Attack>
+          </Attacks>
+          <RightHand>
+            <Name>Trójząb</Name>
+            <Specials />
+            <Cost>10</Cost>
+            <Damage>K8</Damage>
+            <BaseType>Spear</BaseType>
+            <AC>0</AC>
+            <MaxDexterityBonus>0</MaxDexterityBonus>
+            <Panalty>0</Panalty>
+          </RightHand>
+          <Gold>0</Gold>
+          <Effects />
+          <KnownSpellsS>
+            <string>Błyskawica</string>
+            <string>Leczenie lekkich ran</string>
+            <string>Unieruchomienie osoby</string>
+          </KnownSpellsS>
+          <SpellsS>
+            <SpellS>
+              <Name>Błyskawica</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Unieruchomienie osoby</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Unieruchomienie osoby</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Leczenie lekkich ran</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+            <SpellS>
+              <Name>Leczenie lekkich ran</Name>
+              <IsCasted>false</IsCasted>
+            </SpellS>
+          </SpellsS>
+          <AvailableCastings>
+            <SpellCasting>
+              <Level>3</Level>
+              <Count>1</Count>
+              <Type>Mage</Type>
+            </SpellCasting>
+            <SpellCasting>
+              <Level>2</Level>
+              <Count>2</Count>
+              <Type>Cleric</Type>
+            </SpellCasting>
+            <SpellCasting>
+              <Level>1</Level>
+              <Count>2</Count>
+              <Type>Cleric</Type>
+            </SpellCasting>
+          </AvailableCastings>
           <Skills />
           <IsActiveMember>false</IsActiveMember>
         </Character>
@@ -2819,6 +2988,26 @@ Zwiększony zasięg (200m)</Specials>
       <Cost>600</Cost>
       <Damage>K6+3</Damage>
       <BaseType>Blunt</BaseType>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Sejmitar</Name>
+      <Specials>Kryt. 18-20</Specials>
+      <Cost>45</Cost>
+      <Damage>K6</Damage>
+      <BaseType>LightBlade</BaseType>
+      <AC>0</AC>
+      <MaxDexterityBonus>0</MaxDexterityBonus>
+      <Panalty>0</Panalty>
+    </Item>
+    <Item>
+      <Name>Trójząb</Name>
+      <Specials />
+      <Cost>10</Cost>
+      <Damage>K8</Damage>
+      <BaseType>Spear</BaseType>
       <AC>0</AC>
       <MaxDexterityBonus>0</MaxDexterityBonus>
       <Panalty>0</Panalty>

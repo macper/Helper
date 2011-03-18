@@ -184,6 +184,10 @@ namespace DnDHelper
         private void DodajCzarPoziom_Click(object sender, RoutedEventArgs e)
         {
             SpellCasting sCast = new SpellCasting();
+            if (_character.AvailableCastings == null)
+            {
+                _character.AvailableCastings = new List<SpellCasting>();
+            }
             _character.AvailableCastings.Add(sCast);
             listView4.Items.Refresh();
         }
