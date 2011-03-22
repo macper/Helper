@@ -20,7 +20,11 @@ namespace DnDHelper
     public partial class MainWindow : Window
     {
         protected Helper _helper;
-        public Battle _battle;
+        protected Battle _battle;
+        protected Map _map;
+        protected Block _activeBlock = new Block();
+        private ActionType _activeAction;
+        private const int fieldSize = 20;
 
         public MainWindow()
         {
@@ -288,9 +292,152 @@ namespace DnDHelper
             Close();
         }
 
-            
+
+        #region Map
+        private void button11_Click(object sender, RoutedEventArgs e)
+        {
+            NewMap newMapWnd = new NewMap();
+            if (newMapWnd.ShowDialog() == true)
+            {
+                _map = newMapWnd.Map;
+                DrawMap();
+            }
+        }
+
+        private void DrawMap()
+        {
+            grid1.Children.Clear();
+            grid1.Width = _map.Width * fieldSize;
+            grid1.Height = _map.Height * fieldSize;
+            grid1.Background = Brushes.White;
+            for (int i = 0; i < _map.Height * fieldSize; i += fieldSize)
+            {
+                Line l = new Line();
+                l.Stroke = Brushes.LightGray;
+                l.StrokeThickness = 1;
+                l.X1 = i;
+                l.X2 = i;
+                l.Y1 = 0;
+                l.Y2 = _map.Width * fieldSize;
+                grid1.Children.Add(l);
+            }
+            for (int j = 0; j < _map.Width * fieldSize; j += fieldSize)
+            {
+                Line l = new Line();
+                l.Stroke = Brushes.LightGray;
+                l.StrokeThickness = 1;
+                l.X1 = 0;
+                l.X2 = _map.Width * fieldSize;
+                l.Y1 = j;
+                l.Y2 = j;
+                grid1.Children.Add(l);
+            }
+
+            for (int i = 0; i < _map.Height; i++)
+            {
+                for (int j = 0; j < _map.Width; j++)
+                {
+                    if (_map.BlockMap[i, j] != null)
+                    {
+                        Rectangle rec = new Rectangle();
+                        rec.Fill = new SolidColorBrush(_map.BlockMap[i,j].Color);
+                        rec.Width = fieldSize;
+                        rec.Height = fieldSize;
+                        rec.Margin = new Thickness(i * fieldSize, j * fieldSize, 0, 0);
+                        rec.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                        rec.VerticalAlignment = System.Windows.VerticalAlignment.Top;
+                        grid1.Children.Add(rec);
+                    }
+                }
+            }
+        }
+
+        private void slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            double Scale = 1;
+            switch ((int)slider1.Value)
+            {
+                case 1:
+                    Scale = 0.2;
+                    break;
+
+                case 2:
+                    Scale = 0.5;
+                    break;
+
+                case 3:
+                    Scale = 0.75;
+                    break;
+
+                case 5:
+                    Scale = 1.5;
+                    break;
+
+                case 6:
+                    Scale = 2;
+                    break;
+
+                case 7:
+                    Scale = 3;
+                    break;
+
+                case 8:
+                    Scale = 4;
+                    break;
+
+                case 9:
+                case 10:
+                    Scale = 5;
+                    break;
+            }
+            grid1.RenderTransform = new ScaleTransform(Scale, Scale);
+            if (_map != null)
+            {
+                grid1.Width = (int)(_map.Width * fieldSize * Scale);
+                grid1.Height = (int)(_map.Height * fieldSize * Scale);
+            }
+        }
+
+        private void button14_Click(object sender, RoutedEventArgs e)
+        {
+            WPFColorPickerLib.ColorDialog colDlg = new WPFColorPickerLib.ColorDialog();
+            if (colDlg.ShowDialog() == true)
+            {
+                textBox2.Text = string.Format("{0}.{1}.{2}", colDlg.SelectedColor.R, colDlg.SelectedColor.G, colDlg.SelectedColor.B);
+                _activeBlock.Color = colDlg.SelectedColor;
+            }
+        }
+
+        private void grid1_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            if (radioButton1.IsChecked == true)
+            {
+                int posX = (int)(e.GetPosition(grid1).X / fieldSize);
+                int posY = (int)(e.GetPosition(grid1).Y / fieldSize);
+                _map.BlockMap[posX, posY] = new Block() { Color = _activeBlock.Color, Name = _activeBlock.Name, Description = _activeBlock.Description };
+            }
+            DrawMap();
+        }
+
+        private void grid1_MouseMove(object sender, MouseEventArgs e)
+        {
+            int posX = (int)(e.GetPosition(grid1).X / fieldSize);
+            int posY = (int)(e.GetPosition(grid1).Y / fieldSize);
+            label11.Content = string.Format("{0},{1}", posX.ToString(), posY.ToString());
+        }
+
+        #endregion
+
+        
+
+        
+
+        
+
+        
+
 
     }
 
-   
+   public enum ActionType { None, AddBlock, RemoveBlock }
 }
