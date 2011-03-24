@@ -23,7 +23,6 @@ namespace DnDHelper
         protected Battle _battle;
         protected Map _map;
         protected Block _activeBlock = new Block();
-        private ActionType _activeAction;
         private const int fieldSize = 20;
 
         public MainWindow()
@@ -55,6 +54,7 @@ namespace DnDHelper
         {
             listBox1.ItemsSource = _helper.Groups;
             listBox1.DisplayMemberPath = "GroupName";
+            listBox3.DisplayMemberPath = "Name";
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -301,6 +301,7 @@ namespace DnDHelper
             {
                 _map = newMapWnd.Map;
                 DrawMap();
+                listBox3.ItemsSource = _map.AllNamedBlocks;
             }
         }
 
@@ -310,7 +311,7 @@ namespace DnDHelper
             grid1.Width = _map.Width * fieldSize;
             grid1.Height = _map.Height * fieldSize;
             grid1.Background = Brushes.White;
-            for (int i = 0; i < _map.Height * fieldSize; i += fieldSize)
+            for (int i = 0; i < _map.Width * fieldSize; i += fieldSize)
             {
                 Line l = new Line();
                 l.Stroke = Brushes.LightGray;
@@ -318,10 +319,10 @@ namespace DnDHelper
                 l.X1 = i;
                 l.X2 = i;
                 l.Y1 = 0;
-                l.Y2 = _map.Width * fieldSize;
+                l.Y2 = _map.Height * fieldSize;
                 grid1.Children.Add(l);
             }
-            for (int j = 0; j < _map.Width * fieldSize; j += fieldSize)
+            for (int j = 0; j < _map.Height * fieldSize; j += fieldSize)
             {
                 Line l = new Line();
                 l.Stroke = Brushes.LightGray;
@@ -333,9 +334,9 @@ namespace DnDHelper
                 grid1.Children.Add(l);
             }
 
-            for (int i = 0; i < _map.Height; i++)
+            for (int i = 0; i < _map.Width; i++)
             {
-                for (int j = 0; j < _map.Width; j++)
+                for (int j = 0; j < _map.Height; j++)
                 {
                     if (_map.BlockMap[i, j] != null)
                     {
@@ -347,9 +348,34 @@ namespace DnDHelper
                         rec.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
                         rec.VerticalAlignment = System.Windows.VerticalAlignment.Top;
                         grid1.Children.Add(rec);
+                        if (_map.BlockMap[i, j].Name != null)
+                        {
+                            TextBlock text = new TextBlock();
+                            text.FontSize = 8;
+                            text.Text = _map.BlockMap[i, j].Name;
+                            text.Margin = new Thickness(i * fieldSize + 25, j * fieldSize + 10, 0, 0);
+                            grid1.Children.Add(text);
+                            if (_map.BlockMap[i, j] == _activeBlock)
+                            {
+                                text.Foreground = Brushes.Red;
+                            }
+                        }
+                    }
+                    if (_map.BlockMap[i,j] == _activeBlock)
+                    {
+                        Rectangle actRec = new Rectangle();
+                        actRec.Stroke = Brushes.Red;
+                        actRec.StrokeThickness = 2;
+                        actRec.Margin = new Thickness(i * fieldSize, j * fieldSize, 0, 0);
+                        actRec.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                        actRec.VerticalAlignment = System.Windows.VerticalAlignment.Top;
+                        actRec.Width = fieldSize;
+                        actRec.Height = fieldSize;
+                        grid1.Children.Add(actRec);
                     }
                 }
             }
+            
         }
 
         private void slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -403,20 +429,46 @@ namespace DnDHelper
             WPFColorPickerLib.ColorDialog colDlg = new WPFColorPickerLib.ColorDialog();
             if (colDlg.ShowDialog() == true)
             {
-                textBox2.Text = string.Format("{0}.{1}.{2}", colDlg.SelectedColor.R, colDlg.SelectedColor.G, colDlg.SelectedColor.B);
-                _activeBlock.Color = colDlg.SelectedColor;
+                rectangle1.Fill = new SolidColorBrush(colDlg.SelectedColor);
             }
         }
 
         private void grid1_MouseUp(object sender, MouseButtonEventArgs e)
         {
+            int posX = (int)(e.GetPosition(grid1).X / fieldSize);
+            int posY = (int)(e.GetPosition(grid1).Y / fieldSize);
+
             if (radioButton1.IsChecked == true)
             {
-                int posX = (int)(e.GetPosition(grid1).X / fieldSize);
-                int posY = (int)(e.GetPosition(grid1).Y / fieldSize);
-                _map.BlockMap[posX, posY] = new Block() { Color = _activeBlock.Color, Name = _activeBlock.Name, Description = _activeBlock.Description };
+                if (e.LeftButton == MouseButtonState.Pressed)
+                {
+                    _map.BlockMap[posX, posY] = new Block() { Color = ((SolidColorBrush)rectangle1.Fill).Color, Name = textBox3.Text != string.Empty ? textBox3.Text : null, Description = textBox4.Text != string.Empty ? textBox4.Text : null };
+                }
+                else if (e.RightButton == MouseButtonState.Pressed)
+                {
+                    _map.BlockMap[posX, posY] = null;
+                }
+                
+            }
+            else if (radioButton2.IsChecked == true)
+            {
+                _activeBlock = _map.BlockMap[posX, posY];
+                if (_activeBlock != null)
+                {
+                    SetActiveBlock();
+                }
             }
             DrawMap();
+            listBox3.ItemsSource = _map.AllNamedBlocks;
+        }
+
+        private void SetActiveBlock()
+        {
+            rectangle1.Fill = new SolidColorBrush(_activeBlock.Color);
+            if (_activeBlock.Name != null)
+            textBox3.Text = _activeBlock.Name;
+            if (_activeBlock.Description != null)
+            textBox4.Text = _activeBlock.Description;
         }
 
         private void grid1_MouseMove(object sender, MouseEventArgs e)
@@ -426,17 +478,75 @@ namespace DnDHelper
             label11.Content = string.Format("{0},{1}", posX.ToString(), posY.ToString());
         }
 
+        private void button15_Click(object sender, RoutedEventArgs e)
+        {
+            if (_activeBlock != null)
+            {
+                _activeBlock.Color = ((SolidColorBrush)rectangle1.Fill).Color;
+                _activeBlock.Name = textBox3.Text;
+                _activeBlock.Description = textBox4.Text;
+            }
+        }
+
+        private void button13_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.SaveFileDialog saveDlg1 = new Microsoft.Win32.SaveFileDialog();
+            saveDlg1.DefaultExt = ".xml";
+            saveDlg1.Filter = "Pliki XML|*.xml";
+            try
+            {
+                if (saveDlg1.ShowDialog() == true)
+                {
+                    using (System.IO.FileStream fs = new System.IO.FileStream(saveDlg1.FileName, System.IO.FileMode.Create))
+                    {
+                        System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(SerializableMap));
+                        serializer.Serialize(fs, _map.Serialize());
+                        MessageBox.Show("Zapisano pomyślnie");
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.ToString());
+            }
+        }
+
+        private void button12_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog fileDlg = new Microsoft.Win32.OpenFileDialog();
+            fileDlg.DefaultExt = ".xml";
+            fileDlg.Filter = "Pliki XML|*.xml";
+            try
+            {
+                if (fileDlg.ShowDialog() == true)
+                {
+                    using (System.IO.FileStream fs = new System.IO.FileStream(fileDlg.FileName, System.IO.FileMode.Open))
+                    {
+                        System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(SerializableMap));
+                        SerializableMap sMap = (SerializableMap)serializer.Deserialize(fs);
+                        _map = Map.Deserialize(sMap);
+                        DrawMap();
+                        listBox3.ItemsSource = _map.AllNamedBlocks;
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.ToString());
+            }
+        }
+
+        private void listBox3_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (listBox3.SelectedItem != null)
+            {
+                _activeBlock = (Block)listBox3.SelectedItem;
+                DrawMap();
+                SetActiveBlock();
+            }
+        }
+
         #endregion
-
-        
-
-        
-
-        
-
-        
-
-
     }
 
    public enum ActionType { None, AddBlock, RemoveBlock }

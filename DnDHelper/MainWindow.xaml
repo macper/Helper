@@ -110,21 +110,20 @@
                 <TabItem Header="Mapy">
                     <Grid>
                         <Button Content="Nowa" Height="23" Name="button11" Width="75" Margin="5.5,5.02,1033.5,621.02" Click="button11_Click" />
-                        <Button Content="Wczytaj" Height="23" Margin="86.5,5.02,952.5,621.02" Name="button12" Width="75" />
-                        <Button Content="Zapisz" Height="23" Margin="167.5,5.02,871.5,621.02" Name="button13" Width="75" />
+                        <Button Content="Wczytaj" Height="23" Margin="86.5,5.02,952.5,621.02" Name="button12" Width="75" Click="button12_Click" />
+                        <Button Content="Zapisz" Height="23" Margin="167.5,5.02,871.5,621.02" Name="button13" Width="75" Click="button13_Click" />
                         <ScrollViewer Height="604.111" HorizontalAlignment="Left" Margin="5.5,34.02,0,0" Name="scrollViewer1" VerticalAlignment="Top" Width="688.889" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-                            <Grid Height="Auto" Name="grid1" Width="Auto" MouseUp="grid1_MouseUp" MouseMove="grid1_MouseMove"></Grid>
+                            <Grid Height="Auto" Name="grid1" Width="Auto" MouseMove="grid1_MouseMove" MouseDown="grid1_MouseUp"></Grid>
                         </ScrollViewer>
                         <Slider Height="23" HorizontalAlignment="Left" Margin="248.5,5.02,0,0" Name="slider1" VerticalAlignment="Top" Width="100" Value="4" Minimum="1" ValueChanged="slider1_ValueChanged" />
                         <Label Content="Typ:" Height="28" HorizontalAlignment="Left" Margin="700.389,34.02,0,0" Name="label7" VerticalAlignment="Top" />
                         <ComboBox Height="23" HorizontalAlignment="Left" Margin="749.247,34.02,0,0" Name="comboBox1" VerticalAlignment="Top" Width="120" />
                         <Label Content="Kolor:" Height="28" HorizontalAlignment="Left" Margin="700.389,68.02,0,0" Name="label8" VerticalAlignment="Top" />
                         <Button Content="Wybierz" Height="23" HorizontalAlignment="Right" Margin="0,67.5,163.753,0" Name="button14" VerticalAlignment="Top" Width="75" Click="button14_Click" />
-                        <TextBox Height="23" HorizontalAlignment="Left" Margin="749.247,68.02,0,0" Name="textBox2" VerticalAlignment="Top" Width="120" />
                         <GroupBox Header="Akcja:" Height="47.778" HorizontalAlignment="Left" Margin="700.389,102.02,0,0" Name="groupBox1" VerticalAlignment="Top" Width="360.753">
                             <Grid>
-                                <RadioButton Content="Dodaj" Height="16" HorizontalAlignment="Left" Margin="6,6,0,0" Name="radioButton1" VerticalAlignment="Top" />
-                                <RadioButton Content="Usuń" Height="16" HorizontalAlignment="Left" Margin="80.948,6,0,0" Name="radioButton2" VerticalAlignment="Top" />
+                                <RadioButton Content="Dodaj\Usuń" Height="16" HorizontalAlignment="Left" Margin="6,6,0,0" Name="radioButton1" VerticalAlignment="Top" />
+                                <RadioButton Content="Wybierz" Height="16" HorizontalAlignment="Left" Margin="101.111,6,0,0" Name="radioButton2" VerticalAlignment="Top" />
                             </Grid>
                         </GroupBox>
                         <Label Content="Nazwa:" Height="28" Margin="706.389,150.798,359.721,0" Name="label9" VerticalAlignment="Top" />
@@ -132,6 +131,9 @@
                         <Label Content="Opis:" Height="28" Margin="706.389,179.798,359.721,0" Name="label10" VerticalAlignment="Top" />
                         <TextBox Height="107.444" HorizontalAlignment="Left" Margin="749.247,184.798,0,0" Name="textBox4" VerticalAlignment="Top" Width="305.895" AcceptsReturn="True" AcceptsTab="True" TextWrapping="Wrap" />
                         <Label Content="Pozycja" Height="28" HorizontalAlignment="Left" Margin="354.5,5.02,0,0" Name="label11" VerticalAlignment="Top" />
+                        <Rectangle Height="23" HorizontalAlignment="Left" Margin="749.247,67.5,0,0" Name="rectangle1" Stroke="Black" VerticalAlignment="Top" Width="120" />
+                        <Button Content="Zapisz" Height="23" HorizontalAlignment="Left" Margin="980.142,298.242,0,0" Name="button15" VerticalAlignment="Top" Width="75" Click="button15_Click" />
+                        <ListBox Height="307.532" HorizontalAlignment="Left" Margin="749.247,330.599,0,0" Name="listBox3" VerticalAlignment="Top" Width="305.895" SelectionChanged="listBox3_SelectionChanged" />
                     </Grid>
                 </TabItem>
             </TabControl>
