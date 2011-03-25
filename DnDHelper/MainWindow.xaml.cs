@@ -55,6 +55,7 @@ namespace DnDHelper
             listBox1.ItemsSource = _helper.Groups;
             listBox1.DisplayMemberPath = "GroupName";
             listBox3.DisplayMemberPath = "Name";
+            comboBox1.ItemsSource = new string[] { "Block", "TextBlock" };
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -375,6 +376,16 @@ namespace DnDHelper
                     }
                 }
             }
+
+            foreach (StringBlock sBlock in _map.TextBlocks)
+            {
+                TextBlock txtBlock = new TextBlock();
+                txtBlock.Foreground = new SolidColorBrush(sBlock.Color);
+                txtBlock.Text = sBlock.Text;
+                txtBlock.FontSize = 12;
+                txtBlock.Margin = new Thickness(sBlock.Position.X, sBlock.Position.Y, 0, 0);
+                grid1.Children.Add(txtBlock);
+            }
             
         }
 
@@ -435,31 +446,39 @@ namespace DnDHelper
 
         private void grid1_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            int posX = (int)(e.GetPosition(grid1).X / fieldSize);
-            int posY = (int)(e.GetPosition(grid1).Y / fieldSize);
+            if ((string)comboBox1.SelectedItem == "Block")
+            {
+                int posX = (int)(e.GetPosition(grid1).X / fieldSize);
+                int posY = (int)(e.GetPosition(grid1).Y / fieldSize);
 
-            if (radioButton1.IsChecked == true)
-            {
-                if (e.LeftButton == MouseButtonState.Pressed)
+                if (radioButton1.IsChecked == true)
                 {
-                    _map.BlockMap[posX, posY] = new Block() { Color = ((SolidColorBrush)rectangle1.Fill).Color, Name = textBox3.Text != string.Empty ? textBox3.Text : null, Description = textBox4.Text != string.Empty ? textBox4.Text : null };
+                    if (e.LeftButton == MouseButtonState.Pressed)
+                    {
+                        _map.BlockMap[posX, posY] = new Block() { Color = ((SolidColorBrush)rectangle1.Fill).Color, Name = textBox3.Text != string.Empty ? textBox3.Text : null, Description = textBox4.Text != string.Empty ? textBox4.Text : null };
+                    }
+                    else if (e.RightButton == MouseButtonState.Pressed)
+                    {
+                        _map.BlockMap[posX, posY] = null;
+                    }
+
                 }
-                else if (e.RightButton == MouseButtonState.Pressed)
+                else if (radioButton2.IsChecked == true)
                 {
-                    _map.BlockMap[posX, posY] = null;
+                    _activeBlock = _map.BlockMap[posX, posY];
+                    if (_activeBlock != null)
+                    {
+                        SetActiveBlock();
+                    }
                 }
-                
+                DrawMap();
+                listBox3.ItemsSource = _map.AllNamedBlocks;
             }
-            else if (radioButton2.IsChecked == true)
+            else if ((string)comboBox1.SelectedItem == "TextBlock")
             {
-                _activeBlock = _map.BlockMap[posX, posY];
-                if (_activeBlock != null)
-                {
-                    SetActiveBlock();
-                }
+                _map.TextBlocks.Add(new StringBlock() { Color = ((SolidColorBrush)rectangle1.Fill).Color, Position = e.GetPosition(grid1), Text = textBox3.Text });
+                DrawMap();
             }
-            DrawMap();
-            listBox3.ItemsSource = _map.AllNamedBlocks;
         }
 
         private void SetActiveBlock()
@@ -514,6 +533,7 @@ namespace DnDHelper
         private void button12_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog fileDlg = new Microsoft.Win32.OpenFileDialog();
+
             fileDlg.DefaultExt = ".xml";
             fileDlg.Filter = "Pliki XML|*.xml";
             try

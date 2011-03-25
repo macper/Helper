@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Media;
+using System.Windows;
 using System.Xml.Serialization;
 
 namespace DnDHelper
@@ -13,6 +14,7 @@ namespace DnDHelper
         public int Width { get; set; }
         public int Height { get; set; }
         public Block[,] BlockMap { get; set; }
+        public List<StringBlock> TextBlocks { get; set; }
         public List<Block> AllNamedBlocks
         {
             get
@@ -37,6 +39,7 @@ namespace DnDHelper
 
         public Map()
         {
+            TextBlocks = new List<StringBlock>();
         }
 
         public Map(int width, int height)
@@ -44,6 +47,7 @@ namespace DnDHelper
             Width = width;
             Height = height;
             BlockMap = new Block[Width, Height];
+            TextBlocks = new List<StringBlock>();
         }
 
         public SerializableMap Serialize()
@@ -84,6 +88,14 @@ namespace DnDHelper
         public string Description { get; set; }
     }
 
+    public class StringBlock
+    {
+        public Point Position { get; set; }
+        public string Text { get; set; }
+        public Color Color { get; set; }
+        public int Size { get; set; }
+    }
+
     [Serializable]
     public class SerializableBlock
     {
@@ -100,10 +112,12 @@ namespace DnDHelper
         public int Width { get; set; }
         public int Height { get; set; }
         public List<SerializableBlock> Blocks { get; set; }
+        public List<StringBlock> TextBlocks { get; set; }
 
         public SerializableMap()
         {
             Blocks = new List<SerializableBlock>();
+            TextBlocks = new List<StringBlock>();
         }
     }
 
