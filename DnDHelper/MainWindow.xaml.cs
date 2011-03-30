@@ -144,7 +144,7 @@ namespace DnDHelper
         {
             if (listBox1.SelectedItem != null)
             {
-                listBox2.ItemsSource = ((CharacterGroup)listBox1.SelectedItem).Members;
+                listBox2.ItemsSource = ((CharacterGroup)listBox1.SelectedItem).Members.OrderBy(o => o.Name);
                 listBox2.DisplayMemberPath = "Name";
                 listBox2.Items.Refresh();
             }
@@ -277,7 +277,13 @@ namespace DnDHelper
 
         private void AttackCustom_Click(object sender, RoutedEventArgs e)
         {
-            AttackCustomWindow wnd = new AttackCustomWindow(_battle);
+            AttackCustomWindow wnd = null;
+            if (listView1.SelectedItems.Count == 2)
+            {
+                wnd = new AttackCustomWindow(_battle, (Character)listView1.SelectedItems[0], (Character)listView1.SelectedItems[1]);
+            }
+            else
+            wnd = new AttackCustomWindow(_battle);
             wnd.Show();
         }
 
@@ -476,8 +482,9 @@ namespace DnDHelper
             }
             else if ((string)comboBox1.SelectedItem == "TextBlock")
             {
-                _map.TextBlocks.Add(new StringBlock() { Color = ((SolidColorBrush)rectangle1.Fill).Color, Position = e.GetPosition(grid1), Text = textBox3.Text });
+                _map.TextBlocks.Add(new StringBlock() { Color = ((SolidColorBrush)rectangle1.Fill).Color, Position = e.GetPosition(grid1), Text = textBox3.Text, Description = textBox4.Text });
                 DrawMap();
+                listBox3.ItemsSource = _map.TextBlocks;
             }
         }
 
@@ -560,13 +567,98 @@ namespace DnDHelper
         {
             if (listBox3.SelectedItem != null)
             {
-                _activeBlock = (Block)listBox3.SelectedItem;
-                DrawMap();
-                SetActiveBlock();
+                if ((string)comboBox1.SelectedItem == "Block")
+                {
+                    _activeBlock = (Block)listBox3.SelectedItem;
+                    DrawMap();
+                    SetActiveBlock();
+                }
+                else if ((string)comboBox1.SelectedItem == "TextBlock")
+                {
+                    StringBlock sBlock = (StringBlock)listBox3.SelectedItem;
+                    rectangle1.Fill = new SolidColorBrush(sBlock.Color);
+                    textBox3.Text = sBlock.Text;
+                    textBox4.Text = sBlock.Description;
+                }
             }
         }
 
         #endregion
+
+        private void button16_Click(object sender, RoutedEventArgs e)
+        {
+            if (listBox2.SelectedItem != null)
+            {
+                Character chToCopy = (Character)listBox2.SelectedItem;
+                using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
+                {
+                    System.Xml.Serialization.XmlSerializer xmlSerializer = new System.Xml.Serialization.XmlSerializer(typeof(Character));
+                    xmlSerializer.Serialize(ms, chToCopy);
+                    ms.Position = 0;
+                    Character newChar = (Character)xmlSerializer.Deserialize(ms);
+                    newChar.Name = "Kopia_" + chToCopy.Name;
+                    CharacterGroup chGr = (CharacterGroup)listBox1.SelectedItem;
+                    chGr.Members.Add(newChar);
+                    characterDetails1.Init(_helper, newChar);
+                    listBox2.ItemsSource = chGr.Members.OrderBy(o => o.Name);
+                }
+            }
+        }
+
+        private void comboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if ((string)comboBox1.SelectedItem == "Block")
+            {
+                listBox3.ItemsSource = _map.AllNamedBlocks;
+                listBox3.DisplayMemberPath = "Name";
+            }
+            else if ((string)comboBox1.SelectedItem == "TextBlock")
+            {
+                listBox3.ItemsSource = _map.TextBlocks;
+                listBox3.DisplayMemberPath = "Text";
+            }
+        }
+
+        private void UsunTextBlockClick(object sender, RoutedEventArgs e)
+        {
+            if ((string)comboBox1.SelectedItem == "TextBlock")
+            {
+                if (listBox3.SelectedItem != null)
+                {
+                    _map.TextBlocks.Remove((StringBlock)listBox3.SelectedItem);
+                    listBox3.ItemsSource = _map.TextBlocks;
+                    DrawMap();
+                }
+            }
+        }
+
+        private void grid1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((string)comboBox1.SelectedItem == "TextBlock")
+            {
+                if (listBox3.SelectedItem != null)
+                {
+                    StringBlock sb = (StringBlock)listBox3.SelectedItem;
+                    if (e.Key == Key.W)
+                    {
+                        sb.Position = new Point(sb.Position.X, sb.Position.Y - 2);
+                    }
+                    else if (e.Key == Key.S)
+                    {
+                        sb.Position = new Point(sb.Position.X, sb.Position.Y + 2);
+                    }
+                    else if (e.Key == Key.A)
+                    {
+                        sb.Position = new Point(sb.Position.X - 2, sb.Position.Y);
+                    }
+                    else if (e.Key == Key.D)
+                    {
+                        sb.Position = new Point(sb.Position.X + 2, sb.Position.Y);
+                    }
+                    DrawMap();
+                }
+            }
+        }
     }
 
    public enum ActionType { None, AddBlock, RemoveBlock }

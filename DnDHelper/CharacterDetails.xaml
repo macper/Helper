@@ -241,5 +241,7 @@
         <TextBox Text="{Binding Path=CurrentStats.Charisma}" Height="23" HorizontalAlignment="Left" Margin="104,223,0,0" Name="textBox12" VerticalAlignment="Top" Width="59" />
         <TextBox Text="{Binding Path=OriginalStats.Charisma}"  Height="23" HorizontalAlignment="Right" Margin="0,223,349,0" Name="textBox13" VerticalAlignment="Top" Width="59" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="419,162,0,0" Name="textBox14" Text="{Binding Path=BaseInitiative}" VerticalAlignment="Top" Width="60" />
+        <Label Content="Szybkość:" Height="28" HorizontalAlignment="Left" Margin="240,189,0,0" Name="label30" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="355,189,0,0" Name="textBox16" Text="{Binding Path=Speed}" VerticalAlignment="Top" Width="60" />
     </Grid>
 </UserControl>

@@ -1,7 +1,7 @@
 ﻿<Window x:Class="DnDHelper.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="D&amp;D Helper" Height="741" Width="1137" Loaded="Window_Loaded" Closing="Window_Closing" xmlns:my="clr-namespace:DnDHelper">
+        Title="D&amp;D Helper" Height="741" Width="1137" Loaded="Window_Loaded" Closing="Window_Closing" xmlns:my="clr-namespace:DnDHelper" KeyDown="grid1_KeyDown">
     
     <Grid>
         
@@ -105,6 +105,7 @@
                         <Button Content="Nowy" Height="23" HorizontalAlignment="Left" Margin="397,274.5,0,0" Name="button7" VerticalAlignment="Top" Width="75" Click="button7_Click_1" />
                         <Button Content="Usuń" Height="23" HorizontalAlignment="Left" Margin="316,274.5,0,0" Name="button8" VerticalAlignment="Top" Width="75" Click="button8_Click" />
                         <my:CharacterDetails Height="652" x:Name="characterDetails1" Width="578" Grid.Column="2" Margin="439,12,6,-12" />
+                        <Button Content="Kopiuj" Height="23" HorizontalAlignment="Left" Margin="397,306,0,0" Name="button16" VerticalAlignment="Top" Width="75" Click="button16_Click" />
                     </Grid>
                 </TabItem>
                 <TabItem Header="Mapy">
@@ -113,11 +114,11 @@
                         <Button Content="Wczytaj" Height="23" Margin="86.5,5.02,952.5,621.02" Name="button12" Width="75" Click="button12_Click" />
                         <Button Content="Zapisz" Height="23" Margin="167.5,5.02,871.5,621.02" Name="button13" Width="75" Click="button13_Click" />
                         <ScrollViewer Height="604.111" HorizontalAlignment="Left" Margin="5.5,34.02,0,0" Name="scrollViewer1" VerticalAlignment="Top" Width="688.889" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-                            <Grid Height="Auto" Name="grid1" Width="Auto" MouseMove="grid1_MouseMove" MouseDown="grid1_MouseUp"></Grid>
+                            <Grid Height="Auto" Name="grid1" Width="Auto" MouseMove="grid1_MouseMove" MouseDown="grid1_MouseUp" KeyDown="grid1_KeyDown"></Grid>
                         </ScrollViewer>
                         <Slider Height="23" HorizontalAlignment="Left" Margin="248.5,5.02,0,0" Name="slider1" VerticalAlignment="Top" Width="100" Value="4" Minimum="1" ValueChanged="slider1_ValueChanged" />
                         <Label Content="Typ:" Height="28" HorizontalAlignment="Left" Margin="700.389,34.02,0,0" Name="label7" VerticalAlignment="Top" />
-                        <ComboBox Height="23" HorizontalAlignment="Left" Margin="749.247,34.02,0,0" Name="comboBox1" VerticalAlignment="Top" Width="120" />
+                        <ComboBox Height="23" HorizontalAlignment="Left" Margin="749.247,34.02,0,0" Name="comboBox1" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox1_SelectionChanged" />
                         <Label Content="Kolor:" Height="28" HorizontalAlignment="Left" Margin="700.389,68.02,0,0" Name="label8" VerticalAlignment="Top" />
                         <Button Content="Wybierz" Height="23" HorizontalAlignment="Right" Margin="0,67.5,163.753,0" Name="button14" VerticalAlignment="Top" Width="75" Click="button14_Click" />
                         <GroupBox Header="Akcja:" Height="47.778" HorizontalAlignment="Left" Margin="700.389,102.02,0,0" Name="groupBox1" VerticalAlignment="Top" Width="360.753">
@@ -133,7 +134,13 @@
                         <Label Content="Pozycja" Height="28" HorizontalAlignment="Left" Margin="354.5,5.02,0,0" Name="label11" VerticalAlignment="Top" />
                         <Rectangle Height="23" HorizontalAlignment="Left" Margin="749.247,67.5,0,0" Name="rectangle1" Stroke="Black" VerticalAlignment="Top" Width="120" />
                         <Button Content="Zapisz" Height="23" HorizontalAlignment="Left" Margin="980.142,298.242,0,0" Name="button15" VerticalAlignment="Top" Width="75" Click="button15_Click" />
-                        <ListBox Height="307.532" HorizontalAlignment="Left" Margin="749.247,330.599,0,0" Name="listBox3" VerticalAlignment="Top" Width="305.895" SelectionChanged="listBox3_SelectionChanged" />
+                        <ListBox Height="307.532" HorizontalAlignment="Left" Margin="749.247,330.599,0,0" Name="listBox3" VerticalAlignment="Top" Width="305.895" SelectionChanged="listBox3_SelectionChanged">
+                            <ListBox.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem Header="Usuń" Click="UsunTextBlockClick" />
+                                </ContextMenu>
+                            </ListBox.ContextMenu>
+                        </ListBox>
                     </Grid>
                 </TabItem>
             </TabControl>

@@ -28,6 +28,16 @@ namespace DnDHelper
             comboBox2.ItemsSource = _battle.Members;
         }
 
+        public AttackCustomWindow(Battle battle, Character attacker, Character defender)
+        {
+            InitializeComponent();
+            _battle = battle;
+            comboBox1.ItemsSource = _battle.Members;
+            comboBox2.ItemsSource = _battle.Members;
+            comboBox1.SelectedItem = attacker;
+            comboBox2.SelectedItem = defender;
+        }
+
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             if (comboBox1.SelectedItem != null && comboBox2.SelectedItem != null)

@@ -18,6 +18,7 @@ namespace DnDHelper
         public Stats OriginalStats { get; set; }
         public int Initiative { get; set; }
         public int BaseInitiative { get; set; }
+        public int Speed { get; set; }
         public List<Attack> Attacks { get; set; }
         public Item RightHand { get; set; }
         public Item LeftHand { get; set; }
@@ -157,7 +158,7 @@ namespace DnDHelper
         }
     }
 
-    public enum BaseTypes { LightBlade, HeavyBlade, Axe, Bow, Crossbow, Spear, Blunt, LightArmor, HeavyArmor, Shield }
+    public enum BaseTypes { LightBlade, HeavyBlade, Axe, Bow, Crossbow, Spear, Blunt, LightArmor, MediumArmor, HeavyArmor, Shield, Ring, Necklease, Boots, Other }
 
     [Serializable]
     public class CharacterGroup

@@ -66,6 +66,7 @@ namespace DnDHelper
                     }
                 }
             }
+            sMap.TextBlocks = TextBlocks;
             return sMap;
         }
 
@@ -77,6 +78,7 @@ namespace DnDHelper
                 string [] colorArray = sBlock.Color.Split('.');
                 map.BlockMap[sBlock.X, sBlock.Y] = new Block() { Color = Color.FromArgb(byte.Parse(colorArray[0]), byte.Parse(colorArray[1]), byte.Parse(colorArray[2]), byte.Parse(colorArray[3])), Name = sBlock.Name, Description = sBlock.Description };
             }
+            map.TextBlocks = sMap.TextBlocks;
             return map;
         }
     }
@@ -92,6 +94,7 @@ namespace DnDHelper
     {
         public Point Position { get; set; }
         public string Text { get; set; }
+        public string Description { get; set; }
         public Color Color { get; set; }
         public int Size { get; set; }
     }
