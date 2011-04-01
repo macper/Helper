@@ -56,6 +56,8 @@ namespace DnDHelper
             listBox1.DisplayMemberPath = "GroupName";
             listBox3.DisplayMemberPath = "Name";
             comboBox1.ItemsSource = new string[] { "Block", "TextBlock" };
+            textBox2.DataContext = _helper;
+            textBox5.DataContext = _helper;
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -657,6 +659,16 @@ namespace DnDHelper
                     }
                     DrawMap();
                 }
+            }
+        }
+
+        private void button17_Click(object sender, RoutedEventArgs e)
+        {
+            AddXP wnd = new AddXP();
+            if (wnd.ShowDialog() == true)
+            {
+                _helper.XP += wnd.XP;
+                textBox2.Text = _helper.XP.ToString();
             }
         }
     }

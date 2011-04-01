@@ -18,6 +18,8 @@ namespace DnDHelper
         public List<Item> Items;
         public List<SpellDefinition> Spells;
         public List<Effect> Effects;
+        public string Notes { get; set; }
+        public int XP { get; set; }
 
         public Helper()
         {
