@@ -82,6 +82,7 @@ namespace DnDHelper
                         xmlSerializer.Serialize(ms, character);
                         ms.Position = 0;
                         Character newCharacter = (Character)xmlSerializer.Deserialize(ms);
+                        newCharacter.DeserializeSelf(_helper);
                         newCharacter.Name = textBox2.Text;
                         if (_battle.Members.FirstOrDefault(f => f.Name == newCharacter.Name) != null)
                         {

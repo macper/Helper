@@ -237,6 +237,15 @@ namespace DnDHelper
 
         private void button9_Click(object sender, RoutedEventArgs e)
         {
+            if (_battle == null)
+            {
+                return;
+            }
+            if (_battle.Members.Count == 0)
+            {
+                MessageBox.Show("Brak memberów");
+                return;
+            }
             _battle.NextMember();
             characterDetails2.Init(_helper, _battle.ActiveMember);
             listView1.Items.Refresh();
