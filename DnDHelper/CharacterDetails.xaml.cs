@@ -29,19 +29,30 @@ namespace DnDHelper
 
         public void Init(Helper help, Character chr)
         {
-            _character = chr;
-            _helper = help;
-            listView1.ItemsSource = _character.Attacks;
-            listView2.ItemsSource = _character.Effects;
-            listView3.ItemsSource = _character.KnownSpells;
-            listView4.ItemsSource = _character.AvailableCastings;
-            listView6.ItemsSource = _character.Spells.Where(f => f.IsCasted == false).OrderByDescending(k => k.Definition.Level);
-            listView7.ItemsSource = _character.Skills;
-            comboBox2.ItemsSource = _character.AvailableCastings;
-            comboBox1.ItemsSource = SpellEditWindow.Types;
-            comboBox4.ItemsSource = Rules.GetSkillsDefinitions();
-            comboBox4.DisplayMemberPath = "Name";
-            ContentGrid.DataContext = _character;
+            try
+            {
+                _character = chr;
+                _helper = help;
+                listView1.ItemsSource = _character.Attacks;
+                listView2.ItemsSource = _character.Effects;
+                listView3.ItemsSource = _character.KnownSpells;
+                listView4.ItemsSource = _character.AvailableCastings;
+                listView6.ItemsSource = _character.Spells.Where(f => f.IsCasted == false).OrderByDescending(k => k.Definition.Level);
+                listView7.ItemsSource = _character.Skills;
+                comboBox2.ItemsSource = _character.AvailableCastings;
+                comboBox1.ItemsSource = SpellEditWindow.Types;
+                comboBox4.ItemsSource = Rules.SkillsDefinition;
+                comboBox4.DisplayMemberPath = "Name";
+                ContentGrid.DataContext = _character;
+                if (_character.ImagePath != null)
+                {
+                    image1.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "\\Images\\" + _character.ImagePath));
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Inicjalizacja się nie powiodła:" + exc.ToString());
+            }
         }
 
         
@@ -331,7 +342,8 @@ namespace DnDHelper
             if (listView7.SelectedItem != null)
             {
                 SkillContent.DataContext = listView7.SelectedItem;
-                comboBox4.SelectedItem = Rules.GetSkillsDefinitions().First(f => f.Name == ((Skill)listView7.SelectedItem).Name);
+                comboBox4.SelectedItem = Rules.SkillsDefinition.First(f => f.Name == ((Skill)listView7.SelectedItem).Name);
+                textBox17.Text = Rules.SkillsDefinition.First(f => f.Name == ((Skill)listView7.SelectedItem).Name).Description;
             }
         }
 
@@ -514,6 +526,12 @@ namespace DnDHelper
             {
                 textBox15.Text = ((Spell)listView6.SelectedItem).Definition.Description;
             }
+        }
+
+        private void button13_Click(object sender, RoutedEventArgs e)
+        {
+            ImageWindow wnd = new ImageWindow(_character);
+            wnd.ShowDialog();
         }
         
     }

@@ -213,6 +213,7 @@
                     <TextBox Text="{Binding Path=BaseValue}" Height="23" HorizontalAlignment="Left" Margin="375,37,0,0" Name="textBox9" VerticalAlignment="Top" Width="72" />
                     <Label Content="Bonus:" Height="28" HorizontalAlignment="Left" Margin="316,64,0,0" Name="label27" VerticalAlignment="Top" />
                     <TextBox Text="{Binding Path=BonusValue}" Height="23" HorizontalAlignment="Right" Margin="0,66,6,0" Name="textBox10" VerticalAlignment="Top" Width="72" />
+                    <TextBox Height="127" HorizontalAlignment="Left" Margin="318,98,0,0" Name="textBox17" VerticalAlignment="Top" Width="219" IsReadOnly="True" TextWrapping="Wrap" />
                 </Grid>
             </TabItem>
         </TabControl>
@@ -243,5 +244,7 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="419,162,0,0" Name="textBox14" Text="{Binding Path=BaseInitiative}" VerticalAlignment="Top" Width="60" />
         <Label Content="Szybkość:" Height="28" HorizontalAlignment="Left" Margin="240,189,0,0" Name="label30" VerticalAlignment="Top" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="355,189,0,0" Name="textBox16" Text="{Binding Path=Speed}" VerticalAlignment="Top" Width="60" />
+        <Image Height="61" HorizontalAlignment="Left" Margin="483,14,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="89" />
+        <Button Content="Obrazek" Height="23" HorizontalAlignment="Left" Margin="491,79,0,0" Name="button13" VerticalAlignment="Top" Width="75" Click="button13_Click" />
     </Grid>
 </UserControl>

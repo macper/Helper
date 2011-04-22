@@ -34,6 +34,7 @@ namespace DnDHelper
         public List<SpellS> SpellsS { get; set; }
         public List<SpellCasting> AvailableCastings { get; set; }
         public List<Skill> Skills { get; set; }
+        public string ImagePath { get; set; }
 
         // Chujowy hack bo już mnie kurwica bierze z tym WPF-em pierdolonym
         public bool IsActiveMember { get; set; }
