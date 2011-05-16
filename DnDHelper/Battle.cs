@@ -25,6 +25,10 @@ namespace DnDHelper
 
         public void Start()
         {
+            if (Members.Count == 0)
+            {
+                return;
+            }
             Turn = 1;
             ActiveMember = Members[0];
             ActiveMember.IsActiveMember = true;

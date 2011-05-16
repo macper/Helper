@@ -38,6 +38,7 @@ namespace DnDHelper
                 _helper = new Helper();
             }
             _helper.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(_helper_PropertyChanged);
+            Icon =  bitmapToSource(Resources1.DnDIkonka);
         }
 
         void _helper_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -288,14 +289,25 @@ namespace DnDHelper
 
         private void AttackCustom_Click(object sender, RoutedEventArgs e)
         {
+            AttackCustomWindow wnd = new AttackCustomWindow(_battle);
+            wnd.Show();
+        }
+
+        private void AttackOpportunity_Click(object sender, RoutedEventArgs e)
+        {
             AttackCustomWindow wnd = null;
             if (listView1.SelectedItems.Count == 2)
             {
                 wnd = new AttackCustomWindow(_battle, (Character)listView1.SelectedItems[0], (Character)listView1.SelectedItems[1]);
+                wnd.Show();
+                return;
             }
-            else
-            wnd = new AttackCustomWindow(_battle);
-            wnd.Show();
+            if (listView1.SelectedItems.Count == 1 && listView1.SelectedItems[0] != _battle.ActiveMember)
+            {
+                wnd = new AttackCustomWindow(_battle, (Character)listView1.SelectedItems[0], _battle.ActiveMember);
+                wnd.Show();
+                return;
+            }
         }
 
         private void ZapiszButton_Click(object sender, RoutedEventArgs e)
@@ -680,6 +692,16 @@ namespace DnDHelper
                 textBox2.Text = _helper.XP.ToString();
             }
         }
+
+        private BitmapSource bitmapToSource(System.Drawing.Bitmap bitmap)
+        {
+            BitmapSource destination;
+            IntPtr hBitmap = bitmap.GetHbitmap();
+            BitmapSizeOptions sizeOptions = BitmapSizeOptions.FromEmptyOptions();
+            destination = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(hBitmap, IntPtr.Zero, Int32Rect.Empty, sizeOptions);
+            destination.Freeze();
+            return destination;
+        } 
     }
 
    public enum ActionType { None, AddBlock, RemoveBlock }
