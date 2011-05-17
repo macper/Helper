@@ -59,6 +59,32 @@ namespace DnDHelper
             comboBox1.ItemsSource = new string[] { "Block", "TextBlock" };
             textBox2.DataContext = _helper;
             textBox5.DataContext = _helper;
+            listView1.ContextMenu.Items.Add(GetQuickEffectMenuItem());
+        }
+
+        private MenuItem GetQuickEffectMenuItem()
+        {
+            MenuItem root = new MenuItem() { Header = "Szybki efekt" };
+            foreach (Effect effect in _helper.Effects.OrderByDescending(o => o.Name))
+            {
+                MenuItem child = new MenuItem() { Header = effect.Name };
+                child.DataContext = effect;
+                child.Click += new RoutedEventHandler(child_Click);
+                root.Items.Add(child);
+            }
+            return root;
+        }
+
+        void child_Click(object sender, RoutedEventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 1)
+            {
+                MenuItem menu = sender as MenuItem;
+                Effect ef = (Effect)menu.DataContext;
+                Character ch = (Character)listView1.SelectedItems[0];
+                ch.Effects.Add(ef);
+            }
+
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)

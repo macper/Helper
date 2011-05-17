@@ -44,7 +44,7 @@ namespace DnDHelper
             }
             ActiveMember.IsActiveMember = false;
             ActiveMember = Members[++index];
-            if (!ActiveMember.IsAlive)
+            if (!ActiveMember.IsAlive && ActiveMember.CurrentStats.HP < -10)
             {
                 NextMember();
             }
