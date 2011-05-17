@@ -44,6 +44,7 @@ namespace DnDHelper
                 comboBox4.ItemsSource = Rules.SkillsDefinition;
                 comboBox4.DisplayMemberPath = "Name";
                 ContentGrid.DataContext = _character;
+                textBox18.Text = _helper.CurrentTime.Date.AddDays(-7).ToString();
                 if (_character.ImagePath != null)
                 {
                     image1.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "\\Images\\" + _character.ImagePath));
@@ -532,6 +533,19 @@ namespace DnDHelper
         {
             ImageWindow wnd = new ImageWindow(_character);
             wnd.ShowDialog();
+        }
+
+        private void button14_Click(object sender, RoutedEventArgs e)
+        {
+            try 
+            {
+                IEnumerable<KilledCreature> list = _character.Kills.Where(s => s.Date >= DateTime.Parse(textBox18.Text));
+                listView8.ItemsSource = list;
+                listView8.Items.Refresh();
+            }
+            catch
+            {
+            }
         }
         
     }

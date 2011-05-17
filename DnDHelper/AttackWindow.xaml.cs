@@ -47,7 +47,7 @@ namespace DnDHelper
         {
             try
             {
-                _battle.DoDamage(_defender, int.Parse(textBox1.Text));
+                _battle.DoDamage(_attacker, _defender, int.Parse(textBox1.Text));
                 Refresh();
             }
             catch

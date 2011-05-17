@@ -31,7 +31,7 @@ namespace DnDHelper
             try
             {
                 _helper = Helper.LoadState();
-                _battle = new Battle();
+                _battle = new Battle(_helper);
             }
             catch
             {
@@ -173,7 +173,7 @@ namespace DnDHelper
 
         private void NewBattle_Click(object sender, RoutedEventArgs e)
         {
-            _battle = new Battle();
+            _battle = new Battle(_helper);
             ContentWalka.DataContext = _battle;
             listView1.ItemsSource = _battle.Members;
         }
@@ -607,6 +607,7 @@ namespace DnDHelper
                     xmlSerializer.Serialize(ms, chToCopy);
                     ms.Position = 0;
                     Character newChar = (Character)xmlSerializer.Deserialize(ms);
+                    newChar.DeserializeSelf(_helper);
                     newChar.Name = "Kopia_" + chToCopy.Name;
                     CharacterGroup chGr = (CharacterGroup)listBox1.SelectedItem;
                     chGr.Members.Add(newChar);

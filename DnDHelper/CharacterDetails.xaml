@@ -216,6 +216,22 @@
                     <TextBox Height="127" HorizontalAlignment="Left" Margin="318,98,0,0" Name="textBox17" VerticalAlignment="Top" Width="219" IsReadOnly="True" TextWrapping="Wrap" />
                 </Grid>
             </TabItem>
+            <TabItem Header="Statystyki">
+                <Grid>
+                    <Label Content="Od:" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="label31" VerticalAlignment="Top" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="40,8,0,0" Name="textBox18" VerticalAlignment="Top" Width="171" />
+                    <Button Content="Wybierz" Height="23" HorizontalAlignment="Left" Margin="217,8,0,0" Name="button14" VerticalAlignment="Top" Width="75" Click="button14_Click" />
+                    <ListView Height="185" HorizontalAlignment="Left" Margin="6,40,0,0" Name="listView8" VerticalAlignment="Top" Width="530">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Nazwa" Width="200" DisplayMemberBinding="{Binding Path=Name}" />
+                                <GridViewColumn Header="Rasa" Width="150" DisplayMemberBinding="{Binding Path=Race}" />
+                                <GridViewColumn Header="Kiedy" Width="150" DisplayMemberBinding="{Binding Path=Date}" />
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+                </TabItem>
         </TabControl>
         <ListView Height="115" HorizontalAlignment="Left" Margin="235,0,0,317" Name="listView1" VerticalAlignment="Bottom" Width="331" UseLayoutRounding="False" IsManipulationEnabled="True">
             <ListView.ContextMenu>

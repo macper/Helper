@@ -10,11 +10,13 @@ namespace DnDHelper
         public int Turn { get; set; }
         public List<Character> Members { get; set; }
         public Character ActiveMember { get; set; }
+        private Helper _helper;
 
-        public Battle()
+        public Battle(Helper helper)
         {
             Turn = 0;
             Members = new List<Character>();
+            _helper = helper;
         }
 
         public void AddMember(Character character)
@@ -78,6 +80,15 @@ namespace DnDHelper
         public void DoDamage(Character target, int damage)
         {
             target.CurrentStats.HP -= damage;
+        }
+
+        public void DoDamage(Character attacker, Character target, int damage)
+        {
+            target.CurrentStats.HP -= damage;
+            if (target.CurrentStats.HP <= 0)
+            {
+                attacker.Kills.Add(new KilledCreature() { Date = _helper.CurrentTime, Name = target.Name, Race = target.Race });
+            }
         }
     }
 

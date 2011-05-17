@@ -35,6 +35,8 @@ namespace DnDHelper
         public List<SpellCasting> AvailableCastings { get; set; }
         public List<Skill> Skills { get; set; }
         public string ImagePath { get; set; }
+        public List<KilledCreature> Kills { get; set; }
+        
 
         // Chujowy hack bo już mnie kurwica bierze z tym WPF-em pierdolonym
         public bool IsActiveMember { get; set; }
@@ -51,6 +53,7 @@ namespace DnDHelper
             Skills = new List<Skill>();
             KnownSpellsS = new List<string>();
             SpellsS = new List<SpellS>();
+            Kills = new List<KilledCreature>();
         }
 
         public void DeserializeSelf(Helper _helper)
@@ -241,5 +244,13 @@ Opis:
         {
             return string.Format("{0} - poz.{1}({2})", Type, Level.ToString(), Count.ToString());
         }
+    }
+
+    [Serializable]
+    public class KilledCreature
+    {
+        public string Name { get; set; }
+        public string Race { get; set; }
+        public DateTime Date { get; set; }
     }
 }
