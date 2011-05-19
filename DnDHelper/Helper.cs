@@ -43,7 +43,7 @@ namespace DnDHelper
                     ch.SerializeSelf();
                 }
             }
-            using (FileStream fs = new FileStream("Helper.xml", FileMode.Create))
+            using (FileStream fs = new FileStream(AppDomain.CurrentDomain.BaseDirectory + "\\Helper.xml", FileMode.Create))
             {
                 xmlSerializer.Serialize(fs, this);
             }
@@ -53,7 +53,7 @@ namespace DnDHelper
         {
             System.Xml.Serialization.XmlSerializer xmlSerializer = new System.Xml.Serialization.XmlSerializer(typeof(Helper));
             Helper helper;
-            using (FileStream fs = new FileStream("Helper.xml", FileMode.Open))
+            using (FileStream fs = new FileStream(AppDomain.CurrentDomain.BaseDirectory + "\\Helper.xml", FileMode.Open))
             {
                 helper = (Helper)xmlSerializer.Deserialize(fs);
             }

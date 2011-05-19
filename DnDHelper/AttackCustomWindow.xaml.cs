@@ -47,5 +47,12 @@ namespace DnDHelper
                 Close();
             }
         }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            Character tmp = (Character)comboBox1.SelectedItem;
+            comboBox1.SelectedItem = comboBox2.SelectedItem;
+            comboBox2.SelectedItem = tmp;
+        }
     }
 }

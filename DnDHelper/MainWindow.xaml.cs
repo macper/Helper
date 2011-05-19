@@ -24,6 +24,7 @@ namespace DnDHelper
         protected Map _map;
         protected Block _activeBlock = new Block();
         private const int fieldSize = 20;
+        private List<Sound> _sounds;
 
         public MainWindow()
         {
@@ -31,13 +32,16 @@ namespace DnDHelper
             try
             {
                 _helper = Helper.LoadState();
+                _sounds = Sound.LoadState();
                 _battle = new Battle(_helper);
             }
             catch
             {
                 _helper = new Helper();
+                _sounds = new List<Sound>();
             }
             _helper.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(_helper_PropertyChanged);
+            Icon =  bitmapToSource(Resources1.DnDIkonka);
         }
 
         void _helper_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -58,6 +62,34 @@ namespace DnDHelper
             comboBox1.ItemsSource = new string[] { "Block", "TextBlock" };
             textBox2.DataContext = _helper;
             textBox5.DataContext = _helper;
+            listView1.ContextMenu.Items.Add(GetQuickEffectMenuItem());
+            listBox4.ItemsSource = _sounds;
+            listBox4.DisplayMemberPath = "Name";
+        }
+
+        private MenuItem GetQuickEffectMenuItem()
+        {
+            MenuItem root = new MenuItem() { Header = "Szybki efekt" };
+            foreach (Effect effect in _helper.Effects.OrderByDescending(o => o.Name))
+            {
+                MenuItem child = new MenuItem() { Header = effect.Name };
+                child.DataContext = effect;
+                child.Click += new RoutedEventHandler(child_Click);
+                root.Items.Add(child);
+            }
+            return root;
+        }
+
+        void child_Click(object sender, RoutedEventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 1)
+            {
+                MenuItem menu = sender as MenuItem;
+                Effect ef = (Effect)menu.DataContext;
+                Character ch = (Character)listView1.SelectedItems[0];
+                ch.Effects.Add(ef);
+            }
+
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -80,6 +112,7 @@ namespace DnDHelper
             try
             {
                 _helper.SaveState();
+                Sound.SaveState(_sounds);
             }
             catch (Exception exc)
             {
@@ -288,14 +321,25 @@ namespace DnDHelper
 
         private void AttackCustom_Click(object sender, RoutedEventArgs e)
         {
+            AttackCustomWindow wnd = new AttackCustomWindow(_battle);
+            wnd.Show();
+        }
+
+        private void AttackOpportunity_Click(object sender, RoutedEventArgs e)
+        {
             AttackCustomWindow wnd = null;
             if (listView1.SelectedItems.Count == 2)
             {
                 wnd = new AttackCustomWindow(_battle, (Character)listView1.SelectedItems[0], (Character)listView1.SelectedItems[1]);
+                wnd.Show();
+                return;
             }
-            else
-            wnd = new AttackCustomWindow(_battle);
-            wnd.Show();
+            if (listView1.SelectedItems.Count == 1 && listView1.SelectedItems[0] != _battle.ActiveMember)
+            {
+                wnd = new AttackCustomWindow(_battle, (Character)listView1.SelectedItems[0], _battle.ActiveMember);
+                wnd.Show();
+                return;
+            }
         }
 
         private void ZapiszButton_Click(object sender, RoutedEventArgs e)
@@ -681,6 +725,85 @@ namespace DnDHelper
                 textBox2.Text = _helper.XP.ToString();
             }
         }
+
+        private BitmapSource bitmapToSource(System.Drawing.Bitmap bitmap)
+        {
+            BitmapSource destination;
+            IntPtr hBitmap = bitmap.GetHbitmap();
+            BitmapSizeOptions sizeOptions = BitmapSizeOptions.FromEmptyOptions();
+            destination = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(hBitmap, IntPtr.Zero, Int32Rect.Empty, sizeOptions);
+            destination.Freeze();
+            return destination;
+        }
+
+        private void button23_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog flDlg = new Microsoft.Win32.OpenFileDialog();
+            try
+            {
+                flDlg.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory + "\\Sounds";
+                if (flDlg.ShowDialog() == true)
+                {
+                    textBox7.Text = flDlg.FileName.Substring(flDlg.FileName.LastIndexOf("\\")+1);
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.ToString());
+            }
+        }
+
+        private void button21_Click(object sender, RoutedEventArgs e)
+        {
+            _sounds.Add(new Sound() { Name = textBox6.Text, Path = textBox7.Text });
+            listBox4.Items.Refresh();
+        }
+
+        private void listBox4_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (listBox4.SelectedItem != null)
+            {
+                Sound s = (Sound)listBox4.SelectedItem;
+                textBox6.Text = s.Name;
+                textBox7.Text = s.Path;
+            }
+        }
+
+        private void button22_Click(object sender, RoutedEventArgs e)
+        {
+            if (listBox4.SelectedItem != null)
+            {
+                _sounds.Remove((Sound)listBox4.SelectedItem);
+                listBox4.Items.Refresh();
+            }
+        }
+
+        private void button18_Click(object sender, RoutedEventArgs e)
+        {
+            if (listBox4.SelectedItem != null)
+            {
+                Sound s = (Sound)listBox4.SelectedItem;
+                mediaElement1.Source = new Uri(AppDomain.CurrentDomain.BaseDirectory + "\\Sounds\\" + s.Path);
+                mediaElement1.LoadedBehavior = MediaState.Manual;
+                mediaElement1.MediaEnded += new RoutedEventHandler(mediaElement1_MediaEnded);
+                mediaElement1.Play();
+            }
+        }
+
+        void mediaElement1_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            button18_Click(sender, e);
+        }
+
+        private void button19_Click(object sender, RoutedEventArgs e)
+        {
+            mediaElement1.Pause();
+        }
+
+        private void button20_Click(object sender, RoutedEventArgs e)
+        {
+            mediaElement1.Stop();
+        } 
     }
 
    public enum ActionType { None, AddBlock, RemoveBlock }

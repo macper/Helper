@@ -8,5 +8,6 @@
         <Label Content="Obrońca:" Height="28" HorizontalAlignment="Left" Margin="12,41,0,0" Name="label2" VerticalAlignment="Top" />
         <ComboBox DisplayMemberPath="Name"  Height="23" HorizontalAlignment="Left" Margin="79,43,0,0" Name="comboBox2" VerticalAlignment="Top" Width="226" />
         <Button Content="OK" Height="23" HorizontalAlignment="Left" Margin="230,72,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
+        <Button Content="Zamień miejscami" Height="23" HorizontalAlignment="Left" Margin="12,72,0,0" Name="button2" VerticalAlignment="Top" Width="111" Click="button2_Click" />
     </Grid>
 </Window>

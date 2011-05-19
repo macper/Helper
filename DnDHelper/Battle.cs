@@ -27,6 +27,10 @@ namespace DnDHelper
 
         public void Start()
         {
+            if (Members.Count == 0)
+            {
+                return;
+            }
             Turn = 1;
             ActiveMember = Members[0];
             ActiveMember.IsActiveMember = true;
@@ -42,7 +46,7 @@ namespace DnDHelper
             }
             ActiveMember.IsActiveMember = false;
             ActiveMember = Members[++index];
-            if (!ActiveMember.IsAlive)
+            if (!ActiveMember.IsAlive && ActiveMember.CurrentStats.HP < -10)
             {
                 NextMember();
             }
