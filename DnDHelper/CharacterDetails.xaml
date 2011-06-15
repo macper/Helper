@@ -262,5 +262,6 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="355,189,0,0" Name="textBox16" Text="{Binding Path=Speed}" VerticalAlignment="Top" Width="60" />
         <Image Height="61" HorizontalAlignment="Left" Margin="483,14,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="89" />
         <Button Content="Obrazek" Height="23" HorizontalAlignment="Left" Margin="491,79,0,0" Name="button13" VerticalAlignment="Top" Width="75" Click="button13_Click" />
+        <Button Content="Ulecz" Height="23" HorizontalAlignment="Left" Margin="491,104,0,0" Name="button14" VerticalAlignment="Top" Width="75" Click="button14_Click" />
     </Grid>
 </UserControl>

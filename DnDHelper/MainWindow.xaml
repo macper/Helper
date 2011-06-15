@@ -115,7 +115,8 @@
                         <Button Content="Nowy" Height="23" HorizontalAlignment="Left" Margin="397,274.5,0,0" Name="button7" VerticalAlignment="Top" Width="75" Click="button7_Click_1" />
                         <Button Content="Usuń" Height="23" HorizontalAlignment="Left" Margin="316,274.5,0,0" Name="button8" VerticalAlignment="Top" Width="75" Click="button8_Click" />
                         <my:CharacterDetails Height="652" x:Name="characterDetails1" Width="578" Grid.Column="2" Margin="439,12,6,-12" />
-                        <Button Content="Kopiuj" Height="23" HorizontalAlignment="Left" Margin="397,306,0,0" Name="button16" VerticalAlignment="Top" Width="75" Click="button16_Click" />
+                        <Button Content="Kopiuj" Height="23" HorizontalAlignment="Left" Margin="397,303.778,0,0" Name="button16" VerticalAlignment="Top" Width="75" Click="button16_Click" />
+                        <Button Content="Przenieś" Height="23" HorizontalAlignment="Left" Margin="397,335,0,0" Name="button18" VerticalAlignment="Top" Width="75" Click="button18_Click_1" />
                     </Grid>
                 </TabItem>
                 <TabItem Header="Mapy">

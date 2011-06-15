@@ -803,6 +803,18 @@ namespace DnDHelper
         private void button20_Click(object sender, RoutedEventArgs e)
         {
             mediaElement1.Stop();
+        }
+
+        private void button18_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (listBox1.SelectedItem != null && listBox2.SelectedItem != null)
+            {
+                CharacterGroup g = (CharacterGroup)listBox1.SelectedItem;
+                Character ch = (Character)listBox2.SelectedItem;
+                PopUp.ChangeGroupWindow chWnd = new PopUp.ChangeGroupWindow(ch, g, _helper);
+                chWnd.ShowDialog();
+                RefreshMembers_Click(sender, e);
+            }
         } 
     }
 
