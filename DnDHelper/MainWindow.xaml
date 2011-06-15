@@ -157,7 +157,7 @@
                 <TabItem Header="Dźwięki">
                     <Grid>
                         <ListBox Height="369" HorizontalAlignment="Left" Margin="7,8.723,0,0" Name="listBox4" VerticalAlignment="Top" Width="399" SelectionChanged="listBox4_SelectionChanged" />
-                        <Button Content="Play" Height="23" HorizontalAlignment="Left" Margin="7,383.723,0,0" Name="button18" VerticalAlignment="Top" Width="75" Click="button18_Click" />
+                        <Button Content="Play" Height="23" HorizontalAlignment="Left" Margin="7,383.723,0,0" Name="button_18" VerticalAlignment="Top" Width="75" Click="button18_Click" />
                         <Button Content="Pause" Height="23" HorizontalAlignment="Left" Margin="88,383.723,0,0" Name="button19" VerticalAlignment="Top" Width="75" Click="button19_Click" />
                         <Button Content="Stop" Height="23" HorizontalAlignment="Left" Margin="169,383.723,0,0" Name="button20" VerticalAlignment="Top" Width="75" Click="button20_Click" />
                         <Button Content="Dodaj" Height="23" HorizontalAlignment="Left" Margin="412,85.723,0,0" Name="button21" VerticalAlignment="Top" Width="75" Click="button21_Click" />
