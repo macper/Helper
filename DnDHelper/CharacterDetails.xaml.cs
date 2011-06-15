@@ -533,6 +533,13 @@ namespace DnDHelper
             ImageWindow wnd = new ImageWindow(_character);
             wnd.ShowDialog();
         }
+
+        private void button14_Click(object sender, RoutedEventArgs e)
+        {
+            PopUp.HealWindow healWnd = new PopUp.HealWindow(_character);
+            healWnd.ShowDialog();
+            RefreshCharacter();
+        }
         
     }
 }

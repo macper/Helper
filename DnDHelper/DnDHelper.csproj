@@ -84,6 +84,12 @@
     <Compile Include="NewMap.xaml.cs">
       <DependentUpon>NewMap.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PopUp\ChangeGroupWindow.xaml.cs">
+      <DependentUpon>ChangeGroupWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp\HealWindow.xaml.cs">
+      <DependentUpon>HealWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Resources1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -163,6 +169,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="NewMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PopUp\ChangeGroupWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PopUp\HealWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
