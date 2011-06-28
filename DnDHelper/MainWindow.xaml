@@ -9,6 +9,8 @@
             <Menu DockPanel.Dock="Top" IsMainMenu="True" IsEnabled="True">
                 <MenuItem Header="Aplikacja">
                     <MenuItem Header="Zapisz" Click="ZapiszButton_Click" />
+                    <MenuItem Header="Wyślij wersje" Click="WyslijWersje_Click" />
+                    <MenuItem Header="Pobierz wersje" Click="PobierzWersje_Click" />
                     <MenuItem Header="Wyjdź" />
                 </MenuItem>
             </Menu>

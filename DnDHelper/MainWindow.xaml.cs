@@ -343,6 +343,40 @@ namespace DnDHelper
             Cursor = Cursors.Arrow;
         }
 
+        private void WyslijWersje_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                _helper.PutVersionOnServer();
+                MessageBox.Show(string.Format("Wersja aplikacji: {0} została umieszczona na serwerze", _helper.Version.ToString()));
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Nie udało się umieścić wersji na serwerze: " + exc.Message);
+            }
+        }
+
+        private void PobierzWersje_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (_helper.GetVersionFromServer())
+                {
+                    _helper = Helper.LoadState();
+                    _helper.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(_helper_PropertyChanged);
+                    MessageBox.Show("Wersja aplikacji: " + _helper.Version.ToString() + " została pobrana z serwera");
+                }
+                else
+                {
+                    MessageBox.Show("Na serwerze nie ma nowszej wersji aplikacji - nie było potrzeby uaktualnienia");
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Nie udało się ściągnąć wersji: " + exc.Message);
+            }
+        }
+
         private void WyjdzButton_Click(object sender, RoutedEventArgs e)
         {
             Close();
