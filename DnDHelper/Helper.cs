@@ -20,6 +20,7 @@ namespace DnDHelper
         public List<Effect> Effects;
         public string Notes { get; set; }
         public int XP { get; set; }
+        public int Version { get; set; }
 
         public Helper()
         {
@@ -73,6 +74,47 @@ namespace DnDHelper
             {
                 PropertyChanged(null, new PropertyChangedEventArgs(propertyName));
             }
+        }
+
+        public bool GetVersionFromServer()
+        {
+            FTPVersionServer.VersionServer server = GetVersionServer();
+            var versions = server.GetAllAppVersions();
+            List<int> list = new List<int>();
+            foreach (string vs in versions)
+            {
+                try
+                {
+                    list.Add(int.Parse(vs));
+                }
+                catch
+                {
+                }
+            }
+            list.Sort();
+            list.Reverse();
+            int latestVersion = list[0];
+            if (latestVersion > Version)
+            {
+                server.GetFile("Helper.xml", latestVersion.ToString(), "Helper.xml");
+                return true;
+            }
+            return false;
+        }
+
+        public void PutVersionOnServer()
+        {
+            FTPVersionServer.VersionServer server = GetVersionServer();
+            Version++;
+            SaveState();
+            server.PutFile("Helper.xml", Version.ToString());
+        }
+
+        private FTPVersionServer.VersionServer GetVersionServer()
+        {
+            System.Collections.Specialized.NameValueCollection appSett = System.Configuration.ConfigurationManager.AppSettings;
+            FTPVersionServer.VersionServer server = new FTPVersionServer.VersionServer(appSett["FTPServer"], appSett["FTPUser"], appSett["FTPPassword"], appSett["FTPAppDir"]);
+            return server;
         }
 
         #region INotifyPropertyChanged Members
