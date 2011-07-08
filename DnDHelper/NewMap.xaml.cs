@@ -11,7 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace DnDHelper
+namespace DnDHelper.WPF
 {
     /// <summary>
     /// Interaction logic for NewMap.xaml
@@ -29,7 +29,7 @@ namespace DnDHelper
         {
             try
             {
-                Map = new DnDHelper.Map( int.Parse(textBox1.Text), int.Parse(textBox2.Text));
+                Map = new DnDHelper.WPF.Map( int.Parse(textBox1.Text), int.Parse(textBox2.Text));
             }
             catch (Exception exc)
             {

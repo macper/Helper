@@ -1,4 +1,4 @@
-﻿<Window x:Class="DnDHelper.ImageWindow"
+﻿<Window x:Class="DnDHelper.WPF.ImageWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="ImageWindow" Height="526" Width="790" WindowStartupLocation="CenterScreen" WindowState="Maximized">

@@ -1,4 +1,4 @@
-﻿<Window x:Class="DnDHelper.SpellEditWindow"
+﻿<Window x:Class="DnDHelper.WPF.SpellEditWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="SpellEditWindow" Height="423" Width="864">

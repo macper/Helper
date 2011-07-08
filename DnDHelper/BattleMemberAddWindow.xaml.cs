@@ -14,7 +14,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Xml.Serialization;
 
-namespace DnDHelper
+namespace DnDHelper.WPF
 {
     /// <summary>
     /// Interaction logic for BattleMemberAddWindow.xaml

@@ -6,7 +6,7 @@ using System.Windows.Media;
 using System.Windows;
 using System.Xml.Serialization;
 
-namespace DnDHelper
+namespace DnDHelper.WPF
 {
     [Serializable]
     public class Map

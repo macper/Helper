@@ -11,7 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace DnDHelper
+namespace DnDHelper.WPF
 {
     /// <summary>
     /// Interaction logic for AttackWindow.xaml
