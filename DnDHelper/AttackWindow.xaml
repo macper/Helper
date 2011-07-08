@@ -1,4 +1,4 @@
-﻿<Window x:Class="DnDHelper.AttackWindow"
+﻿<Window x:Class="DnDHelper.WPF.AttackWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="AttackWindow" Height="244" Width="509" WindowStartupLocation="CenterScreen">

@@ -8,7 +8,7 @@
     <ProjectGuid>{3C0DDA93-F2B6-4D2B-9B06-76A24ACE0E8B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DnDHelper</RootNamespace>
+    <RootNamespace>DnDHelper.WPF</RootNamespace>
     <AssemblyName>DnDHelper</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
@@ -36,10 +36,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FTPVersionServer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\FTPVersionServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
@@ -75,7 +71,6 @@
     <Compile Include="AttackWindow.xaml.cs">
       <DependentUpon>AttackWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Battle.cs" />
     <Compile Include="BattleMemberAddWindow.xaml.cs">
       <DependentUpon>BattleMemberAddWindow.xaml</DependentUpon>
     </Compile>
@@ -100,7 +95,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources1.resx</DependentUpon>
     </Compile>
-    <Compile Include="Rules.cs" />
     <Compile Include="SpellEditWindow.xaml.cs">
       <DependentUpon>SpellEditWindow.xaml</DependentUpon>
     </Compile>
@@ -158,14 +152,12 @@
     <Compile Include="AttackEditWindow.xaml.cs">
       <DependentUpon>AttackEditWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Character.cs" />
     <Compile Include="CharacterDetails.xaml.cs">
       <DependentUpon>CharacterDetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="EffectEditWindow.xaml.cs">
       <DependentUpon>EffectEditWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Helper.cs" />
     <Compile Include="ItemsWindow.xaml.cs">
       <DependentUpon>ItemsWindow.xaml</DependentUpon>
     </Compile>
@@ -227,11 +219,16 @@
     <EmbeddedResource Include="DnDIkonka.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <Content Include="DLL\FTPVersionServer.dll" />
     <Content Include="WPFColorPickerLib.dll" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DnDHelperLib\DnDHelper.Lib.csproj">
+      <Project>{19A48299-FF88-4691-8715-26ABDE10F61A}</Project>
+      <Name>DnDHelper.Lib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.ComponentModel;
 
-namespace DnDHelper
+namespace DnDHelper.WPF
 {
     /// <summary>
     /// Interaction logic for SpellEditWindow.xaml

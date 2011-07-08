@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DnDHelper
+namespace DnDHelper.WPF
 {
     /// <summary>
     /// Interaction logic for CharacterDetails.xaml
@@ -139,7 +139,7 @@ namespace DnDHelper
 
         private void DodajEfekt_Click(object sender, RoutedEventArgs e)
         {
-            Effect newEfekt = new DnDHelper.Effect();
+            Effect newEfekt = new Effect();
             EffectEditWindow efWnd = new EffectEditWindow(newEfekt, _helper);
             if (efWnd.ShowDialog() == true)
             {
@@ -155,7 +155,7 @@ namespace DnDHelper
                 MessageBox.Show("Coś byś se wybrał najpierw");
                 return;
             }
-            DnDHelper.Effect efekt = (DnDHelper.Effect)listView2.SelectedItem;
+            Effect efekt = (Effect)listView2.SelectedItem;
             EffectEditWindow efWnd = new EffectEditWindow(efekt, _helper);
             if (efWnd.ShowDialog() == true)
             {
@@ -170,7 +170,7 @@ namespace DnDHelper
                 MessageBox.Show("Coś trza wybrać, nie ma rady");
                 return;
             }
-            DnDHelper.Effect efekt = (DnDHelper.Effect)listView2.SelectedItem;
+            Effect efekt = (Effect)listView2.SelectedItem;
             _character.Effects.Remove(efekt);
             listView2.Items.Refresh();
         }

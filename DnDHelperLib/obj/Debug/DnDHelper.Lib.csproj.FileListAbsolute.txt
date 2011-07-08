@@ -1,0 +1,6 @@
+D:\Maciek\Helper\DnDHelperLib\obj\Debug\ResolveAssemblyReference.cache
+D:\Maciek\Helper\DnDHelperLib\bin\Debug\DnDHelperLib.dll
+D:\Maciek\Helper\DnDHelperLib\bin\Debug\DnDHelperLib.pdb
+D:\Maciek\Helper\DnDHelperLib\bin\Debug\FTPVersionServer.dll
+D:\Maciek\Helper\DnDHelperLib\obj\Debug\DnDHelperLib.dll
+D:\Maciek\Helper\DnDHelperLib\obj\Debug\DnDHelperLib.pdb
